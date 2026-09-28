@@ -58,18 +58,19 @@ export default function CareersPage(){
     <section className="section section-ink">
       <div className="shell trust-preview">
         <div>
-          <div className="eyebrow light">GORILLA RECRUITMENT</div>
-          <h2>A separate ORVIA recruitment service built around capability, not CV theatre.</h2>
-          <p>Gorilla Recruitment is the working name for ORVIA’s commercial recruitment offer: helping organisations find and assess people whose real capability may be missed by conventional recruitment filters.</p>
-          <p>Its proposition should remain separate from ORVIA’s own careers pages, with its own scope, pricing, methodology and evidence before public launch.</p>
+          <div className="eyebrow light">ORVIA PRACTITIONER NETWORK</div>
+          <h2>A professional pathway built around capability, standards and continuing development.</h2>
+          <p>The controlled ORVIA model combines recruitment, standards, supervised development, appropriate authorisation and a community of practice. It is designed to recognise capable people and build the professional layer around what they already bring.</p>
+          <p>Public licence language remains held until the full governance model for competence, supervision, CPD, renewal, complaints, insurance, suspension and any public register is formally approved.</p>
+          <Link className="text-link" href="/practitioner-network">Explore the Practitioner Network →</Link>
         </div>
         <div className="trust-list dark-list">
-          <span>Capability-led role design</span>
+          <span>Capability-led selection</span>
           <span>Transferable-skills assessment</span>
-          <span>Veteran and career-change pathways</span>
-          <span>Evidence-based selection</span>
-          <span>Structured onboarding and development</span>
-          <span>Clear legal and professional boundaries</span>
+          <span>Structured learning and supervised practice</span>
+          <span>Evidence of competence</span>
+          <span>Continuing development and peer challenge</span>
+          <span>Clear professional boundaries</span>
         </div>
       </div>
     </section>

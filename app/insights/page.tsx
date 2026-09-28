@@ -1,0 +1,1 @@
+export default function Insights(){return <section className="page-hero"><div className="shell"><div className="eyebrow">INSIGHTS</div><h1>Latest from ORVIA.</h1><p className="lead">Curated, approved corporate and product content belongs here. Uncontrolled social comments should not be republished automatically.</p></div></section>}

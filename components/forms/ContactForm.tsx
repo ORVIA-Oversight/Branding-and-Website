@@ -1,0 +1,3 @@
+"use client";
+import { useState } from "react";
+export function ContactForm(){const [sent,setSent]=useState(false);return <form className="contact-form" onSubmit={(e)=>{e.preventDefault();setSent(true)}}><label>Name<input name="name" required /></label><label>Email<input name="email" type="email" required /></label><label>What would you like to discuss?<textarea name="message" rows={6} required /></label><input type="hidden" name="originating_product" value="oversight"/><button className="button" type="submit">Send enquiry</button>{sent&&<p role="status">Demo form captured locally. Connect CONTACT_API_URL before production.</p>}</form>}

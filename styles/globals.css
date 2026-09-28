@@ -20,3 +20,33 @@
 select{font:inherit;padding:14px;border:1px solid #bcc7d2;border-radius:12px;background:#fff}
 @media(max-width:1100px){.af-hero-grid,.careers-hero-grid,.benefits-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.journey-card div{grid-template-columns:72px 1fr}.practitioner-steps article{grid-template-columns:55px 1fr}}
+
+
+.practitioner-hero{background:radial-gradient(circle at 82% 10%,#d9e8f5 0,transparent 32%),linear-gradient(180deg,#f9fbfd,#fff)}
+.practitioner-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.practitioner-statement-card{min-height:420px;border-radius:30px;background:linear-gradient(145deg,#081b33,#173f66 60%,#315d84);color:#fff;padding:44px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow)}
+.practitioner-statement-card span{font-size:.74rem;letter-spacing:.16em;color:#b8cbe3;margin-bottom:18px}
+.practitioner-statement-card strong{font-size:clamp(2.2rem,4vw,4.2rem);line-height:1.02;letter-spacing:-.045em}
+.practitioner-statement-card p{color:#d5e0ea;line-height:1.6;max-width:580px}
+.quality-story{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.quality-story span{padding:28px;border-radius:20px;background:var(--paper);font-weight:800;letter-spacing:.12em;font-size:.8rem}
+.practitioner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.practitioner-card{padding:30px;border:1px solid var(--line);border-radius:24px;background:#fff;min-height:290px}
+.practitioner-card>span{font-family:var(--font-mono);font-size:.78rem;color:#758395}
+.practitioner-card h3{font-size:1.45rem;margin:38px 0 12px}
+.practitioner-card p{color:var(--muted);line-height:1.7}
+.gladiator-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}
+.gladiator-grid article{padding:26px;border:1px solid rgba(255,255,255,.14);border-radius:22px}
+.gladiator-grid strong{font-size:.8rem;letter-spacing:.14em;color:#a9c3dc}
+.gladiator-grid p{color:#d0dae4;line-height:1.65}
+.premium-steps article{padding:30px 0}
+.benefit-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.benefit-card-grid article{padding:30px;border-radius:22px;background:#fff;border:1px solid var(--line)}
+.benefit-card-grid h3{font-size:1.35rem}.benefit-card-grid p{color:var(--muted);line-height:1.7}
+.client-practitioner-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.signal-list{display:grid;border-top:1px solid rgba(255,255,255,.15)}
+.signal-list span{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.15);font-weight:650;color:#fff}
+.governance-callout{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start;padding:42px;border:1px solid var(--line);border-radius:28px}
+.governance-callout p{font-size:1.08rem;line-height:1.8;color:var(--muted);margin:0}
+@media(max-width:1100px){.practitioner-hero-grid,.client-practitioner-grid,.governance-callout{grid-template-columns:1fr}.practitioner-grid,.benefit-card-grid{grid-template-columns:repeat(2,1fr)}.gladiator-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.practitioner-grid,.benefit-card-grid,.gladiator-grid,.quality-story{grid-template-columns:1fr}.practitioner-statement-card{min-height:340px;padding:30px}}

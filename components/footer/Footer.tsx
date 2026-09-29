@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { footerNavigation } from "@/config/navigation";
+import { masterBrandAssets } from "@/config/brandAssets";
 
 function FooterLink({item}:{item:{label:string;href:string;external?:boolean}}){
   if(item.external || item.href.startsWith("http")){
@@ -14,7 +15,7 @@ export function Footer() {
       <div className="footer-main-approved">
         <div className="footer-brand-approved">
           <Link href="https://orvia.org.uk" aria-label="ORVIA Oversight">
-            <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA Oversight"/>
+            <img src={masterBrandAssets.logo} alt="ORVIA Oversight"/>
           </Link>
           <p><strong>See. Understand. Protect.</strong><br/>Independent oversight, evidence and practical improvement with people kept at the centre.</p>
         </div>

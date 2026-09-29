@@ -2,7 +2,23 @@ import Link from "next/link";
 import { primaryNav } from "@/config/navigation";
 import { productConfig } from "@/config/products";
 
-export function Header() {
+type ProductHeaderProps = {
+  productName?: string;
+  productMark?: string;
+  productAccent?: string;
+  productHref?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+};
+
+export function ProductHeader({
+  productName="Brand & Web System",
+  productMark="B",
+  productAccent=productConfig.accent,
+  productHref="/",
+  ctaLabel="Talk to ORVIA",
+  ctaHref="/contact"
+}:ProductHeaderProps) {
   return <>
     <div className="utility-bar">
       <div className="shell utility-inner">
@@ -12,21 +28,30 @@ export function Header() {
           <a href={`mailto:${productConfig.email}`}>Email</a>
           <a href="https://wa.me/443300433703">WhatsApp</a>
           <Link href="/contact">Book a meeting</Link>
-          <a href="#">Client login</a>
         </div>
       </div>
     </div>
     <header className="main-header">
       <div className="shell nav-wrap">
-        <Link href="/" className="brand" aria-label="ORVIA home">
-          <span className="brand-mark">O</span>
-          <span className="brand-copy"><strong>ORVIA</strong><small>UNIVERSAL REFERENCE</small></span>
-        </Link>
+        <div className="estate-masthead">
+          <Link href="https://orvia.org.uk" className="master-brand" aria-label="ORVIA Oversight">
+            <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA Oversight"/>
+          </Link>
+          <span className="brand-divider" aria-hidden="true"/>
+          <Link href={productHref} className="product-brand" style={{"--product-accent":productAccent} as React.CSSProperties}>
+            <span className="product-brand-icon">{productMark}</span>
+            <span className="product-brand-copy"><small>ORVIA PRODUCT</small><strong>{productName}</strong></span>
+          </Link>
+        </div>
         <nav aria-label="Primary navigation">
-          {primaryNav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
+          {primaryNav.map(([label,href])=><Link key={href} href={href}>{label}</Link>)}
         </nav>
-        <Link href="/contact" className="button button-small">Talk to ORVIA</Link>
+        <Link href={ctaHref} className="button button-small">{ctaLabel}</Link>
       </div>
     </header>
   </>;
+}
+
+export function Header(){
+  return <ProductHeader/>;
 }

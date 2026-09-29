@@ -6,7 +6,7 @@ export function Footer() {
       <div className="footer-main-approved">
         <div className="footer-brand-approved">
           <Link href="https://orvia.org.uk" aria-label="ORVIA Oversight">
-            <img src="/brand/ORVIA-Oversight-white.png" alt="ORVIA Oversight"/>
+            <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA Oversight"/>
           </Link>
           <p><strong>See. Understand. Protect.</strong><br/>Independent oversight, evidence and practical improvement with people kept at the centre.</p>
         </div>

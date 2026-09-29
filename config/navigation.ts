@@ -1,12 +1,44 @@
-export const primaryNav = [
-  ["Platform", "/#platform"],
-  ["Method", "/#method"],
-  ["Practitioners", "/practitioner-network"],
-  ["Case Studies", "/case-studies"],
-  ["Trust", "/trust"],
-  ["Armed Forces", "/armed-forces"],
-  ["Careers", "/careers"]
-] as const;
+export type NavItem = {
+  label: string;
+  href: string;
+  description?: string;
+  external?: boolean;
+};
+
+export type NavGroup = {
+  label: string;
+  items: readonly NavItem[];
+};
+
+export const navigationGroups = [
+  {
+    label: "Explore",
+    items: [
+      { label: "Platform", href: "/#platform", description: "How the ORVIA operating system fits together." },
+      { label: "Method", href: "/#method", description: "Observe. Review. Verify. Interpret. Act." },
+      { label: "Systems", href: "/systems", description: "IRIS, HIVE, VITA, VERA, Command and AI." },
+      { label: "Case Studies", href: "/case-studies", description: "See the ORVIA approach in practice." }
+    ]
+  },
+  {
+    label: "People",
+    items: [
+      { label: "Founder Story", href: "/founder", description: "Why John built ORVIA and what drives the company." },
+      { label: "Practitioners", href: "/practitioner-network", description: "Our practitioner model and capability pathway." },
+      { label: "Armed Forces", href: "/armed-forces", description: "Veterans, Service leavers, families and transferable skills." },
+      { label: "Careers", href: "/careers", description: "Join ORVIA and build capability with us." }
+    ]
+  },
+  {
+    label: "Trust",
+    items: [
+      { label: "Trust Centre", href: "/trust", description: "Governance, controls, boundaries and verified trust." },
+      { label: "Armed Forces Covenant", href: "/armed-forces", description: "Our Covenant commitment and ERS Bronze status." },
+      { label: "Insights", href: "/insights", description: "ORVIA thinking, updates and explainers." },
+      { label: "Contact", href: "/contact", description: "Talk to ORVIA." }
+    ]
+  }
+] as const satisfies readonly NavGroup[];
 
 export const customerAccessNav = [
   {
@@ -40,3 +72,28 @@ export const customerAccessNav = [
     status:"restricted"
   }
 ] as const;
+
+export const footerNavigation = {
+  startHere: [
+    { label:"Why ORVIA", href:"/why-orvia" },
+    { label:"Founder Story", href:"/founder" },
+    { label:"Who We Help", href:"/#services" },
+    { label:"Services", href:"/#services" },
+    { label:"Contact", href:"/contact" }
+  ],
+  methodProducts: [
+    { label:"ORVIA Method", href:"/#method" },
+    { label:"ORVIA Systems", href:"/systems" },
+    { label:"ORVIA Voice", href:"https://voice.orvia.org.uk", external:true },
+    { label:"Witness Room", href:"https://witness.orvia.org.uk", external:true },
+    { label:"Customer Access", href:"/customer-login" }
+  ],
+  company: [
+    { label:"About", href:"/about" },
+    { label:"Founder Story", href:"/founder" },
+    { label:"Insights", href:"/insights" },
+    { label:"Armed Forces", href:"/armed-forces" },
+    { label:"Careers", href:"/careers" },
+    { label:"Trust Centre", href:"/trust" }
+  ]
+} as const;

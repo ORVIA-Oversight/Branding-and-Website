@@ -1,220 +1,54 @@
 import Link from "next/link";
+import { Method } from "@/components/orvia/Method";
 import { ArmedForcesCommitment } from "@/components/trust/ArmedForcesCommitment";
+import { products, productIdentityRule } from "@/config/products";
 
-type RouteCard = {
-  title: string;
-  body: string;
-  href: string;
-  cta: string;
-  external?: boolean;
-};
-
-const needs: RouteCard[] = [
-  {
-    title:"I need help with a concern",
-    body:"Start with what has happened. ORVIA helps structure the concern, preserve the evidence and identify a proportionate next step.",
-    href:"/work-with-orvia",
-    cta:"Tell us what is happening"
-  },
-  {
-    title:"I run a service or organisation",
-    body:"Strengthen governance, safeguarding, assurance, operational grip and evidence of improvement without adding unnecessary complexity.",
-    href:"/work-with-orvia",
-    cta:"See how ORVIA can help"
-  },
-  {
-    title:"I need evidence reviewed or challenged",
-    body:"Use structured evidence review, chronology, competing explanations and human challenge for consequential or disputed matters.",
-    href:"https://witness.orvia.org.uk",
-    cta:"Open Witness Room",
-    external:true
-  },
-  {
-    title:"I need calls captured and followed up",
-    body:"ORVIA Voice provides accountable call capture, routing and follow-up, with human judgement kept where it matters.",
-    href:"https://voice.orvia.org.uk",
-    cta:"Explore ORVIA Voice",
-    external:true
-  },
-  {
-    title:"I want to work with ORVIA",
-    body:"Explore practitioner, founder-led and career routes, including the training and authorisation standards behind ORVIA casework.",
-    href:"/work-with-orvia",
-    cta:"Work with ORVIA"
-  },
-  {
-    title:"I am already a customer",
-    body:"Open your workspace, cases, evidence and current actions.",
-    href:"https://workspace.orvia.org.uk",
-    cta:"Customer workspace",
-    external:true
-  }
+const cards=[
+  ["systems","Fragmented systems","Information sits in too many places, ownership gets blurred and nobody has the whole picture.","Connect evidence, ownership and assurance around one coherent operating model.","A clearer line from concern to action."],
+  ["provenance","Weak provenance","Evidence is copied, summarised or detached from the original source until nobody can prove what changed.","Preserve originals, versions, assertions, dissent and missing evidence.","More defensible decisions."],
+  ["actions","Actions that disappear","Important actions are agreed, then lost in email, minutes, handovers or disconnected task lists.","Assign ownership, timers, gates and explicit failure states.","Visible accountability."],
+  ["assurance","Assurance that stops at closure","A task can be marked complete without checking whether the change actually worked or stayed effective.","Verify implementation, effectiveness and sustained impact.","Learning that continues after action."]
 ];
 
-const outcomes: [string,string][] = [
-  ["See the real problem","Bring fragmented evidence, concerns, workflows and context into one clearer picture."],
-  ["Know what needs action","Make ownership, deadlines, uncertainty and escalation visible."],
-  ["Prove what changed","Keep the evidence showing what was found, what was done and whether the improvement worked."],
-  ["Keep judgement human","Use technology to organise, compare and challenge without handing high-consequence decisions to a machine."]
-];
-
-const process: [string,string][] = [
-  ["01","Tell us what is happening"],
-  ["02","Preserve and structure the evidence"],
-  ["03","Test what the evidence actually supports"],
-  ["04","Agree the proportionate action"],
-  ["05","Verify whether the change worked"]
-];
-
-const routes: RouteCard[] = [
-  {title:"ORVIA Voice",body:"24/7 call capture and accountable follow-up.",href:"https://voice.orvia.org.uk",cta:"Open service",external:true},
-  {title:"Witness Room",body:"Structured evidence preparation, challenge and controlled perspectives.",href:"https://witness.orvia.org.uk",cta:"Open service",external:true},
-  {title:"Perspective Room",body:"Human reasoning, safeguarding judgement and evidence-led assessment.",href:"/perspective-room",cta:"Open service"},
-  {title:"ORVIA Web",body:"Lean commercial websites and managed web delivery.",href:"https://web.orvia.org.uk",cta:"Open service",external:true},
-  {title:"MIA",body:"Memory preservation, family archive and legacy.",href:"https://mia.orvia.org.uk",cta:"Open service",external:true},
-  {title:"Threshold",body:"Structured concern and evidence review.",href:"https://threshold.orvia.org.uk",cta:"Open service",external:true}
-];
-
-function RouteLink({item}:{item:RouteCard}) {
-  if (item.external) {
-    return <a className="text-link" href={item.href} target="_blank" rel="noreferrer">{item.cta} →</a>;
-  }
-  return <Link className="text-link" href={item.href}>{item.cta} →</Link>;
+function ProblemIcon({type}:{type:string}){
+  const common={width:28,height:28,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:1.8,strokeLinecap:"round" as const,strokeLinejoin:"round" as const,"aria-hidden":true};
+  if(type==="systems") return <svg {...common}><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7.8 7.2l3 8.1M16.2 7.2l-3 8.1M8 6h8"/></svg>;
+  if(type==="provenance") return <svg {...common}><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v5h5M10 12h6M10 16h4"/><path d="M4 7v13h10"/></svg>;
+  if(type==="actions") return <svg {...common}><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l2.5 2.5L16 9"/><path d="M8 7h5"/></svg>;
+  return <svg {...common}><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/><path d="M7.5 18.5l-2 2M16.5 18.5l2 2"/></svg>;
 }
+const steps=["Capture","Understand","Verify","Human review","Act"];
 
-export default function Home(){
-  return <>
-    <section className="hero">
-      <div className="shell hero-grid">
-        <div className="hero-copy">
-          <div className="eyebrow">ORVIA OVERSIGHT</div>
-          <h1>Bring us the problem. We help make the evidence clearer.</h1>
-          <p>ORVIA helps people and organisations understand concerns, strengthen governance, test evidence and turn findings into accountable improvement.</p>
-          <div className="actions">
-            <Link className="button" href="/work-with-orvia">Tell us what is happening</Link>
-            <a className="button secondary" href="#start">Choose what you need</a>
-          </div>
-          <div className="trust-inline">
-            <span>Independent</span>
-            <span>Evidence-led</span>
-            <span>Human-centred</span>
-            <span>ICO registered</span>
-            <span>ERS Bronze</span>
-          </div>
-        </div>
-        <div className="hero-media">
-          <div className="media-visual">
-            <div className="orbit orbit-a"></div>
-            <div className="orbit orbit-b"></div>
-            <div className="core">ORVIA</div>
-            <div className="signal signal-1">Understand</div>
-            <div className="signal signal-2">Evidence</div>
-            <div className="signal signal-3">Improve</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="start" className="section">
-      <div className="shell">
-        <div className="section-head">
-          <div>
-            <div className="eyebrow">START WITH YOUR NEED</div>
-            <h2>You do not need to understand the ORVIA system before you can use it.</h2>
-          </div>
-          <p>Choose the route closest to what you need now. The deeper methodology, governance and evidence standards remain available when you want them.</p>
-        </div>
-        <div className="card-grid">
-          {needs.map(item => <article className="feature-card" key={item.title}>
-            <h3>{item.title}</h3>
-            <p>{item.body}</p>
-            <RouteLink item={item}/>
-          </article>)}
-        </div>
-      </div>
-    </section>
-
-    <section className="section section-soft">
-      <div className="shell">
-        <div className="section-head">
-          <div><div className="eyebrow">WHAT ORVIA HELPS YOU ACHIEVE</div><h2>Clarity, accountability and evidence of real improvement.</h2></div>
-          <p>ORVIA is designed to reduce noise, not create another layer of it.</p>
-        </div>
-        <div className="card-grid">
-          {outcomes.map(([title,body]) => <article className="feature-card" key={title}><h3>{title}</h3><p>{body}</p></article>)}
-        </div>
-      </div>
-    </section>
-
-    <section className="section">
-      <div className="shell">
-        <div className="eyebrow">HOW IT WORKS</div>
-        <h2>From concern to verified improvement.</h2>
-        <div className="steps">
-          {process.map(([number,label]) => <div key={number}><span>{number}</span><strong>{label}</strong></div>)}
-        </div>
-        <p className="lead">Technology can organise evidence, identify gaps and challenge assumptions. Safeguarding, clinical, culpability and other high-consequence judgements remain human decisions.</p>
-      </div>
-    </section>
-
-    <section className="section section-ink">
-      <div className="shell">
-        <div className="section-head">
-          <div><div className="eyebrow light">MAIN ROUTES</div><h2>Use the service that matches the job.</h2></div>
-          <p>Product names should never be a barrier. Every ORVIA service is paired with a plain-English purpose.</p>
-        </div>
-        <div className="card-grid">
-          {routes.map(item => <article className="feature-card" key={item.title}>
-            <h3>{item.title}</h3>
-            <p>{item.body}</p>
-            <RouteLink item={item}/>
-          </article>)}
-        </div>
-      </div>
-    </section>
-
-    <section className="section section-soft">
-      <div className="shell trust-preview">
-        <div>
-          <div className="eyebrow">TRUST, WITHOUT THE WALL OF TEXT</div>
-          <h2>Important proof should be easy to find, not forced in front of every user.</h2>
-          <p>ORVIA publishes verified claims, keeps human authority explicit and separates public trust information from internal governance detail.</p>
-        </div>
-        <div className="trust-list">
-          <span>Companies House 16123685</span>
-          <span>ICO ZC152311</span>
-          <span>Armed Forces Covenant signatory</span>
-          <span>Defence Employer Recognition Scheme Bronze Award</span>
-          <a href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer">Trust A Veteran profile →</a>
-          <Link href="/trust">Open Trust Centre →</Link>
-        </div>
-      </div>
-    </section>
-
-    <ArmedForcesCommitment/>
-
-    <section className="section">
-      <div className="shell">
-        <div className="section-head">
-          <div><div className="eyebrow">BRAND & WEB GOVERNANCE</div><h2>Need the system underneath the experience?</h2></div>
-          <p>This site remains the canonical reference for teams building and governing the wider ORVIA estate. Depth is available, but it is no longer imposed on the first-time user.</p>
-        </div>
-        <div className="card-grid">
-          <article className="feature-card"><h3>ORVIA systems</h3><p>IRIS, HIVE, VITA, VERA, Command and the controlled AI architecture.</p><Link className="text-link" href="/systems">Open systems reference →</Link></article>
-          <article className="feature-card"><h3>Commercial standard</h3><p>The release gate from offer to governed delivery, including real next actions and onboarding.</p><Link className="text-link" href="/commercial">Open commercial standard →</Link></article>
-          <article className="feature-card"><h3>Website estate</h3><p>The canonical route for migrating ORVIA sites into the shared brand, UX and release standard.</p><Link className="text-link" href="/estate">Open estate reference →</Link></article>
-        </div>
-      </div>
-    </section>
-
-    <section className="final-cta">
-      <div className="shell">
-        <div>
-          <div className="eyebrow light">START WITH THE PROBLEM</div>
-          <h2>You do not need to diagnose it before you contact ORVIA.</h2>
-        </div>
-        <Link href="/work-with-orvia" className="button light-button">Tell us what is happening</Link>
-      </div>
-    </section>
-  </>;
-}
+export default function Home(){return <>
+  <section className="hero"><div className="shell hero-grid"><div className="hero-copy"><div className="eyebrow">ORVIA BRAND & WEB SYSTEM</div><h1>One brand system. Every ORVIA product aligned.</h1><p>This is the canonical ORVIA design and web reference: one visual language, one trust layer, one component system and one governed standard for every ORVIA public product.</p><div className="actions"><Link className="button" href="/contact">Book a discovery</Link><Link className="button secondary" href="#platform">Explore the platform</Link></div><div className="trust-inline"><span>Independent</span><span>Evidence-led</span><span>Human-centred</span><span>ICO registered</span></div></div><div className="hero-media"><div className="media-visual"><div className="orbit orbit-a"></div><div className="orbit orbit-b"></div><div className="core">ORVIA</div><div className="signal signal-1">Evidence</div><div className="signal signal-2">Assurance</div><div className="signal signal-3">Action</div></div></div></div></section>
+  <section id="platform" className="section"><div className="shell"><div className="section-head"><div><div className="eyebrow">WHAT ORVIA DOES</div><h2>Make complex organisational truth easier to see — and harder to lose.</h2></div><p>ORVIA is designed for environments where fragmented systems, incomplete evidence and weak follow-through create risk.</p></div><div className="card-grid platform-problem-grid">{cards.map(([icon,problem,explainer,doing,outcome])=><article className="feature-card platform-problem-card" key={problem}>
+  <div className="platform-card-top"><span className="platform-card-icon"><ProblemIcon type={icon}/></span><span className="card-label">Problem</span></div>
+  <h3>{problem}</h3>
+  <p className="platform-card-explainer">{explainer}</p>
+  <p className="platform-card-response"><strong>ORVIA response:</strong> {doing}</p>
+  <div className="card-outcome"><strong>Outcome</strong><span>{outcome}</span></div>
+</article>)}</div></div></section>
+  <section className="section"><div className="shell split"><div className="editorial-media"><div className="visual-caption">Human first. Human last.</div></div><div><div className="eyebrow">DESIGNED AROUND JUDGEMENT</div><h2>Technology should organise evidence, not decide who is right.</h2><p className="lead">ORVIA separates capture, workflow, evidence, assurance and human decision. AI can assist with structure and inconsistency detection, but it does not make safeguarding, clinical or culpability decisions.</p><Link className="text-link" href="/trust">See our trust model →</Link></div></div></section>
+  <section className="section section-soft"><div className="shell"><div className="eyebrow">HOW IT WORKS</div><h2>From signal to proportionate action.</h2><div className="steps">{steps.map((s,i)=><div key={s}><span>{String(i+1).padStart(2,"0")}</span><strong>{s}</strong></div>)}</div></div></section>
+  <section className="section"><div className="shell video-block"><div><div className="eyebrow">10-SECOND EXPLAINER</div><h2>One connected pathway, not another disconnected tool.</h2><p>Video slot is production-ready with poster, captions, reduced-motion fallback and analytics hooks. Media should be loaded only from approved ORVIA assets.</p></div><div className="video-placeholder"><span>APPROVED VIDEO ASSET</span><strong>00:10</strong></div></div></section>
+  <section className="section section-ink"><div className="shell case-feature"><div><div className="eyebrow light">FEATURED CASE STUDY</div><h2>From fragmented concern to visible accountability.</h2><p>A reference case-study module showing problem, approach, outcome, limitations and related services without hard-coding the story into the page.</p><Link href="/case-studies" className="button light-button">View case studies</Link></div><div className="case-metrics"><div><span>01</span><strong>Original evidence preserved</strong></div><div><span>02</span><strong>Ownership made explicit</strong></div><div><span>03</span><strong>Effectiveness rechecked</strong></div></div></div></section>
+  <Method/>
+  <section className="section identity-system" id="identity-system"><div className="shell">
+  <div className="section-head identity-head"><div><div className="eyebrow">ORVIA IDENTITY SYSTEM</div><h2>One masterbrand. Every site visibly its own.</h2></div><p>The ORVIA structure stays consistent, but each product must carry its approved identity through the entire website — not just the logo in the header.</p></div>
+  <div className="identity-rule"><div><span className="identity-rule-number">01</span><h3>The logo starts the identity. It does not end it.</h3><p>{productIdentityRule.requirement}</p></div><div className="identity-surfaces">{productIdentityRule.surfaces.map(surface=><span key={surface}>{surface}</span>)}</div></div>
+  <div className="identity-grid">
+    {Object.values(products).map(product=><article className="identity-card" key={product.name} style={{"--product-accent":product.accent} as React.CSSProperties}>
+      <div className="identity-logo-stage"><span className="identity-mark">{product.mark}</span><div className="identity-lockup"><strong>{product.name}</strong><small>{product.visualCue}</small></div></div>
+      <div className="identity-copy"><div><span className="identity-accent-dot"/><b>{product.shortName}</b></div><p>{product.descriptor}</p><small>{product.url.replace("https://","")}</small></div>
+      <div className="identity-swatch"><span/><span/><span/></div>
+    </article>)}
+  </div>
+  <div className="identity-governance">
+    <div><div className="eyebrow">NON-NEGOTIABLE</div><h3>Site-wide brand matching</h3></div>
+    <p>A product logo and its accent define a site-level theme token. Header, CTA treatment, highlights, selected cards, visual motifs, favicon, OG image and footer reference must all resolve from the same product configuration. No page should look like a generic ORVIA page with a different badge pasted onto it.</p>
+  </div>
+</div></section>
+  <section className="section section-soft"><div className="shell trust-preview"><div><div className="eyebrow">TRUST & SECURITY</div><h2>Claims should be supported by evidence.</h2><p>ORVIA publishes what can be substantiated, separates public trust information from internal risk registers, and keeps human oversight explicit.</p></div><div className="trust-list"><span>Privacy & data rights</span><span>DPIA approach</span><span>Security practices</span><span>Human oversight</span><span>Working toward Cyber Essentials</span><Link href="/trust">Open Trust Centre →</Link></div></div></section>
+  <ArmedForcesCommitment/>
+  <section className="final-cta"><div className="shell"><div><div className="eyebrow light">START A CONVERSATION</div><h2>Bring us the problem. We’ll help make the evidence clearer.</h2></div><Link href="/contact" className="button light-button">Talk to ORVIA</Link></div></section>
+</>}

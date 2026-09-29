@@ -1,0 +1,53 @@
+export const websiteBuildStandard = {
+  version:"1.0.0",
+  principle:"A new ORVIA website is an operating surface, not an isolated marketing page.",
+  mandatoryConnections:[
+    "Brand registry",
+    "Commercial registry",
+    "IRIS workflow",
+    "Sales lifecycle",
+    "Google Search Console",
+    "GA4 or approved analytics",
+    "SEO-01 daily discovery review",
+    "Social attribution / campaign tracking",
+    "Customer access or onboarding destination where applicable",
+    "GitHub repository",
+    "Vercel deployment",
+    "Canonical domain"
+  ],
+  inheritedControls:[
+    "ORVIA parent identity",
+    "product colour family",
+    "canonical header",
+    "canonical light footer",
+    "canonical navigation architecture",
+    "trust layer",
+    "founder story source",
+    "ORVIA Method",
+    "accessibility rules",
+    "legal footer",
+    "commercial completion gate",
+    "SEO release gate",
+    "sales release gate",
+    "case-study publication boundary"
+  ],
+  releaseEvidence:[
+    "domain resolves",
+    "repository mapped",
+    "deployment mapped",
+    "all navigation links tested",
+    "all CTAs tested",
+    "commercial route tested",
+    "IRIS workflow creation tested",
+    "owner and timer tested",
+    "onboarding destination tested",
+    "GSC connection verified or explicitly blocked",
+    "analytics connection verified or explicitly blocked",
+    "sitemap and robots verified",
+    "canonical URLs verified",
+    "structured metadata verified",
+    "mobile and accessibility checks passed",
+    "rollback point recorded"
+  ],
+  states:["draft","configured","tested","verified","live","degraded","blocked"] as const
+} as const;

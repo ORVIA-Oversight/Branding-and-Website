@@ -12,31 +12,41 @@ export type NavGroup = {
 
 export const navigationGroups = [
   {
-    label: "Explore",
+    label: "Platform",
     items: [
-      { label: "Platform", href: "/#platform", description: "How the ORVIA operating system fits together." },
-      { label: "Method", href: "/#method", description: "Observe. Review. Verify. Interpret. Act." },
+      { label: "Platform overview", href: "/#platform", description: "How the ORVIA operating system fits together." },
+      { label: "ORVIA Method", href: "/#method", description: "Observe. Review. Verify. Interpret. Act." },
       { label: "Systems", href: "/systems", description: "IRIS, HIVE, VITA, VERA, Command and AI." },
-      { label: "Commercial Standard", href: "/commercial", description: "The release gate from offer to governed delivery." },
-      { label: "Case Studies", href: "/case-studies", description: "See the ORVIA approach in practice." }
+      { label: "Commercial Standard", href: "/commercial", description: "The release gate from offer to governed delivery." }
     ]
   },
   {
-    label: "People",
+    label: "Products",
+    items: [
+      { label: "All products", href: "/products", description: "See the current ORVIA product and service estate." },
+      { label: "ORVIA Voice", href: "https://voice.orvia.org.uk", description: "Call capture, routing and accountable follow-up.", external:true },
+      { label: "Witness Room", href: "https://witness.orvia.org.uk", description: "Evidence preparation, challenge and controlled perspectives.", external:true },
+      { label: "ORVIA Web", href: "https://web.orvia.org.uk", description: "Rapid commercial website builds and managed web delivery.", external:true },
+      { label: "MIA", href: "https://mia.orvia.org.uk", description: "Memory preservation, family archive and legacy.", external:true },
+      { label: "Threshold", href: "https://threshold.orvia.org.uk", description: "Structured concern and evidence review.", external:true }
+    ]
+  },
+  {
+    label: "Company",
     items: [
       { label: "Founder Story", href: "/founder", description: "Why John built ORVIA and what drives the company." },
-      { label: "Work with John", href: "/work-with-john", description: "Direct consultancy, mentoring and operational support." },
+      { label: "Work with John", href: "/work-with-john", description: "Direct consultancy, challenge and operational support." },
       { label: "Practitioners", href: "/practitioner-network", description: "Our practitioner model and capability pathway." },
       { label: "Armed Forces", href: "/armed-forces", description: "Veterans, Service leavers, families and transferable skills." },
       { label: "Careers", href: "/careers", description: "Join ORVIA and build capability with us." }
     ]
   },
   {
-    label: "Trust",
+    label: "Resources",
     items: [
-      { label: "Trust Centre", href: "/trust", description: "Governance, controls, boundaries and verified trust." },
-      { label: "Armed Forces Covenant", href: "/armed-forces", description: "Our Covenant commitment and ERS Bronze status." },
+      { label: "Case Studies", href: "/case-studies", description: "See ORVIA builds and operating models in practice." },
       { label: "Insights", href: "/insights", description: "ORVIA thinking, updates and explainers." },
+      { label: "Trust Centre", href: "/trust", description: "Governance, controls, boundaries and verified trust." },
       { label: "Contact", href: "/contact", description: "Talk to ORVIA." }
     ]
   }
@@ -77,10 +87,10 @@ export const customerAccessNav = [
 
 export const footerNavigation = {
   startHere: [
-    { label:"Why ORVIA", href:"/why-orvia" },
-    { label:"Founder Story", href:"/founder" },
-    { label:"Who We Help", href:"/#services" },
-    { label:"Services", href:"/#services" },
+    { label:"Why ORVIA", href:"/founder" },
+    { label:"Work with John", href:"/work-with-john" },
+    { label:"Products", href:"/products" },
+    { label:"Case Studies", href:"/case-studies" },
     { label:"Contact", href:"/contact" }
   ],
   methodProducts: [
@@ -92,7 +102,6 @@ export const footerNavigation = {
     { label:"Customer Access", href:"/customer-login" }
   ],
   company: [
-    { label:"About", href:"/about" },
     { label:"Founder Story", href:"/founder" },
     { label:"Work with John", href:"/work-with-john" },
     { label:"Insights", href:"/insights" },

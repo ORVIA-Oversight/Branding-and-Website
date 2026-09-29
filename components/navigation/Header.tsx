@@ -38,7 +38,7 @@ export function ProductHeader({
       <div className="shell nav-wrap">
         <div className="estate-masthead">
           <Link href="https://orvia.org.uk" className="master-brand" aria-label="ORVIA Oversight">
-            <img src="/brand/ORVIA-Oversight-white.png" alt="ORVIA"/>
+            <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA"/>
           </Link>
 
           <span className="brand-divider" aria-hidden="true"/>

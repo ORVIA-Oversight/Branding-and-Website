@@ -782,3 +782,18 @@ background-size:52px 52px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),tr
   .working-practice-guarantee{gap:24px;padding:26px}
   .working-practice-examples{gap:30px;margin-top:42px}
 }
+
+
+/* Practitioner casework gate */
+.practitioner-casework-gate{background:linear-gradient(180deg,#fff,#f7fafc)}
+.practitioner-casework-modules{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.practitioner-casework-modules article{padding:24px;border:1px solid var(--line);border-radius:20px;background:#fff;min-height:230px}
+.practitioner-casework-modules article>span{font-family:var(--font-mono);font-size:.68rem;color:#8795a4}
+.practitioner-casework-modules h3{font-size:1.12rem;color:var(--navy);margin:18px 0 9px}
+.practitioner-casework-modules p{margin:0;color:var(--muted);line-height:1.6}
+.practitioner-authorisation-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;margin-top:20px;padding:30px;border-radius:26px;background:linear-gradient(135deg,#0b2d5c,#153f66);color:#fff}
+.practitioner-authorisation-box h3{color:#fff;font-size:1.35rem;margin:12px 0 8px}
+.practitioner-authorisation-box p{color:#d7e2ea;line-height:1.6}
+.practitioner-authorisation-box ul{margin:0;padding-left:20px;color:#e1e9ef;line-height:1.75}
+@media(max-width:1000px){.practitioner-casework-modules{grid-template-columns:1fr 1fr}.practitioner-authorisation-box{grid-template-columns:1fr}}
+@media(max-width:680px){.practitioner-casework-modules{grid-template-columns:1fr}}

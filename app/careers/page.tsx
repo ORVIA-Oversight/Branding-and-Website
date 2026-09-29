@@ -1,28 +1,91 @@
 import Link from "next/link";
 
-const principles=[
-  ["Capability before CV polish","We look at judgement, transferable skills, problem-solving, communication, leadership and potential — not just conventional career language."],
-  ["Evidence before title","Where competence matters, we build and evidence it through structured induction, learning, shadowing, supervision and review."],
-  ["Service experience counts","Veterans, Reservists and the wider Armed Forces community are encouraged to show us what they can actually do, not just translate rank into civilian job titles."],
-  ["Professional boundaries stay clear","Required qualifications, clearances and regulated-role standards still apply. ORVIA does not shortcut them."]
+const values=[
+  ["Meaningful work","Use your skills to make a practical difference in people’s lives and in the organisations that serve them."],
+  ["Innovative platforms","Work with IRIS, HIVE, VITA, VERA, Command and AI to support evidence-led improvement."],
+  ["Human first","Technology expands the questions. Evidence disciplines the answer. A human remains accountable."],
+  ["Outside the box","Test hypotheses, consider alternatives and challenge the easy explanation when the evidence points elsewhere."],
+  ["Growth & development","Build capability through learning, supervision, feedback and evidence of competence."],
+  ["Supportive community","Work with people who value integrity, fairness, curiosity and respect."]
+];
+
+const groups=[
+  ["ARMED FORCES","Veterans · Service leavers · Reservists"],
+  ["FAMILIES","Military spouses · Partners · Support networks"],
+  ["OTHER SERVICES","Police · Fire · NHS · Coastguard · Prison Service"],
+  ["CIVILIANS","Career changers · Specialists · Experienced professionals"]
 ];
 
 export default function CareersPage(){
   return <>
-    <section className="page-hero careers-hero">
-      <div className="shell careers-hero-grid">
-        <div>
-          <div className="eyebrow">CAREERS AT ORVIA</div>
-          <h1>Bring us what you’re capable of.</h1>
-          <p className="lead">We recruit for capability, not CV polish. ORVIA is interested in how you think, what you notice, how you communicate, what you have learned and how you behave when the answer is not obvious.</p>
+    <section className="careers-v2-hero">
+      <div className="shell careers-v2-grid">
+        <div className="careers-v2-copy">
+          <div className="eyebrow light">CAREERS AT ORVIA</div>
+          <h1>Purpose. People.<br/><span>A fairer society.</span></h1>
+          <p className="lead">We bring together military veterans, people from other services and civilians who share a commitment to protect people, strengthen organisations and create lasting change.</p>
           <div className="actions">
-            <a className="button" href="#express-interest">Tell us what you can do</a>
-            <Link className="button secondary" href="/armed-forces">Armed Forces & Veterans</Link>
+            <a className="button af-gold-button" href="#express-interest">Join our team</a>
+            <Link className="button af-outline-button" href="/armed-forces">Our veteran story</Link>
           </div>
+          <p className="af-v2-principle">DIFFERENT EXPERIENCES. A SHARED PURPOSE.</p>
         </div>
-        <div className="careers-quote-card">
-          <span>OUR RECRUITMENT QUESTION</span>
-          <strong>What can you do that your CV may not show?</strong>
+        <div className="careers-v2-visual">
+          <img src="/armed-forces/service-team.jpg" alt="People working together in a demanding environment"/>
+          <div className="careers-v2-quote"><strong>Bring us what you’re capable of.</strong><span>Not just what your CV knows how to say.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section className="career-group-strip">
+      <div className="shell career-group-grid">
+        {groups.map(([title,body])=><article key={title}><strong>{title}</strong><span>{body}</span></article>)}
+      </div>
+    </section>
+
+    <section className="section">
+      <div className="shell careers-story-grid">
+        <div>
+          <div className="eyebrow">WHY ORVIA</div>
+          <h2>We need people who can see what others miss.</h2>
+          <p className="lead">The work we do can be intricate. We go into organisations, examine what is happening, test explanations, identify what is not working and help make it better.</p>
+          <p>That needs people who can stay steady, ask harder questions, recognise uncertainty and think beyond the obvious. Some of those people come from the Armed Forces or other public services. Some do not. What matters is the capability and the integrity behind it.</p>
+          <Link className="text-link" href="/armed-forces">Read the Armed Forces & Veterans story →</Link>
+        </div>
+        <div className="careers-v2-photo-grid">
+          <figure className="careers-v2-photo-main"><img src="/armed-forces/family.webp" alt="Family together"/></figure>
+          <figure><img src="/armed-forces/john-mcgill.jpg" alt="John McGill, founder of ORVIA"/></figure>
+          <div className="careers-v2-statement"><strong>Protect the human.</strong><span>Improve the system around them.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section className="section section-soft">
+      <div className="shell">
+        <div className="section-head">
+          <div><div className="eyebrow">WHAT WORK HERE SHOULD FEEL LIKE</div><h2>More than a job.</h2></div>
+          <p>ORVIA is building a workplace where unusual experience can become useful practice — with proper boundaries, development and accountability around it.</p>
+        </div>
+        <div className="career-value-grid">
+          {values.map(([title,body],i)=><article key={title}><span>{String(i+1).padStart(2,"0")}</span><h3>{title}</h3><p>{body}</p></article>)}
+        </div>
+      </div>
+    </section>
+
+    <section className="section section-ink">
+      <div className="shell careers-tech-grid">
+        <div>
+          <div className="eyebrow light">HUMAN-LED TECHNOLOGY</div>
+          <h2>Advanced tools. Human authority.</h2>
+          <p className="lead">We use technology to analyse evidence, build hypotheses, test alternatives and expose blind spots. But nothing high-consequence leaves ORVIA without human review and accountability.</p>
+        </div>
+        <div className="career-tech-list">
+          <span><strong>IRIS</strong> coordinates work</span>
+          <span><strong>HIVE</strong> preserves evidence</span>
+          <span><strong>VITA</strong> tests assurance</span>
+          <span><strong>VERA</strong> verifies</span>
+          <span><strong>Command</strong> gives operational visibility</span>
+          <span><strong>AI</strong> explores hypotheses and alternatives</span>
         </div>
       </div>
     </section>
@@ -30,62 +93,36 @@ export default function CareersPage(){
     <section className="section">
       <div className="shell">
         <div className="section-head">
-          <div><div className="eyebrow">HOW WE RECRUIT</div><h2>People are more than keywords, job titles and neat career histories.</h2></div>
-          <p>ORVIA still checks the things that matter. But we do not mistake presentation for capability.</p>
+          <div><div className="eyebrow">HOW WE RECRUIT</div><h2>Everybody gets a fair shot. An open door is not an easy door.</h2></div>
+          <p>We recruit for capability, not CV polish. Where a role requires qualification, statutory competence, licence, clearance or regulated status, those requirements remain mandatory.</p>
         </div>
-        <div className="card-grid">{principles.map(([title,body])=><article className="feature-card" key={title}><h3>{title}</h3><p>{body}</p></article>)}</div>
-      </div>
-    </section>
-
-    <section className="section section-soft">
-      <div className="shell split">
-        <div>
-          <div className="eyebrow">PRACTITIONER PATHWAY</div>
-          <h2>From transferable experience to credible professional practice.</h2>
-          <p className="lead">For some people, especially Service leavers and career changers, the right route is not simply “apply for a job”. It is to identify capability, translate it, build the missing professional layer and create evidence of safe, credible practice.</p>
-          <Link className="text-link" href="/armed-forces">See the Armed Forces pathway →</Link>
+        <div className="career-pathway">
+          <span>DISCOVER</span><i>→</i><span>TEST</span><i>→</i><span>BUILD</span><i>→</i><span>PRACTISE</span><i>→</i><span>EVIDENCE</span><i>→</i><span>AUTHORISE</span><i>→</i><span>DEVELOP</span>
         </div>
-        <div className="journey-card">
-          <div><span>01</span><strong>Capability mapping</strong></div>
-          <div><span>02</span><strong>Role fit & boundaries</strong></div>
-          <div><span>03</span><strong>Learning & supervised development</strong></div>
-          <div><span>04</span><strong>Practice evidence</strong></div>
-          <div><span>05</span><strong>Ongoing assurance</strong></div>
+        <div className="career-principle-box">
+          <strong>No AI system independently hires or rejects a practitioner.</strong>
+          <span>Human reasoning is assessed before AI use. Human suitability review remains a human responsibility.</span>
         </div>
       </div>
     </section>
 
-    <section className="section section-ink">
-      <div className="shell trust-preview">
-        <div>
-          <div className="eyebrow light">ORVIA PRACTITIONER NETWORK</div>
-          <h2>A professional pathway built around capability, standards and continuing development.</h2>
-          <p>The controlled ORVIA model combines recruitment, standards, supervised development, appropriate authorisation and a community of practice. It is designed to recognise capable people and build the professional layer around what they already bring.</p>
-          <p>Public licence language remains held until the full governance model for competence, supervision, CPD, renewal, complaints, insurance, suspension and any public register is formally approved.</p>
-          <Link className="text-link" href="/practitioner-network">Explore the Practitioner Network →</Link>
-        </div>
-        <div className="trust-list dark-list">
-          <span>Capability-led selection</span>
-          <span>Transferable-skills assessment</span>
-          <span>Structured learning and supervised practice</span>
-          <span>Evidence of competence</span>
-          <span>Continuing development and peer challenge</span>
-          <span>Clear professional boundaries</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="express-interest" className="section">
+    <section id="express-interest" className="section section-soft">
       <div className="shell contact-layout">
         <div>
           <div className="eyebrow">EXPRESS INTEREST</div>
           <h2>Start with what you can do.</h2>
           <p className="lead">A CV can help, but it does not have to be the first thing we see. Tell us about your experience, capability and the direction you want to take.</p>
+          <div className="career-interest-prompts">
+            <span>What have you done that matters?</span>
+            <span>How do you think when the answer is unclear?</span>
+            <span>What can you do that your CV may not show?</span>
+            <span>What would you like to develop into?</span>
+          </div>
         </div>
         <form className="contact-form">
           <label>Name<input name="name" required /></label>
           <label>Email<input name="email" type="email" required /></label>
-          <label>Background / community<select name="background" defaultValue=""><option value="" disabled>Select if relevant</option><option>Veteran / Service leaver</option><option>Reservist</option><option>Military spouse / partner</option><option>Career changer</option><option>Experienced professional</option><option>Other</option></select></label>
+          <label>Background / community<select name="background" defaultValue=""><option value="" disabled>Select if relevant</option><option>Veteran / Service leaver</option><option>Reservist</option><option>Military spouse / partner</option><option>Police / Fire / NHS / other service</option><option>Career changer</option><option>Experienced professional</option><option>Other</option></select></label>
           <label>What can you do that your CV may not show?<textarea name="capability" rows={7} required /></label>
           <label>What would you like to develop into?<textarea name="direction" rows={4} /></label>
           <button className="button" type="submit">Send expression of interest</button>

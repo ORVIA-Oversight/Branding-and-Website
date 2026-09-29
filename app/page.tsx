@@ -28,17 +28,21 @@ const products = [
 
 export default function Home(){
   return <>
-    <section className="lean-hero">
-      <div className="shell lean-hero-grid">
-        <div>
+    <section className="home-cinematic-hero" aria-label="ORVIA Oversight">
+      <div className="home-hero-media" aria-hidden="true">
+        <div className="home-hero-image"/>
+        <div className="home-hero-film-overlay"/>
+      </div>
+      <div className="shell home-hero-content">
+        <div className="home-hero-copy">
           <div className="lean-kicker">ORVIA OVERSIGHT</div>
           <h1>See the issue.<br/>Understand the evidence.<br/><span>Act with confidence.</span></h1>
           <p>ORVIA helps people and organisations make sense of concerns, fragmented evidence and operational risk — then turn that understanding into accountable action and verified improvement.</p>
           <div className="lean-actions">
-            <Link href="/work-with-orvia" className="button">Tell us what’s happening</Link>
-            <a href="#start" className="lean-secondary-action">Choose what you need</a>
+            <Link href="/work-with-orvia" className="button home-hero-primary">Tell us what’s happening</Link>
+            <a href="#start" className="home-hero-secondary">Choose what you need</a>
           </div>
-          <div className="lean-proof-row">
+          <div className="lean-proof-row home-hero-proof">
             <span>Independent</span>
             <span>Evidence-led</span>
             <span>Human-centred</span>
@@ -46,14 +50,8 @@ export default function Home(){
             <span>ERS Bronze</span>
           </div>
         </div>
-
-        <div className="lean-hero-panel" aria-label="ORVIA operating model">
-          <div className="lean-core">ORVIA</div>
-          <div className="lean-node n1"><b>OBSERVE</b><span>What is happening?</span></div>
-          <div className="lean-node n2"><b>REVIEW</b><span>What does it mean?</span></div>
-          <div className="lean-node n3"><b>VERIFY</b><span>What can be proved?</span></div>
-          <div className="lean-node n4"><b>INTERPRET</b><span>What else could explain it?</span></div>
-          <div className="lean-node n5"><b>ACT</b><span>What needs to happen next?</span></div>
+        <div className="home-hero-method" aria-label="ORVIA method">
+          <span>OBSERVE</span><i>→</i><span>REVIEW</span><i>→</i><span>VERIFY</span><i>→</i><span>INTERPRET</span><i>→</i><span>ACT</span>
         </div>
       </div>
     </section>

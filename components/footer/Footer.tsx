@@ -1,4 +1,12 @@
 import Link from "next/link";
+import { footerNavigation } from "@/config/navigation";
+
+function FooterLink({item}:{item:{label:string;href:string;external?:boolean}}){
+  if(item.external || item.href.startsWith("http")){
+    return <a href={item.href} target="_blank" rel="noreferrer">{item.label}</a>;
+  }
+  return <Link href={item.href}>{item.label}</Link>;
+}
 
 export function Footer() {
   return <footer className="footer footer-approved">
@@ -13,25 +21,17 @@ export function Footer() {
 
         <div className="footer-col">
           <h3>START HERE</h3>
-          <Link href="/why-orvia">Why ORVIA</Link>
-          <Link href="/#services">Who We Help</Link>
-          <Link href="/#services">Services</Link>
-          <Link href="/contact">Contact</Link>
+          {footerNavigation.startHere.map(item=><FooterLink key={item.href+item.label} item={item}/>)}
         </div>
 
         <div className="footer-col">
           <h3>METHOD + PRODUCTS</h3>
-          <Link href="/#method">ORVIA Method</Link>
-          <a href="https://voice.orvia.org.uk">ORVIA Voice</a>
-          <a href="https://workspace.orvia.org.uk">Customer Access</a>
+          {footerNavigation.methodProducts.map(item=><FooterLink key={item.href+item.label} item={item}/>)}
         </div>
 
         <div className="footer-col">
           <h3>COMPANY</h3>
-          <Link href="/about">About</Link>
-          <a href="https://orvia.org.uk/work-with-john">Work with John</a>
-          <Link href="/insights">Insights</Link>
-          <Link href="/armed-forces">Veterans</Link>
+          {footerNavigation.company.map(item=><FooterLink key={item.href+item.label} item={item}/>)}
           <a href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer">Trust a Veteran</a>
           <a href="tel:+443300433703">0330 043 3703</a>
           <a href="mailto:hello@orvia.org.uk">hello@orvia.org.uk</a>
@@ -52,7 +52,7 @@ export function Footer() {
         <strong>Verified trust:</strong>
         <a href="https://www.armedforcescovenant.gov.uk/" target="_blank" rel="noreferrer">Armed Forces Covenant</a>
         <Link href="/armed-forces">ERS Bronze</Link>
-        <Link href="/armed-forces#veteran-story">Veteran-founded</Link>
+        <Link href="/founder">Veteran-founded</Link>
         <a href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer">Trust a Veteran</a>
       </div>
 

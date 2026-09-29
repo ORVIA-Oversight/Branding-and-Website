@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Method } from "@/components/orvia/Method";
 import { ArmedForcesCommitment } from "@/components/trust/ArmedForcesCommitment";
+import { products, productIdentityRule } from "@/config/products";
 
 const cards=[
   ["Fragmented systems","Connect evidence, ownership and assurance around one coherent operating model.","A clearer line from concern to action."],
@@ -18,7 +19,21 @@ export default function Home(){return <>
   <section className="section"><div className="shell video-block"><div><div className="eyebrow">10-SECOND EXPLAINER</div><h2>One connected pathway, not another disconnected tool.</h2><p>Video slot is production-ready with poster, captions, reduced-motion fallback and analytics hooks. Media should be loaded only from approved ORVIA assets.</p></div><div className="video-placeholder"><span>APPROVED VIDEO ASSET</span><strong>00:10</strong></div></div></section>
   <section className="section section-ink"><div className="shell case-feature"><div><div className="eyebrow light">FEATURED CASE STUDY</div><h2>From fragmented concern to visible accountability.</h2><p>A reference case-study module showing problem, approach, outcome, limitations and related services without hard-coding the story into the page.</p><Link href="/case-studies" className="button light-button">View case studies</Link></div><div className="case-metrics"><div><span>01</span><strong>Original evidence preserved</strong></div><div><span>02</span><strong>Ownership made explicit</strong></div><div><span>03</span><strong>Effectiveness rechecked</strong></div></div></div></section>
   <Method/>
-  <section className="section"><div className="shell related"><div className="section-head"><div><div className="eyebrow">CONNECTED ORVIA</div><h2>One organisation. Distinct specialist products.</h2></div><p>Products inherit the same trust, contact, telemetry and design system while keeping their own specialist content and accent.</p></div><div className="related-grid"><article><span>R</span><h3>Voice</h3><p>Communications and capture front door.</p></article><article><span>V</span><h3>Threshold</h3><p>Structured concern and decision support.</p></article><article><span>I</span><h3>MIA</h3><p>Human-centred life and legacy evidence.</p></article><article><span>A</span><h3>Web</h3><p>Fast, governed digital delivery.</p></article></div></div></section>
+  <section className="section identity-system" id="identity-system"><div className="shell">
+  <div className="section-head identity-head"><div><div className="eyebrow">ORVIA IDENTITY SYSTEM</div><h2>One masterbrand. Every site visibly its own.</h2></div><p>The ORVIA structure stays consistent, but each product must carry its approved identity through the entire website — not just the logo in the header.</p></div>
+  <div className="identity-rule"><div><span className="identity-rule-number">01</span><h3>The logo starts the identity. It does not end it.</h3><p>{productIdentityRule.requirement}</p></div><div className="identity-surfaces">{productIdentityRule.surfaces.map(surface=><span key={surface}>{surface}</span>)}</div></div>
+  <div className="identity-grid">
+    {Object.values(products).map(product=><article className="identity-card" key={product.name} style={{"--product-accent":product.accent} as React.CSSProperties}>
+      <div className="identity-logo-stage"><span className="identity-mark">{product.mark}</span><div className="identity-lockup"><strong>{product.name}</strong><small>{product.visualCue}</small></div></div>
+      <div className="identity-copy"><div><span className="identity-accent-dot"/><b>{product.shortName}</b></div><p>{product.descriptor}</p><small>{product.url.replace("https://","")}</small></div>
+      <div className="identity-swatch"><span/><span/><span/></div>
+    </article>)}
+  </div>
+  <div className="identity-governance">
+    <div><div className="eyebrow">NON-NEGOTIABLE</div><h3>Site-wide brand matching</h3></div>
+    <p>A product logo and its accent define a site-level theme token. Header, CTA treatment, highlights, selected cards, visual motifs, favicon, OG image and footer reference must all resolve from the same product configuration. No page should look like a generic ORVIA page with a different badge pasted onto it.</p>
+  </div>
+</div></section>
   <section className="section section-soft"><div className="shell trust-preview"><div><div className="eyebrow">TRUST & SECURITY</div><h2>Claims should be supported by evidence.</h2><p>ORVIA publishes what can be substantiated, separates public trust information from internal risk registers, and keeps human oversight explicit.</p></div><div className="trust-list"><span>Privacy & data rights</span><span>DPIA approach</span><span>Security practices</span><span>Human oversight</span><span>Working toward Cyber Essentials</span><Link href="/trust">Open Trust Centre →</Link></div></div></section>
   <ArmedForcesCommitment/>
   <section className="final-cta"><div className="shell"><div><div className="eyebrow light">START A CONVERSATION</div><h2>Bring us the problem. We’ll help make the evidence clearer.</h2></div><Link href="/contact" className="button light-button">Talk to ORVIA</Link></div></section>

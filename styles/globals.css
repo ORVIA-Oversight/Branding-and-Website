@@ -426,3 +426,41 @@ select{font:inherit;padding:14px;border:1px solid #bcc7d2;border-radius:12px;bac
 .platform-card-response strong{color:var(--ink)}
 .platform-problem-card .card-outcome{margin-top:18px!important;padding-top:14px!important}
 .platform-problem-card .card-outcome span{font-size:.9rem;color:#3f4b57}
+
+
+/* Approved light ORVIA footer — canonical estate footer */
+.footer-approved{
+  background:#fbfcfe!important;
+  color:#0b2d5c!important;
+  border-top:1px solid #dfe7ee!important;
+}
+.footer-approved .footer-brand-approved p,
+.footer-approved .footer-bottom-approved{
+  color:#536b84!important;
+}
+.footer-approved .footer-brand-approved p strong,
+.footer-approved .footer-col h3,
+.footer-approved .footer-signature-approved>strong,
+.footer-approved .footer-trust-approved strong{
+  color:#0b2d5c!important;
+}
+.footer-approved .footer-col a,
+.footer-approved .footer-trust-approved a,
+.footer-approved .footer-bottom-approved a{
+  color:#0b2d5c!important;
+}
+.footer-approved .footer-signature-approved{
+  border-left-color:#d9e3ec!important;
+}
+.footer-approved .footer-socials a{
+  color:#0b2d5c!important;
+  background:#eef3f8!important;
+  border-color:#d7e1ea!important;
+}
+.footer-approved .footer-trust-approved{
+  border-top-color:#d9e3ec!important;
+  border-bottom-color:#d9e3ec!important;
+}
+.footer-approved .footer-signature-line{
+  background:#e34b23!important;
+}

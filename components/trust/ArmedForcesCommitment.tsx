@@ -8,8 +8,8 @@ export function ArmedForcesCommitment(){
         <div className="eyebrow">ARMED FORCES COMMITMENT</div>
         <h2>Forces friendly by commitment, not marketing.</h2>
         <p>ORVIA Oversight Ltd supports the Armed Forces community and recognises the transferable capability, judgement and experience developed through Service.</p>
-        <p><strong>Employer Recognition Scheme — Bronze.</strong> Progressing our commitment toward Silver and Gold recognition.</p>
-        <Link href="/armed-forces" className="text-link">Read our commitment →</Link>
+        <p><strong>Employer Recognition Scheme — Bronze Award holder.</strong> Award confirmed 22 September 2026. ORVIA also has a current public Trust A Veteran profile, with membership promotion authorised by Trust A Veteran.</p>
+        <Link href="/armed-forces" className="text-link">Read our commitment →</Link>\n        <a href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer" className="text-link">View Trust A Veteran profile →</a>
       </div>
       <div className="af-official-lockup" aria-label="Official Armed Forces recognition marks">
         <figure className="af-official-mark">

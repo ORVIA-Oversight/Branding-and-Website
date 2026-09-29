@@ -1,5 +1,7 @@
 import { familyDefaults, siteRegistry, siteBuildDefaults, type SiteFamily } from "@/config/siteRegistry";
 import { commercialGate, type CommercialMode } from "@/config/commercial";
+import { websiteBuildStandard } from "@/config/buildStandard";
+import { salesOperatingModel, salesReleaseGate } from "@/config/sales";
 
 export type NewSiteInput = {
   name: string;
@@ -48,6 +50,13 @@ export function buildSiteBlueprint(input: NewSiteInput){
       allowDirectPurchase: Boolean(input.allowDirectPurchase),
       requiresDiscovery: Boolean(input.requiresDiscovery),
       completionGate: commercialGate
+    },
+    operatingModel: {
+      websiteBuildStandard,
+      sales: salesOperatingModel,
+      salesReleaseGate,
+      requiredConnections: websiteBuildStandard.mandatoryConnections,
+      releaseEvidence: websiteBuildStandard.releaseEvidence
     },
     inherited: {
       header: siteBuildDefaults.header,

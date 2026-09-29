@@ -1,5 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { founderStory } from "@/config/founder";
+
+export const metadata:Metadata={
+  title:"Work with John McGill | ORVIA Oversight",
+  description:"Direct, evidence-led consultancy with John McGill for safeguarding, governance, operational review, leadership support and high-consequence organisational challenge.",
+  alternates:{canonical:"/work-with-john"},
+  openGraph:{
+    title:"Work with John McGill | ORVIA Oversight",
+    description:"Bring John in when you need independent challenge, operational judgement and a clear view of what the evidence actually supports.",
+    type:"website",
+    url:"/work-with-john"
+  }
+};
 
 const triggers=[
   ["Something does not add up","You have reports, explanations or assurances, but the picture still does not feel complete."],

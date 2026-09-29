@@ -134,7 +134,17 @@ export default function Home(){
       </div>
     </section>
 
-    <section className="orvia-family-ribbon">\n      <div className="shell orvia-family-ribbon-inner">\n        <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA Oversight"/>\n        <div><strong>One ORVIA family.</strong><span>Shared standards, shared trust, different propositions.</span></div>\n      </div>\n    </section>\n\n    <section className="lean-section lean-products">
+    <section className="orvia-family-ribbon">
+      <div className="shell orvia-family-ribbon-inner">
+        <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA Oversight"/>
+        <div>
+          <strong>One ORVIA family.</strong>
+          <span>Shared standards, shared trust, different propositions.</span>
+        </div>
+      </div>
+    </section>
+
+    <section className="lean-section lean-products">
       <div className="shell">
         <div className="lean-section-heading">
           <div>

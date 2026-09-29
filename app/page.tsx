@@ -154,8 +154,8 @@ export default function Home(){
           <p>Product names are secondary. Each service is presented with a plain-English purpose and a real next action.</p>
         </div>
         <div className="lean-product-grid">
-          {products.map(([name,body,href,mark])=><article key={name}>
-            <span className="lean-product-mark-card">{mark}</span>
+          {products.map(([name,body,href,mark],i)=><article key={name}>
+            <span className="lean-product-mark-card" aria-label={`${name} icon`}><HomeIcon name={productIcons[i]}/></span>
             <div><h3>{name}</h3><p>{body}</p></div>
             {href.startsWith("http")
               ? <a href={href} target="_blank" rel="noreferrer">Open service →</a>

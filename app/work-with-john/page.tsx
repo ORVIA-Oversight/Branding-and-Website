@@ -35,7 +35,7 @@ const services=[
 ] as const;
 
 const rates=[
-  ["Remote advice and mentoring","£540 per day, VAT included","£450 professional fee plus VAT where applicable"],
+  ["Remote advice and mentoring","£624 per day, VAT included","£520 professional fee plus VAT where applicable"],
   ["Operational consultancy or interim leadership","£720 per day, VAT included","£600 professional fee plus VAT where applicable"],
   ["Specialist safeguarding, governance or assurance","£950 per day, VAT included","Higher-risk review work requiring defined findings or a formal written output."],
   ["Urgent or weekend instruction","Applicable rate plus 25%","Accepted only where capacity and professional boundaries permit."]
@@ -72,7 +72,7 @@ export default function WorkWithJohnPage(){
           <blockquote>“You are not paying me to agree with you. You are bringing me in to help you see the position clearly and deal with what the evidence actually shows.”</blockquote>
           <div className="work-john-rate-card">
             <small>Consultancy from</small>
-            <strong>£450 + VAT / day</strong>
+            <strong>£520 + VAT / day</strong>
             <span>Scope and rate confirmed before work begins.</span>
           </div>
         </aside>

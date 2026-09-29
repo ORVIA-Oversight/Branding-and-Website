@@ -646,3 +646,95 @@ linear-gradient(180deg,#fbfdff 0%,#f6f9fb 48%,#fff 100%)}
 .pr-final{padding:64px 0;background:linear-gradient(135deg,#0b2d5c,#154a70);color:#fff}.pr-final-grid{display:flex;align-items:center;justify-content:space-between;gap:40px}.pr-final h2{color:#fff;font-size:clamp(2.2rem,4vw,4.4rem);line-height:1;margin:12px 0}.pr-final p{color:#d8e4ec;font-size:1.1rem}.pr-outline-light{background:transparent!important;color:#fff!important;border:1px solid rgba(255,255,255,.4)!important}
 @media(max-width:1100px){.pr-hero-grid,.pr-character-grid,.pr-candidate-grid,.pr-grace-grid,.pr-boundaries,.pr-discovery-grid,.pr-cinematic-grid{grid-template-columns:1fr}.pr-hero-visual{min-height:auto}.pr-room-frame{max-width:580px}.pr-journey{grid-template-columns:1fr 1fr}.pr-domain-grid{grid-template-columns:1fr 1fr}.pr-benefit-grid{grid-template-columns:1fr 1fr}.pr-integrity-card{position:relative;top:auto}.pr-pilot-card{grid-template-columns:1fr 1fr}.pr-cinematic-grid{gap:24px}}
 @media(max-width:720px){.pr-hero{padding-top:58px}.pr-hero-copy h1{font-size:clamp(3rem,15vw,4.8rem)}.pr-room-frame{border-radius:28px}.pr-journey,.pr-domain-grid,.pr-audience-grid,.pr-benefit-grid,.pr-promise-list,.pr-review-grid,.pr-review-timeline,.pr-boundary-grid,.pr-pilot-card,.pr-form-grid,.pr-faq{grid-template-columns:1fr}.pr-candidate-grid,.pr-grace-grid,.pr-boundaries,.pr-discovery-grid{gap:42px}.pr-final-grid{align-items:flex-start;flex-direction:column}.pr-final .actions{width:100%}}
+
+
+/* Work with John v2 — premium founder consultancy page */
+.work-john-hero-v2{position:relative;overflow:hidden;padding:clamp(72px,8vw,116px) 0 78px;background:
+radial-gradient(circle at 78% 18%,rgba(47,127,134,.14),transparent 28%),
+radial-gradient(circle at 65% 72%,rgba(240,165,26,.10),transparent 24%),
+linear-gradient(180deg,#fbfdff 0%,#f7fafc 55%,#fff 100%)}
+.work-john-hero-v2:before{content:"";position:absolute;inset:0;background-image:
+linear-gradient(rgba(11,45,92,.028) 1px,transparent 1px),
+linear-gradient(90deg,rgba(11,45,92,.028) 1px,transparent 1px);
+background-size:52px 52px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),transparent 88%);pointer-events:none}
+.work-john-hero-v2 .work-john-hero-grid{position:relative;z-index:1;grid-template-columns:1.12fr .88fr;gap:88px}
+.work-john-hero-v2 h1{max-width:820px;font-size:clamp(3.3rem,6.2vw,6.3rem);line-height:.94;letter-spacing:-.055em;color:var(--navy);margin:18px 0 24px}
+.work-john-lead{max-width:760px;font-size:clamp(1.08rem,1.35vw,1.28rem)!important;line-height:1.68!important}
+.work-john-challenge-line{display:grid;gap:7px;max-width:760px;margin:28px 0 0;padding:18px 20px;border-left:4px solid var(--teal);background:rgba(255,255,255,.8);border-radius:0 16px 16px 0;box-shadow:0 12px 34px rgba(11,45,92,.06)}
+.work-john-challenge-line strong{color:var(--navy);font-size:1.02rem}
+.work-john-challenge-line span{color:var(--muted);font-size:.9rem}
+.work-john-primary-actions{margin-top:28px;gap:12px}
+.work-john-proof-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.work-john-proof-row span{padding:9px 12px;border:1px solid #dbe4ec;border-radius:999px;background:rgba(255,255,255,.88);font-size:.78rem;font-weight:700;color:#44566a}
+.work-john-authority-panel{position:relative;padding:34px;border:1px solid #dbe4ec;border-radius:30px;background:rgba(255,255,255,.92);box-shadow:0 30px 90px rgba(11,45,92,.12);overflow:hidden}
+.work-john-authority-panel:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-88px;bottom:-94px;background:radial-gradient(circle,rgba(47,127,134,.18),transparent 70%)}
+.work-john-authority-panel .founder-signature-mark{font-size:2.55rem;line-height:1;font-weight:650;letter-spacing:-.04em;color:var(--navy);font-style:italic;margin-bottom:18px}
+.work-john-authority-rule{height:1px;background:linear-gradient(90deg,var(--teal),rgba(47,127,134,0));margin:0 0 18px}
+.work-john-authority-panel>strong{display:block;font-size:1.18rem;color:var(--navy)}
+.work-john-authority-panel>span{display:block;color:var(--muted);font-size:.9rem;margin-top:4px}
+.work-john-authority-panel blockquote{margin:28px 0;padding:0;border:0;font-size:1.3rem;line-height:1.55;letter-spacing:-.02em;color:#283b50}
+.work-john-rate-card{position:relative;z-index:1;padding:18px 20px;border-radius:18px;background:var(--navy);color:#fff}
+.work-john-rate-card small{display:block;font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:#b9d1dd}
+.work-john-rate-card strong{display:block;font-size:1.5rem;margin:7px 0 4px}
+.work-john-rate-card span{display:block;color:#d5e1e8;font-size:.78rem;line-height:1.45}
+
+.work-john-positioning{padding:0 0 18px;background:#fff}
+.work-john-positioning-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;transform:translateY(-18px)}
+.work-john-positioning-grid>div{padding:24px 24px 22px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 18px 50px rgba(11,45,92,.065)}
+.work-john-positioning-grid span{font-family:var(--font-mono);font-size:.69rem;color:var(--teal)}
+.work-john-positioning-grid strong{display:block;margin:14px 0 7px;color:var(--navy);font-size:1.08rem}
+.work-john-positioning-grid p{margin:0;color:var(--muted);line-height:1.58;font-size:.9rem}
+
+.work-john-trigger-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.work-john-trigger-grid article{display:flex;flex-direction:column;min-height:250px;padding:26px;border:1px solid var(--line);border-radius:22px;background:#fff;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.work-john-trigger-grid article:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(11,45,92,.09);border-color:#cbd8e2}
+.work-john-trigger-grid article>span{font-family:var(--font-mono);font-size:.7rem;color:#8a98a7}
+.work-john-trigger-grid h3{margin:20px 0 9px;font-size:1.18rem;color:var(--navy)}
+.work-john-trigger-grid p{margin:0 0 22px;color:var(--muted);line-height:1.6}
+.work-john-trigger-grid a{margin-top:auto;color:var(--teal);font-weight:760;font-size:.88rem;text-decoration:none}
+
+.work-john-no-yes{position:relative;overflow:hidden}
+.work-john-no-yes:after{content:"CHALLENGE";position:absolute;right:-2%;bottom:-18%;font-size:17vw;font-weight:900;letter-spacing:-.07em;color:rgba(255,255,255,.025);pointer-events:none}
+.work-john-no-yes-grid{position:relative;z-index:1;display:grid;grid-template-columns:.9fr 1.1fr;gap:82px;align-items:start}
+.work-john-no-yes h2{color:#fff;font-size:clamp(2.5rem,4.7vw,4.9rem);line-height:.98;letter-spacing:-.04em;margin:15px 0 20px}
+.work-john-no-yes .lead{color:#cbd8e3;max-width:700px}
+.work-john-wont-list{display:grid;gap:11px}
+.work-john-wont-list span{display:block;padding:18px 20px;border:1px solid rgba(255,255,255,.14);border-radius:17px;background:rgba(255,255,255,.035);color:#d8e3eb;line-height:1.55}
+.work-john-wont-list strong{color:#fff}
+
+.work-john-service-grid article{transition:transform .2s ease,box-shadow .2s ease}
+.work-john-service-grid article:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(11,45,92,.08)}
+.work-john-mid-cta{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:24px;padding:24px 26px;border-radius:22px;background:#eef4f7;border:1px solid #dbe4ec}
+.work-john-mid-cta>div{display:grid;gap:5px;max-width:760px}
+.work-john-mid-cta strong{color:var(--navy);font-size:1.03rem}
+.work-john-mid-cta span{color:var(--muted);line-height:1.55;font-size:.9rem}
+
+.work-john-rates article{display:flex;flex-direction:column;min-height:245px;transition:transform .2s ease,box-shadow .2s ease}
+.work-john-rates article:hover{transform:translateY(-3px);box-shadow:0 18px 48px rgba(11,45,92,.08)}
+.work-john-rates article a{margin-top:auto;padding-top:16px;color:var(--teal);font-weight:760;text-decoration:none;font-size:.88rem}
+
+.work-john-engage{background:linear-gradient(180deg,#fff,#f7fafc)}
+.work-john-engage-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:76px;align-items:start}
+.work-john-engage-grid h2{font-size:clamp(2.5rem,4.5vw,4.7rem);line-height:1.02;letter-spacing:-.045em;margin:16px 0;color:var(--navy)}
+.work-john-engage-actions{display:grid;gap:12px}
+.work-john-engage-actions>a{display:grid;gap:5px;padding:21px 22px;border:1px solid var(--line);border-radius:18px;background:#fff;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.work-john-engage-actions>a:hover{transform:translateX(4px);border-color:#c7d6df;box-shadow:0 14px 38px rgba(11,45,92,.07)}
+.work-john-engage-actions strong{color:var(--navy);font-size:1.04rem}
+.work-john-engage-actions span{color:var(--muted);font-size:.88rem;line-height:1.5}
+.work-john-final{padding:38px 0 16px}
+.work-john-final h2{max-width:900px;margin:12px auto 18px;font-size:clamp(2.6rem,4.9vw,5.1rem);line-height:1;letter-spacing:-.045em;color:var(--navy)}
+
+@media(max-width:1100px){
+  .work-john-hero-v2 .work-john-hero-grid,.work-john-no-yes-grid,.work-john-engage-grid{grid-template-columns:1fr}
+  .work-john-positioning-grid,.work-john-trigger-grid{grid-template-columns:1fr 1fr}
+  .work-john-authority-panel{max-width:760px}
+}
+@media(max-width:720px){
+  .work-john-hero-v2{padding-top:56px}
+  .work-john-hero-v2 h1{font-size:clamp(3rem,14vw,4.7rem)}
+  .work-john-positioning-grid,.work-john-trigger-grid{grid-template-columns:1fr}
+  .work-john-positioning-grid{transform:none}
+  .work-john-proof-row{gap:7px}
+  .work-john-no-yes-grid,.work-john-engage-grid{gap:42px}
+  .work-john-mid-cta{align-items:flex-start;flex-direction:column}
+}

@@ -17,6 +17,7 @@ export const navigationGroups = [
       { label: "Platform", href: "/#platform", description: "How the ORVIA operating system fits together." },
       { label: "Method", href: "/#method", description: "Observe. Review. Verify. Interpret. Act." },
       { label: "Systems", href: "/systems", description: "IRIS, HIVE, VITA, VERA, Command and AI." },
+      { label: "Commercial Standard", href: "/commercial", description: "The release gate from offer to governed delivery." },
       { label: "Case Studies", href: "/case-studies", description: "See the ORVIA approach in practice." }
     ]
   },
@@ -84,6 +85,7 @@ export const footerNavigation = {
   methodProducts: [
     { label:"ORVIA Method", href:"/#method" },
     { label:"ORVIA Systems", href:"/systems" },
+    { label:"Commercial Standard", href:"/commercial" },
     { label:"ORVIA Voice", href:"https://voice.orvia.org.uk", external:true },
     { label:"Witness Room", href:"https://witness.orvia.org.uk", external:true },
     { label:"Customer Access", href:"/customer-login" }

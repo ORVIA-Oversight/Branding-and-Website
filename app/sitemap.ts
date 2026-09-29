@@ -9,6 +9,7 @@ export default function sitemap():MetadataRoute.Sitemap{
     "/systems",
     "/commercial",
     "/founder",
+    "/work-with-orvia",
     "/work-with-john",
     "/practitioner-network",
     "/armed-forces",
@@ -23,6 +24,6 @@ export default function sitemap():MetadataRoute.Sitemap{
     url:`${base}${path}`,
     lastModified:new Date(),
     changeFrequency:path===""?"weekly":"monthly",
-    priority:path===""?1:["/products","/work-with-john","/case-studies"].includes(path)?0.9:0.7
+    priority:path===""?1:["/products","/work-with-orvia","/work-with-john","/case-studies"].includes(path)?0.9:0.7
   }));
 }

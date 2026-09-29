@@ -54,7 +54,7 @@ export default function CareersPage(){
         </div>
         <div className="careers-v2-photo-grid">
           <figure className="careers-v2-photo-main"><img src="/armed-forces/family.webp" alt="Family together"/></figure>
-          <figure><img src="/armed-forces/john-mcgill.jpg" alt="John McGill, founder of ORVIA"/></figure>
+          <div className="careers-v2-image-placeholder" aria-label="Reserved for approved careers image"><span>NEW APPROVED IMAGE</span><strong>Reserved visual slot</strong></div>
           <div className="careers-v2-statement"><strong>Protect the human.</strong><span>Improve the system around them.</span></div>
         </div>
       </div>

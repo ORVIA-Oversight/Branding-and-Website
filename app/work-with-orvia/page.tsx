@@ -62,6 +62,30 @@ export default function WorkWithOrviaPage(){
     </div>
   </section>
 
+
+  <section className="section section-soft">
+    <div className="shell work-john-two-col">
+      <div>
+        <div className="eyebrow">ORVIA PRACTITIONER FEES</div>
+        <h2>Professional casework from £520 + VAT per day.</h2>
+        <p className="lead">The starting rate applies to ORVIA practitioner-led work. The final rate follows the responsibility, specialist input, urgency, travel and required written outputs. Scope and price are confirmed before work begins.</p>
+      </div>
+      <article className="work-john-receive">
+        <div className="eyebrow">WHAT THE FEE BUYS</div>
+        <h3>Structured judgement, not generic consultancy time.</h3>
+        <ul>
+          <li>Evidence-led problem definition</li>
+          <li>Appropriate practitioner capability</li>
+          <li>Clear scope, ownership and boundaries</li>
+          <li>Documented reasoning behind recommendations</li>
+          <li>Implementation support where agreed</li>
+          <li>Verification that the intervention worked</li>
+        </ul>
+        <Link className="button" href="/contact">Request a scoped proposal</Link>
+      </article>
+    </div>
+  </section>
+
   <section className="section section-ink">
     <div className="shell work-john-boundary">
       <div><div className="eyebrow light">OUR GUARANTEE</div><h2>If we recommend it, we will show you why.</h2></div>

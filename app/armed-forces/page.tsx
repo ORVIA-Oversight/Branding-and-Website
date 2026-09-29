@@ -62,8 +62,11 @@ export default function ArmedForcesPage(){
             <div className="af-v2-image-label">SERVICE INFORMS PURPOSE</div>
           </div>
           <div className="af-v2-side-grid">
-            <figure><img src="/armed-forces/john-mcgill.jpg" alt="John McGill, founder of ORVIA"/></figure>
             <figure><img src="/armed-forces/family.webp" alt="Family together"/></figure>
+            <div className="af-v2-placeholder" aria-label="Reserved for approved Armed Forces image">
+              <span>NEW APPROVED IMAGE</span>
+              <strong>Reserved visual slot</strong>
+            </div>
           </div>
         </div>
       </div>

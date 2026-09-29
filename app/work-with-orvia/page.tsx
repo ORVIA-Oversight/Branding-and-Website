@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { WorkingPractice } from "@/components/orvia/WorkingPractice";
 import { founderCredentials } from "@/config/founderCredentials";
+import { practitionerDeliveryModel } from "@/config/practitionerDelivery";
 
 export const metadata:Metadata={
   title:"Work with ORVIA | Evidence-led operational improvement",
@@ -38,6 +39,41 @@ export default function WorkWithOrviaPage(){
   </section>
 
   <WorkingPractice/>
+
+
+  <section className="section">
+    <div className="shell">
+      <div className="section-head">
+        <div><div className="eyebrow">WHAT AN ORVIA PRACTITIONER BRINGS</div><h2>Not a generic consultant. A defined set of working qualities.</h2></div>
+        <p>Practitioners are selected and developed to bring disciplined observation, evidence, safeguarding, governance and practical implementation into the client's existing environment.</p>
+      </div>
+      <div className="practitioner-quality-grid">
+        {practitionerDeliveryModel.qualities.map(([title,copy],index)=><article key={title}>
+          <span>{String(index+1).padStart(2,"0")}</span>
+          <h3>{title}</h3>
+          <p>{copy}</p>
+        </article>)}
+      </div>
+    </div>
+  </section>
+
+  <section className="section section-soft">
+    <div className="shell">
+      <div className="section-head">
+        <div><div className="eyebrow">PRACTITIONER PACKAGES</div><h2>Buy a defined outcome, not vague consultancy time.</h2></div>
+        <p>Packages can be delivered by one authorised practitioner or a mixed ORVIA team depending on scope, risk and specialist boundaries.</p>
+      </div>
+      <div className="practitioner-package-grid">
+        {practitionerDeliveryModel.packages.map((item,index)=><article key={item.name}>
+          <span>{String(index+1).padStart(2,"0")}</span>
+          <h3>{item.name}</h3>
+          <p>{item.purpose}</p>
+          <strong>Typical outputs</strong>
+          <ul>{item.deliverables.map(d=><li key={d}>{d}</li>)}</ul>
+        </article>)}
+      </div>
+    </div>
+  </section>
 
   <section className="section section-soft">
     <div className="shell work-john-two-col">

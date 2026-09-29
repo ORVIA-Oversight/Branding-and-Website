@@ -4,6 +4,7 @@ export type ProductId =
   | "threshold"
   | "mia"
   | "witness"
+  | "perspective"
   | "foundation"
   | "academy"
   | "web";
@@ -53,6 +54,15 @@ export const products = {
     url: "https://witness.orvia.org.uk",
     descriptor: "Structured preparation and perspective testing",
     visualCue: "Room / perspectives / ripple"
+  },
+  perspective: {
+    name: "ORVIA Perspective Room",
+    shortName: "Perspective Room",
+    mark: "P",
+    accent: "#2F7F86",
+    url: "https://perspective.orvia.org.uk",
+    descriptor: "Human reasoning, safeguarding judgement and evidence-led recruitment",
+    visualCue: "Perspective / layered evidence / human review"
   },
   foundation: {
     name: "ORVIA Foundation",

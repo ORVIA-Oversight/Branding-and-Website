@@ -38,11 +38,11 @@ export type SiteRegistryEntry = {
 };
 
 export const ORVIA_COLOURS = {
-  navy:"#0B2D5C",
-  teal:"#2F7F86",
-  gold:"#F0A51A",
-  purple:"#6A2E7C",
-  orange:"#E34B23",
+  navy:"#0B2450",
+  teal:"#2B929D",
+  gold:"#EAAA00",
+  purple:"#82418F",
+  orange:"#E74612",
   warm:"#FAF7F2",
   slate:"#516274",
   ink:"#101923"

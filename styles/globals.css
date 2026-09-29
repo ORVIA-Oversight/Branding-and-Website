@@ -519,3 +519,29 @@ select{font:inherit;padding:14px;border:1px solid #bcc7d2;border-radius:12px;bac
 .case-study-grid-v2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.case-study-card-v2{padding:30px;border:1px solid var(--line);border-radius:24px;background:#fff}.case-study-top{display:flex;justify-content:space-between;gap:20px;align-items:center}.case-study-top span{font-family:var(--font-mono);font-size:.72rem;color:#8290a0}.case-study-top em{font-style:normal;font-size:.64rem;letter-spacing:.09em;padding:6px 8px;border-radius:999px;background:#eef3f7;color:#4d647d}.case-study-card-v2 h2{font-size:1.6rem;margin:22px 0 10px}.case-study-card-v2>p{color:var(--muted);line-height:1.65}.case-proof-list{display:grid;border-top:1px solid var(--line);margin-top:22px}.case-proof-list span{padding:10px 0;border-bottom:1px solid var(--line);font-size:.88rem}
 @media(max-width:1000px){.founder-hero-grid,.commercial-hero-grid,.founder-story-layout,.founder-control{grid-template-columns:1fr}.founder-principles{grid-template-columns:1fr 1fr}.commercial-chain{grid-template-columns:1fr 1fr}.commercial-estate-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){.founder-principles,.commercial-chain,.commercial-estate-grid,.case-study-grid-v2{grid-template-columns:1fr}}
+
+
+/* Work with John — canonical redesign */
+.work-john-hero{background:radial-gradient(circle at 82% 16%,#e8f0f7 0,transparent 34%),linear-gradient(180deg,#fbfdff,#fff)}
+.work-john-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
+.work-john-rate-pill{display:inline-flex;gap:6px;align-items:center;margin-top:22px;padding:11px 15px;border-radius:999px;background:#eef4f8;color:var(--navy);font-size:.92rem}
+.work-john-note{max-width:720px;color:var(--muted);line-height:1.6;font-size:.9rem}
+.work-john-signature-panel{padding:36px;border:1px solid var(--line);border-radius:28px;background:#fff;box-shadow:var(--shadow)}
+.work-john-signature-panel strong{display:block;font-size:1.2rem}.work-john-signature-panel span{display:block;color:var(--muted);margin-top:5px}.work-john-signature-panel p{color:var(--muted);line-height:1.6;margin-top:22px}
+.work-john-service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.work-john-service-grid article{padding:26px;border:1px solid var(--line);border-radius:22px;background:#fff;min-height:245px}
+.work-john-service-grid article>span{font-family:var(--font-mono);font-size:.72rem;color:#8190a0}
+.work-john-service-grid h3{font-size:1.25rem;margin:22px 0 10px}.work-john-service-grid p{color:var(--muted);line-height:1.6;margin:0}
+.work-john-two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:74px;align-items:start}
+.work-john-receive{padding:30px;border:1px solid var(--line);border-radius:24px;background:#fff;box-shadow:0 18px 48px rgba(15,23,32,.06)}
+.work-john-receive h3{font-size:1.5rem;margin-top:0}.work-john-receive ul{padding-left:20px;color:#46515d;line-height:1.7}.work-john-receive .button{margin-top:16px}
+.work-john-rates{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.work-john-rates article{padding:24px;border:1px solid var(--line);border-radius:20px;background:#fff}
+.work-john-rates h3{font-size:1.05rem;margin:0 0 18px}.work-john-rates strong{display:block;color:var(--navy);font-size:1.15rem;margin-bottom:9px}.work-john-rates p{color:var(--muted);font-size:.87rem;line-height:1.5;margin:0}
+.work-john-small{margin-top:18px;color:var(--muted);font-size:.86rem;line-height:1.6}
+.work-john-boundary{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:start}.work-john-boundary p{color:#cbd6e1;line-height:1.7}
+.work-john-terms{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:start}.work-john-terms p{color:var(--muted);line-height:1.7}
+.work-john-actions{display:grid;gap:10px;align-content:start}
+.work-john-final{text-align:center}.work-john-final .lead{margin-left:auto;margin-right:auto}.work-john-final .actions{justify-content:center}
+@media(max-width:1050px){.work-john-hero-grid,.work-john-two-col,.work-john-boundary,.work-john-terms{grid-template-columns:1fr}.work-john-service-grid{grid-template-columns:1fr 1fr}.work-john-rates{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.work-john-service-grid,.work-john-rates{grid-template-columns:1fr}}

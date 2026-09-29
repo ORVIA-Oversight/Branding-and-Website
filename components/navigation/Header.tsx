@@ -62,9 +62,7 @@ export function ProductHeader({
         <span>ORVIA Oversight Ltd</span>
         <div className="utility-actions">
           <a href="tel:+443300433703">{productConfig.phone}</a>
-          <a href={`mailto:${productConfig.email}`}>Email</a>
-          <a href="https://wa.me/443300433703">WhatsApp</a>
-          <Link href="/contact">Book a meeting</Link>
+          <a href={`mailto:${productConfig.email}`}>{productConfig.email}</a>
         </div>
       </div>
     </div>
@@ -86,7 +84,7 @@ export function ProductHeader({
 
         <nav className="desktop-mega-nav" aria-label="Primary navigation">
           {navigationGroups.map(group=><NavGroup key={group.label} label={group.label} items={group.items}/>)}
-          <CustomerMenu/>
+          <Link className="customer-access-link" href="/customer-login">Customer Login</Link>
         </nav>
 
         <details className="mobile-hamburger">

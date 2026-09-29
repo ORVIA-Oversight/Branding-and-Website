@@ -10,7 +10,7 @@ export type NavGroup = {
   items: readonly NavItem[];
 };
 
-export const navigationGroups = [
+export const navigationGroups: readonly NavGroup[] = [
   {
     label: "Platform",
     items: [
@@ -54,7 +54,7 @@ export const navigationGroups = [
       { label: "Contact", href: "/contact", description: "Talk to ORVIA." }
     ]
   }
-] as const satisfies readonly NavGroup[];
+] as const;
 
 export const customerAccessNav = [
   {
@@ -116,3 +116,7 @@ export const footerNavigation = {
     { label:"Trust Centre", href:"/trust" }
   ]
 } as const;
+
+
+// Backward-compatible flat navigation for any legacy component still importing primaryNav.
+export const primaryNav = navigationGroups.flatMap(group => group.items.map(item => [item.label, item.href] as const));

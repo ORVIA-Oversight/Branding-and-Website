@@ -81,3 +81,13 @@ select{font:inherit;padding:14px;border:1px solid #bcc7d2;border-radius:12px;bac
 .identity-governance{margin-top:28px;padding:34px;border-radius:28px;background:#0a203d;color:#fff;display:grid;grid-template-columns:.65fr 1.35fr;gap:52px;align-items:start}.identity-governance h3{font-size:1.7rem;margin:0}.identity-governance p{margin:0;color:#d5e0ea;line-height:1.75}
 @media(max-width:1100px){.identity-rule,.identity-governance{grid-template-columns:1fr}.identity-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.identity-grid,.identity-surfaces{grid-template-columns:1fr}.identity-rule,.identity-governance{padding:24px}.identity-logo-stage{min-height:130px}}
+
+
+/* Official Armed Forces marks */
+.af-official-lockup{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.af-official-mark,.official-asset-card{margin:0;padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:230px}
+.af-official-mark img,.official-asset-card img{display:block;max-width:100%;max-height:150px;width:auto;height:auto;object-fit:contain}
+.af-official-mark figcaption,.official-asset-card figcaption{margin-top:18px;text-align:center;font-size:.85rem;color:var(--muted);line-height:1.45}
+.af-official-mark figcaption{font-weight:700}
+.official-asset-card figcaption{display:flex;flex-direction:column;gap:5px}.official-asset-card figcaption strong{color:var(--ink);font-size:.94rem}
+@media(max-width:700px){.af-official-lockup{grid-template-columns:1fr}.af-official-mark,.official-asset-card{min-height:200px}}

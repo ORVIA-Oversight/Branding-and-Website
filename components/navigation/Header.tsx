@@ -5,6 +5,7 @@ import { productConfig } from "@/config/products";
 type ProductHeaderProps = {
   productName?: string;
   productMark?: string;
+  productIconSrc?: string;
   productAccent?: string;
   productHref?: string;
   ctaLabel?: string;
@@ -14,6 +15,7 @@ type ProductHeaderProps = {
 export function ProductHeader({
   productName="Brand & Web System",
   productMark="B",
+  productIconSrc,
   productAccent=productConfig.accent,
   productHref="/",
   ctaLabel="Talk to ORVIA",
@@ -31,22 +33,31 @@ export function ProductHeader({
         </div>
       </div>
     </div>
-    <header className="main-header">
+
+    <header className="main-header estate-header">
       <div className="shell nav-wrap">
         <div className="estate-masthead">
           <Link href="https://orvia.org.uk" className="master-brand" aria-label="ORVIA Oversight">
-            <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA Oversight"/>
+            <img src="/brand/ORVIA-Oversight-white.png" alt="ORVIA"/>
           </Link>
+
           <span className="brand-divider" aria-hidden="true"/>
+
           <Link href={productHref} className="product-brand" style={{"--product-accent":productAccent} as React.CSSProperties}>
-            <span className="product-brand-icon">{productMark}</span>
-            <span className="product-brand-copy"><small>ORVIA PRODUCT</small><strong>{productName}</strong></span>
+            {productIconSrc
+              ? <img className="product-brand-image" src={productIconSrc} alt=""/>
+              : <span className="product-brand-icon">{productMark}</span>}
+            <span className="product-brand-copy">
+              <strong>{productName}</strong>
+            </span>
           </Link>
         </div>
+
         <nav aria-label="Primary navigation">
           {primaryNav.map(([label,href])=><Link key={href} href={href}>{label}</Link>)}
         </nav>
-        <Link href={ctaHref} className="button button-small">{ctaLabel}</Link>
+
+        <Link href={ctaHref} className="button button-small estate-cta">{ctaLabel}</Link>
       </div>
     </header>
   </>;

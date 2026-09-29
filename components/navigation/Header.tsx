@@ -12,11 +12,15 @@ type ProductHeaderProps = {
   ctaHref?: string;
 };
 
+function isExternalNavItem(item:{href:string;external?:boolean}) {
+  return item.external === true || item.href.startsWith("http");
+}
+
 function NavGroup({label,items}:{label:string;items:readonly {label:string;href:string;description?:string;external?:boolean}[]}) {
   return <details className="nav-group">
     <summary>{label}</summary>
     <div className="nav-dropdown">
-      {items.map(item => item.external || item.href.startsWith("http")
+      {items.map(item => isExternalNavItem(item)
         ? <a key={item.href} href={item.href} target="_blank" rel="noreferrer">
             <strong>{item.label}</strong>
             {item.description && <small>{item.description}</small>}
@@ -75,7 +79,7 @@ export function ProductHeader({
           <div className="mobile-menu-panel">
             {navigationGroups.map(group=><section key={group.label}>
               <h3>{group.label}</h3>
-              {group.items.map(item => item.external || item.href.startsWith("http")
+              {group.items.map(item => isExternalNavItem(item)
                 ? <a key={item.href} href={item.href} target="_blank" rel="noreferrer">{item.label}</a>
                 : <Link key={item.href} href={item.href}>{item.label}</Link>)}
             </section>)}

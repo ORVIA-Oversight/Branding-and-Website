@@ -1,130 +1,184 @@
 import Link from "next/link";
 import { armedForcesAssets } from "@/config/armedForces";
 
-const communities = [
-  ["Veterans & Service leavers","Turn Service experience into a credible civilian practice pathway without forcing it into a conventional CV shape."],
-  ["Reservists","A workplace that understands Reserve service, training commitments and the value of continued military service."],
-  ["Spouses & partners","Recognising careers can be disrupted by postings, mobility and family commitments — and that capability is not reduced by a non-linear CV."],
-  ["Cadet & wider service community","Where appropriate, create routes that help people translate leadership, instruction, logistics, communication and public-service experience into civilian opportunity."]
+const serviceGroups = [
+  ["ARMY","Discipline · resilience · leadership"],
+  ["ROYAL NAVY","Adaptability · teamwork · perspective"],
+  ["ROYAL AIR FORCE","Precision · innovation · problem solving"],
+  ["VETERANS & FAMILIES","Support · opportunity · belonging"],
+  ["OTHER SERVICES","Police · Fire · NHS · Coastguard · Prison Service"]
+];
+
+const strengths = [
+  ["Resilience","Stay steady when information is incomplete, difficult or changing."],
+  ["Strategic thinking","See the wider system, dependencies and consequences."],
+  ["Leadership","Take responsibility, communicate clearly and support others."],
+  ["Direct communication","Say what matters without hiding behind unnecessary complexity."],
+  ["Problem solving","Challenge assumptions, test alternatives and adapt when the evidence changes."],
+  ["Integrity","Do the right thing even when the answer is uncomfortable."]
 ];
 
 const pathway = [
-  ["01","Map your capability","We start with what you can actually do: judgement, leadership, analysis, communication, discipline, operational awareness and specialist experience."],
-  ["02","Translate it","We help turn military experience into language clients, commissioners and civilian organisations understand without stripping away what made the experience valuable."],
-  ["03","Build practice credibility","Structured induction, supervised development, ORVIA methods, evidence discipline, governance and role-specific learning build the professional layer around existing capability."],
-  ["04","Practise with support","You are not simply handed a title. We work with you through shadowing, review, feedback and appropriate supervision until the role can be evidenced."],
-  ["05","Keep developing","Capability is reviewed through real work, learning and assurance. The objective is a practitioner who can explain what they know, what they do not know and what they will do next."]
+  ["01","Register interest","Tell us about your experience, capability and where you want to go next."],
+  ["02","Initial human conversation","A real conversation about motivation, transferable experience, boundaries and role fit."],
+  ["03","Human reasoning assessment","Work through an ambiguous scenario without AI. We assess evidence use, judgement, proportionality and uncertainty."],
+  ["04","Challenge & problem-solving","A structured scenario or exercise tests adaptability, collaboration and willingness to revise a position."],
+  ["05","AI interaction assessment","Only after the human-only stages. We assess whether AI is used as assistance rather than authority."],
+  ["06","Human suitability review","A senior human reviews values, resilience, conduct and fit. AI does not hire or reject practitioners."],
+  ["07","Vetting & safer recruitment","Appropriate identity, vetting and safer-recruitment checks are completed for the role."],
+  ["08","Training & supervised practice","ORVIA methods, observed work and supervised assignments build evidence of competence."],
+  ["09","Competency sign-off","Practice authority is earned through demonstrated competence."],
+  ["10","Case allocation & development","Work is allocated within verified competence, with continuing learning and assurance."]
 ];
 
 export default function ArmedForcesPage(){
   return <>
-    <section className="page-hero af-hero">
-      <div className="shell af-hero-grid">
-        <div>
-          <div className="eyebrow">ARMED FORCES & VETERANS</div>
-          <h1>Service changes. Capability doesn’t.</h1>
-          <p className="lead">ORVIA is veteran-founded and committed to building meaningful civilian opportunities from the skills, judgement and objectivity developed through Service.</p>
+    <section className="af-v2-hero">
+      <div className="shell af-v2-hero-grid">
+        <div className="af-v2-copy">
+          <div className="eyebrow light">VETERANS · SERVICE LEAVERS · FAMILIES · PUBLIC SERVICE</div>
+          <h1>Different experiences.<br/><span>A shared purpose.</span></h1>
+          <p className="lead">John McGill is a military veteran. ORVIA takes that status seriously by creating work where judgement, resilience, curiosity and unconventional problem-solving can be used to protect people and improve organisations.</p>
           <div className="actions">
-            <Link className="button" href="/careers">Explore practitioner careers</Link>
-            <a className="button secondary" href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer">Our Trust A Veteran profile</a>
+            <Link className="button af-gold-button" href="/careers">Explore opportunities</Link>
+            <a className="button af-outline-button" href="#veteran-story">Our veteran story</a>
           </div>
-          <div className="trust-inline">
-            <span>Armed Forces Covenant signatory</span>
-            <span>ERS Bronze Award</span>
-            <span>Working toward Silver</span>
-            <span>Gold is the long-term ambition</span>
-          </div>
+          <p className="af-v2-principle">HUMAN FIRST. HUMAN LAST.</p>
         </div>
-        <div className="official-assets-panel">
-          <figure className="official-asset-card">
-            <img src={armedForcesAssets.covenant.src} alt={armedForcesAssets.covenant.alt}/>
-            <figcaption><strong>Armed Forces Covenant</strong><span>Official positive master artwork.</span></figcaption>
-          </figure>
-          <figure className="official-asset-card">
-            <img src={armedForcesAssets.bronze.src} alt={armedForcesAssets.bronze.alt}/>
-            <figcaption><strong>ERS Bronze Award</strong><span>Official issued Bronze recognition artwork.</span></figcaption>
-          </figure>
+
+        <div className="af-v2-media" aria-label="ORVIA Armed Forces and family imagery">
+          <div className="af-v2-main-image">
+            <img src="/armed-forces/service-team.jpg" alt="Team working together outdoors"/>
+            <div className="af-v2-image-label">SERVICE INFORMS PURPOSE</div>
+          </div>
+          <div className="af-v2-side-grid">
+            <figure><img src="/armed-forces/john-mcgill.jpg" alt="John McGill, founder of ORVIA"/></figure>
+            <figure><img src="/armed-forces/family.webp" alt="Family together"/></figure>
+          </div>
         </div>
       </div>
     </section>
 
-    <section className="section">
-      <div className="shell split">
+    <section className="af-service-strip">
+      <div className="shell af-service-grid">
+        {serviceGroups.map(([title,body])=><article key={title}><strong>{title}</strong><span>{body}</span></article>)}
+      </div>
+    </section>
+
+    <section className="af-proof-strip">
+      <div className="shell af-proof-grid">
+        <a className="af-proof-card" href="https://www.armedforcescovenant.gov.uk/" target="_blank" rel="noreferrer">
+          <img src={armedForcesAssets.covenant.src} alt={armedForcesAssets.covenant.alt}/>
+          <span><strong>Armed Forces Covenant</strong>Official signatory</span>
+        </a>
+        <div className="af-proof-card">
+          <img src={armedForcesAssets.bronze.src} alt={armedForcesAssets.bronze.alt}/>
+          <span><strong>ERS Bronze Award</strong>Current award holder</span>
+        </div>
+        <a className="af-proof-card af-proof-text" href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer">
+          <span className="af-proof-monogram">TAV</span>
+          <span><strong>Trust A Veteran</strong>ORVIA public profile</span>
+        </a>
+        <div className="af-proof-card af-proof-next">
+          <span className="af-proof-monogram">→</span>
+          <span><strong>Our next steps</strong>Silver aspiration · Gold longer-term ambition</span>
+        </div>
+      </div>
+    </section>
+
+    <section className="section" id="veteran-story">
+      <div className="shell af-story-grid">
         <div>
-          <div className="eyebrow">OUR JOURNEY</div>
-          <h2>Bronze is a milestone, not the finish line.</h2>
-          <p className="lead">ORVIA has signed the Armed Forces Covenant and achieved Bronze recognition through the Defence Employer Recognition Scheme. We are now building the policies, evidence and day-to-day practice needed to progress toward Silver, with Gold as the longer-term ambition.</p>
-          <p>That means the commitment has to be visible in recruitment, Reserve support, development, communication and the way we work with the wider Armed Forces community — not just in a badge in a footer.</p>
+          <div className="eyebrow">OUR VETERAN STORY</div>
+          <h2>Service built the foundation. People give it purpose.</h2>
+          <p className="lead">John is a military veteran. Military service taught him resilience and a steady mindset: stay calm, look at what is actually in front of you and deal with the issue rather than the noise around it.</p>
+          <p>John is direct and straight to the point. Those characteristics are not a template everybody has to follow, but they help explain why ORVIA is prepared to ask difficult questions, follow evidence and keep going when the answer is uncomfortable.</p>
+          <p>We may not always be liked. We may uncover things an organisation would rather had stayed hidden. But if a human, family, professional or organisation has trusted ORVIA to look properly, we cannot be truthful to them by avoiding what the evidence shows.</p>
+          <div className="af-story-quote">
+            <strong>Fix the wrongs. Improve the system. Protect the human.</strong>
+            <span>That is the purpose behind the work.</span>
+          </div>
         </div>
-        <div className="journey-card">
-          <div><span>ACHIEVED</span><strong>Covenant signed</strong></div>
-          <div><span>ACHIEVED</span><strong>ERS Bronze</strong></div>
-          <div><span>NOW</span><strong>Building toward Silver</strong></div>
-          <div><span>AMBITION</span><strong>Progress to Gold</strong></div>
-        </div>
+        <figure className="af-family-feature">
+          <img src="/armed-forces/family.webp" alt="Family together"/>
+          <figcaption>Service affects more than the person in uniform. Families, partners and support networks matter too.</figcaption>
+        </figure>
       </div>
     </section>
 
     <section className="section section-soft">
       <div className="shell">
         <div className="section-head">
-          <div><div className="eyebrow">WHO WE WANT TO HEAR FROM</div><h2>The whole Armed Forces community brings value.</h2></div>
-          <p>We recruit for capability and potential, not for the ability to translate a Service career into corporate jargon.</p>
+          <div><div className="eyebrow">YOUR SKILLS MAKE A DIFFERENCE</div><h2>Experience is valuable when it is recognised properly.</h2></div>
+          <p>ORVIA looks for the underlying capability behind a career history, whether it comes from the Armed Forces, emergency services, public service, regulated work or another demanding environment.</p>
         </div>
-        <div className="card-grid">{communities.map(([title,body])=><article className="feature-card" key={title}><h3>{title}</h3><p>{body}</p></article>)}</div>
+        <div className="af-strength-grid">
+          {strengths.map(([title,body],i)=><article key={title}><span>{String(i+1).padStart(2,"0")}</span><h3>{title}</h3><p>{body}</p></article>)}
+        </div>
       </div>
     </section>
 
-    <section className="section section-ink">
+    <section className="section section-ink af-tech-section">
       <div className="shell">
-        <div className="eyebrow light">THE ORVIA PRACTITIONER PATHWAY</div>
-        <h2>We do not ask you to become somebody else. We build professional practice around what you already bring.</h2>
-        <div className="practitioner-steps">
-          {pathway.map(([n,title,body])=><article key={n}><span>{n}</span><div><h3>{title}</h3><p>{body}</p></div></article>)}
+        <div className="section-head">
+          <div><div className="eyebrow light">HUMAN-LED TECHNOLOGY</div><h2>Use every tool available. Never hand the decision to the tool.</h2></div>
+          <p>ORVIA uses future-facing technology to widen the field of view, test more possibilities and preserve evidence — while keeping responsibility with a human.</p>
+        </div>
+        <div className="af-system-grid">
+          <article><strong>IRIS</strong><span>Coordinates work, owners, routing and escalation.</span></article>
+          <article><strong>HIVE</strong><span>Preserves evidence, provenance, versions and dissent.</span></article>
+          <article><strong>VITA</strong><span>Tests completeness, assurance and blind spots.</span></article>
+          <article><strong>VERA</strong><span>Verifies who checked what against which evidence.</span></article>
+          <article><strong>Command</strong><span>Provides operational visibility for authorised humans.</span></article>
+          <article><strong>AI</strong><span>Builds hypotheses, challenges theories and explores alternative explanations.</span></article>
+        </div>
+        <div className="af-human-last">
+          <strong>Nothing high-consequence leaves a human.</strong>
+          <span>Technology can organise, compare, challenge and suggest. Safeguarding, clinical, culpability and other serious judgements remain human decisions.</span>
         </div>
       </div>
     </section>
 
     <section className="section">
-      <div className="shell benefits-grid">
-        <div>
-          <div className="eyebrow">WHY ORVIA</div>
-          <h2>A route from resettlement to credible practice.</h2>
-          <p className="lead">A Service leaver may arrive with years of operational judgement, leadership, intelligence gathering, instruction, assurance, logistics or crisis-management experience — but no civilian job title that captures it. Our job is to help translate and evidence that capability responsibly.</p>
+      <div className="shell">
+        <div className="section-head">
+          <div><div className="eyebrow">THE ORVIA RECRUITMENT PATHWAY</div><h2>Everybody gets a fair shot. An open door is not an easy door.</h2></div>
+          <p>We recruit for capability, not CV polish. Professional requirements still apply where the work demands them, and authority is earned through evidence of competence.</p>
         </div>
-        <div className="benefit-list">
-          <span>Capability-led selection rather than keyword CV filtering</span>
-          <span>Structured ORVIA induction and methodology</span>
-          <span>Mentoring, shadowing and feedback</span>
-          <span>Role-specific learning and evidence of competence where required</span>
-          <span>Clear professional boundaries and human oversight</span>
-          <span>Opportunities to develop into practitioner, assurance and leadership roles</span>
+        <div className="af-pathway-grid">
+          {pathway.map(([n,title,body])=><article key={n}><span>{n}</span><div><h3>{title}</h3><p>{body}</p></div></article>)}
         </div>
       </div>
     </section>
 
     <section className="section section-soft">
-      <div className="shell trust-preview">
+      <div className="shell af-community-grid">
         <div>
-          <div className="eyebrow">TRUST A VETERAN</div>
-          <h2>Part of a wider veteran business community.</h2>
-          <p>Trust A Veteran is a UK directory focused on veteran-owned and veteran-provided businesses. ORVIA maintains its own profile within that community and uses only authorised Trust A Veteran branding where displayed.</p>
+          <div className="eyebrow">WHO WE WANT TO HEAR FROM</div>
+          <h2>Veterans are part of the story, not the whole story.</h2>
+          <p className="lead">ORVIA wants people who can think, challenge, learn and stay accountable. That includes veterans, Service leavers, Reservists, military families and people from other services — but also civilians whose experience gives them the same commitment to evidence, people and improvement.</p>
         </div>
-        <div className="trust-list">
-          <a href="https://www.trustaveteran.com/" target="_blank" rel="noreferrer">Visit Trust A Veteran →</a>
-          <a href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer">View ORVIA on Trust A Veteran →</a>
-          <a href="https://www.armedforcescovenant.gov.uk/" target="_blank" rel="noreferrer">Armed Forces Covenant →</a>
+        <div className="af-community-list">
+          <span>Veterans & Service leavers</span>
+          <span>Reservists</span>
+          <span>Military spouses & partners</span>
+          <span>Police, Fire, NHS, Coastguard & other services</span>
+          <span>Career changers</span>
+          <span>Experienced professionals</span>
+          <span>People with unconventional career histories</span>
+          <span>People whose capability is bigger than their CV</span>
         </div>
       </div>
     </section>
 
-    <section className="final-cta">
+    <section className="final-cta af-final-cta">
       <div className="shell">
         <div>
-          <div className="eyebrow light">YOU DO NOT NEED A PERFECT CIVILIAN CV</div>
-          <h2>Tell us what you can do, how you think and what you want to become.</h2>
+          <div className="eyebrow light">BUILD A CAREER WITH PURPOSE</div>
+          <h2>Your experience can still make a difference.</h2>
+          <p>Tell us what you can do, how you think and what you want to become.</p>
         </div>
-        <Link className="button light-button" href="/careers">Start your ORVIA practitioner journey</Link>
+        <Link className="button light-button" href="/careers#express-interest">Join our team</Link>
       </div>
     </section>
   </>;

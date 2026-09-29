@@ -113,7 +113,7 @@ export default function Home(){
           {needs.map(item => <article className="feature-card" key={item.title}>
             <h3>{item.title}</h3>
             <p>{item.body}</p>
-            {item.external
+            {"external" in item && item.external
               ? <a className="text-link" href={item.href} target="_blank" rel="noreferrer">{item.cta} →</a>
               : <Link className="text-link" href={item.href}>{item.cta} →</Link>}
           </article>)}

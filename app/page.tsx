@@ -11,6 +11,8 @@ const needs = [
   ["I’m already a customer","Go straight to your workspace, cases and current actions.","https://workspace.orvia.org.uk"]
 ] as const;
 
+const needIcons = ["alert","service","evidence","voice","people","workspace"] as const;
+
 const outcomes = [
   ["Clarity","See the problem, context and evidence more clearly."],
   ["Accountability","Make ownership, deadlines and decisions visible."],
@@ -26,6 +28,23 @@ const products = [
   ["MIA","Memory preservation, family archive and legacy.","https://mia.orvia.org.uk","M"],
   ["Threshold","Structured concern and evidence review.","https://threshold.orvia.org.uk","T"]
 ] as const;
+
+const productIcons = ["voice","evidence","perspective","web","family","threshold"] as const;
+
+function HomeIcon({name}:{name:string}){
+  const p={width:28,height:28,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:1.8,strokeLinecap:"round" as const,strokeLinejoin:"round" as const,"aria-hidden":true};
+  if(name==="alert") return <svg {...p}><path d="M12 3 2.8 19h18.4z"/><path d="M12 9v4M12 17h.01"/></svg>;
+  if(name==="service") return <svg {...p}><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5"/></svg>;
+  if(name==="evidence") return <svg {...p}><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4M9 12h6M9 16h4"/></svg>;
+  if(name==="voice") return <svg {...p}><path d="M6 8a6 6 0 0 1 12 0v4a6 6 0 0 1-12 0z"/><path d="M9 21h6M12 18v3"/></svg>;
+  if(name==="people") return <svg {...p}><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c.5-4 2.7-6 6-6s5.5 2 6 6M15 15c2.7.2 4.4 1.8 5 5"/></svg>;
+  if(name==="workspace") return <svg {...p}><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 9v11"/></svg>;
+  if(name==="web") return <svg {...p}><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.3 3 14.7 0 18M12 3c-3 3.3-3 14.7 0 18"/></svg>;
+  if(name==="family") return <svg {...p}><circle cx="8" cy="8" r="2.5"/><circle cx="16" cy="8" r="2.5"/><path d="M4 19c.5-3 2-5 4-5s3.5 2 4 5M12 19c.5-3 2-5 4-5s3.5 2 4 5"/></svg>;
+  if(name==="threshold") return <svg {...p}><path d="M5 3v18M19 3v18M5 12h14"/><path d="m15 8 4 4-4 4"/></svg>;
+  if(name==="perspective") return <svg {...p}><circle cx="12" cy="12" r="3"/><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6S2.5 12 2.5 12z"/></svg>;
+  return <svg {...p}><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg>;
+}
 
 export default function Home(){
   return <>
@@ -115,7 +134,7 @@ export default function Home(){
       </div>
     </section>
 
-    <section className="lean-section lean-products">
+    <section className="orvia-family-ribbon">\n      <div className="shell orvia-family-ribbon-inner">\n        <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA Oversight"/>\n        <div><strong>One ORVIA family.</strong><span>Shared standards, shared trust, different propositions.</span></div>\n      </div>\n    </section>\n\n    <section className="lean-section lean-products">
       <div className="shell">
         <div className="lean-section-heading">
           <div>

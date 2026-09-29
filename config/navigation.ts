@@ -25,6 +25,7 @@ export const navigationGroups = [
     label: "People",
     items: [
       { label: "Founder Story", href: "/founder", description: "Why John built ORVIA and what drives the company." },
+      { label: "Work with John", href: "/work-with-john", description: "Direct consultancy, mentoring and operational support." },
       { label: "Practitioners", href: "/practitioner-network", description: "Our practitioner model and capability pathway." },
       { label: "Armed Forces", href: "/armed-forces", description: "Veterans, Service leavers, families and transferable skills." },
       { label: "Careers", href: "/careers", description: "Join ORVIA and build capability with us." }
@@ -93,6 +94,7 @@ export const footerNavigation = {
   company: [
     { label:"About", href:"/about" },
     { label:"Founder Story", href:"/founder" },
+    { label:"Work with John", href:"/work-with-john" },
     { label:"Insights", href:"/insights" },
     { label:"Armed Forces", href:"/armed-forces" },
     { label:"Careers", href:"/careers" },

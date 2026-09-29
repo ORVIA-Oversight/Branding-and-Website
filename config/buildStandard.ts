@@ -38,6 +38,24 @@ export const websiteBuildStandard = {
       "Product-specific accent, logo and visual cues must remain consistent across stills, video and page UI."
     ]
   },
+  sharedPlatformTemplate:{
+    principle:"Build the controlled shell once; each ORVIA proposition ports in its own content, media, files and working connections.",
+    inheritedSlots:[
+      "full-bleed hero image or hero video",
+      "overlay proposition and primary action",
+      "human/evidence/assurance icon explainers",
+      "scenario-led explainer imagery",
+      "short-form video slots",
+      "trust and proof assets",
+      "files and downloads",
+      "commercial route",
+      "customer/onboarding destination",
+      "IRIS workflow ownership",
+      "analytics, SEO and release verification"
+    ],
+    rule:"Empty areas are controlled content/media slots, not invitations to redesign the platform.",
+    portingModel:"Replace proposition-specific content and approved assets while preserving the shared shell, controls and interaction patterns."
+  },
   mandatoryConnections:[
     "Brand registry",
     "Commercial registry",
@@ -69,7 +87,8 @@ export const websiteBuildStandard = {
     "case-study publication boundary",
     "lean UX gate",
     "full-bleed page hero standard",
-    "product visual storytelling standard"
+    "product visual storytelling standard",
+    "shared platform template and controlled content/media slots"
   ],
   leanUxGate:{
     failureState:"LEAN_UX_GATE_FAILED",

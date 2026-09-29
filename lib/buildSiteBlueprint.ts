@@ -1,4 +1,5 @@
 import { familyDefaults, siteRegistry, siteBuildDefaults, type SiteFamily } from "@/config/siteRegistry";
+import { commercialGate, type CommercialMode } from "@/config/commercial";
 
 export type NewSiteInput = {
   name: string;
@@ -10,6 +11,10 @@ export type NewSiteInput = {
   audience: string[];
   services: string[];
   commercialModel: "published-pricing" | "quote" | "non-commercial";
+  commercialMode?: CommercialMode;
+  commercialRegistryId?: string;
+  allowDirectPurchase?: boolean;
+  requiresDiscovery?: boolean;
 };
 
 export function buildSiteBlueprint(input: NewSiteInput){
@@ -36,6 +41,13 @@ export function buildSiteBlueprint(input: NewSiteInput){
       audience: input.audience,
       services: input.services,
       commercialModel: input.commercialModel
+    },
+    commercial: {
+      commercialMode: input.commercialMode || (input.commercialModel === "published-pricing" ? "fixed_price" : input.commercialModel === "quote" ? "scoped" : "non_commercial"),
+      commercialRegistryId: input.commercialRegistryId,
+      allowDirectPurchase: Boolean(input.allowDirectPurchase),
+      requiresDiscovery: Boolean(input.requiresDiscovery),
+      completionGate: commercialGate
     },
     inherited: {
       header: siteBuildDefaults.header,

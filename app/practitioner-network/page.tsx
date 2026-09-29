@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { practitionerCaseworkGate } from "@/config/practitionerTraining";
+import { practitionerDeliveryModel } from "@/config/practitionerDelivery";
 
 const mindset = [
   ["Read the room","Notice what is said, what is avoided, what does not fit, where confidence is misplaced and where a system is quietly telling you something is wrong."],
@@ -138,6 +139,19 @@ export default function PractitionerNetworkPage(){
         <div className="eyebrow">FROM CAPABILITY TO PRACTICE</div>
         <h2>We build the professional layer around what you already bring.</h2>
         <div className="practitioner-steps premium-steps">{pathway.map(([n,title,body])=><article key={n}><span>{n}</span><div><h3>{title}</h3><p>{body}</p></div></article>)}</div>
+      </div>
+    </section>
+
+
+    <section className="section">
+      <div className="shell">
+        <div className="section-head">
+          <div><div className="eyebrow">CLIENT-FACING CAPABILITY</div><h2>The qualities ORVIA practitioners bring into an assignment.</h2></div>
+          <p>These are the behaviours and disciplines the network is designed to make consistent across casework.</p>
+        </div>
+        <div className="practitioner-quality-grid">
+          {practitionerDeliveryModel.qualities.map(([title,copy],index)=><article key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p></article>)}
+        </div>
       </div>
     </section>
 

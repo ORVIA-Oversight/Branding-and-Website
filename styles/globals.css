@@ -61,3 +61,23 @@ select{font:inherit;padding:14px;border:1px solid #bcc7d2;border-radius:12px;bac
 .covert-boundary{margin-top:30px;padding:24px 28px;border-left:4px solid var(--navy);background:#fff;border-radius:0 18px 18px 0}.covert-boundary strong{display:block;margin-bottom:8px}.covert-boundary p{margin:0;color:var(--muted);line-height:1.75}
 @media(max-width:1100px){.oath-grid,.service-modes-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.service-mode-cards{grid-template-columns:1fr}.oath-card{padding:28px;min-height:280px}}
+
+
+/* ORVIA estate identity system */
+.identity-system{background:linear-gradient(180deg,#fff 0,#f7f9fb 100%)}
+.identity-head{margin-bottom:34px}
+.identity-rule{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;padding:34px;border:1px solid var(--line);border-radius:28px;background:#fff;margin-bottom:28px}
+.identity-rule-number{display:inline-flex;width:42px;height:42px;border-radius:50%;align-items:center;justify-content:center;background:var(--navy);color:#fff;font-weight:800;font-size:.8rem;margin-bottom:22px}
+.identity-rule h3{font-size:1.7rem;letter-spacing:-.03em;margin:0 0 12px}.identity-rule p{color:var(--muted);line-height:1.7;margin:0}
+.identity-surfaces{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.identity-surfaces span{padding:13px 15px;border-radius:14px;background:var(--paper);border:1px solid var(--line);font-size:.88rem;font-weight:700}
+.identity-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.identity-card{--product-accent:var(--navy);border:1px solid var(--line);border-top:6px solid var(--product-accent);border-radius:24px;background:#fff;overflow:hidden;min-height:315px;display:flex;flex-direction:column;box-shadow:0 12px 35px rgba(15,23,32,.05)}
+.identity-logo-stage{min-height:150px;padding:28px;display:flex;align-items:center;gap:18px;background:linear-gradient(145deg,color-mix(in srgb,var(--product-accent) 9%,#fff),#fff)}
+.identity-mark{width:64px;height:64px;flex:0 0 64px;border-radius:50%;display:grid;place-items:center;background:var(--product-accent);color:#fff;font-weight:850;font-size:1.55rem;box-shadow:0 8px 26px color-mix(in srgb,var(--product-accent) 24%,transparent)}
+.identity-lockup{display:flex;flex-direction:column;gap:7px}.identity-lockup strong{font-size:1.15rem;letter-spacing:-.02em}.identity-lockup small{color:var(--muted);line-height:1.35}
+.identity-copy{padding:24px 28px 20px}.identity-copy>div{display:flex;align-items:center;gap:9px}.identity-accent-dot{width:9px;height:9px;border-radius:50%;background:var(--product-accent)}.identity-copy p{color:var(--muted);line-height:1.55;margin:12px 0}.identity-copy small{color:#7d8895}
+.identity-swatch{display:grid;grid-template-columns:2fr 1fr 1fr;margin-top:auto;height:8px}.identity-swatch span:nth-child(1){background:var(--product-accent)}.identity-swatch span:nth-child(2){background:#0B2D5C}.identity-swatch span:nth-child(3){background:#FAF7F2}
+.identity-governance{margin-top:28px;padding:34px;border-radius:28px;background:#0a203d;color:#fff;display:grid;grid-template-columns:.65fr 1.35fr;gap:52px;align-items:start}.identity-governance h3{font-size:1.7rem;margin:0}.identity-governance p{margin:0;color:#d5e0ea;line-height:1.75}
+@media(max-width:1100px){.identity-rule,.identity-governance{grid-template-columns:1fr}.identity-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.identity-grid,.identity-surfaces{grid-template-columns:1fr}.identity-rule,.identity-governance{padding:24px}.identity-logo-stage{min-height:130px}}

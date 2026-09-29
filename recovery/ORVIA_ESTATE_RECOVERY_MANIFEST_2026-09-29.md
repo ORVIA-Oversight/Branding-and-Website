@@ -132,3 +132,45 @@ The 25 September Accounts, Access & Credential Register requires account ownersh
 
 ## Next evidence task
 Reconcile each REVIEW REQUIRED row against actual Vercel project metadata and DNS/domain ownership, then update this manifest and SharePoint recovery folder. No production changes are authorised by this manifest alone.
+
+
+## 29 September live Asset Registry cross-check
+
+The live `public.orvia_asset_registry` currently contains 31 assets. It confirms that the recovery model already exists in the operational database and should be treated as the primary machine-readable recovery register.
+
+Important current records include:
+- ORVIA Oversight -> `ORVIA-Oversight/orvia-public-website` -> desired/current Vercel `orvia-oversight` -> verified.
+- ORVIA Web -> `ORVIA-Oversight/web` -> Vercel `orvia-web` -> verified_by_ui in the registry on 25 Sep, but that project name is not visible in the currently connected Vercel team listing. Treat this as REGISTRY DRIFT, not as proof of outage.
+- MIA -> `ORVIA-Oversight/orvia-mia` -> Vercel `orvia-mia` -> migration_pending. Registry currently records `https://mialegacy.uk/` as canonical.
+- Voice -> `ORVIA-Oversight/orvia-voice` -> Vercel `orvia-voice` -> verified_by_ui on 25 Sep; current Vercel connector listing does not expose that project name.
+- Threshold -> `ORVIA-Oversight/threshold` -> Vercel `orvia-threshold` -> migration_pending. Registry currently records `https://threshold-review.co.uk/`.
+- Command -> `ORVIA-Oversight/orvia-command-centre` -> Vercel `orvia-command` -> verified_by_ui on 25 Sep; current Vercel listing does not expose that project name.
+- IRIS -> `ORVIA-Oversight/iris-by-orvia` -> currently recorded deployment project `iris-by-orvia-jvs9`; desired name `orvia-iris`; disposition `rename`.
+- Witness Room -> `ORVIA-Oversight/orvia-witness-room` -> registry deployment `orvia-witness-room` -> migration_pending; registry currently records the Vercel app URL and a separate owned `witnessroom.co.uk` domain.
+- Workspace Access -> `ORVIA-Oversight/orvia-brain-prototype` -> Vercel `orvia-brain-prototype`; registry now marks it `retired_preserved` / `obsolete` / HOLD. Do not delete until dependency checks are complete.
+- Legacy Vercel projects `site`, `orvia-preview`, `orvia-public-website`, `vercel-static`, `orvia_live_pull`, and `public-project` are explicitly recorded as retire candidates.
+- `orvia-healthcare` is recorded as `retired_preserved` / HOLD, not as safe-to-delete.
+- `orvia_site_staging` is recorded TEMPORARY and currently points at the Voice refit branch.
+
+### Domain assets currently recorded but not fully mapped
+The Asset Registry also records owned or held domains for ORVIA Academy, Brand, Business, Foundation, Governance, Insight, Safeguarding, Security, Training, Web, Vanguard Tactical, Witness Room and Threshold Review. Several are `owned_unmapped` or `commercial_primary_pending`. These must not be treated as production mappings until verified.
+
+## Supabase recovery/security findings — 29 September
+
+The ORVIA operational Supabase project is ACTIVE_HEALTHY and currently contains established admin, Voice, Web, MIA, Insight, Assurance and Asset Registry tables.
+
+### SECURITY REVIEW REQUIRED
+Supabase's current advisor reports:
+1. **ERROR — RLS disabled:** `public.brand_social_provider_accounts` has Row Level Security disabled in the public schema. This needs a deliberate access-policy review before enabling RLS, because enabling it without suitable policies can break current access.
+2. **ERROR — security-definer view:** `public.admin_iris_queue_health` is reported as a SECURITY DEFINER view. Review whether it can be converted to a security-invoker pattern without breaking the intended internal queue-health access.
+3. **WARN — leaked-password protection disabled:** Supabase Auth leaked-password protection is currently disabled.
+4. **INFO — RLS enabled with no policy:** 66 tables are reported with RLS enabled but no policies. This is not the same as RLS being disabled: by default it can make those tables inaccessible through client roles. Each table needs to be classified as server-only or client-accessible before any policy is added.
+
+No remediation was auto-applied because access requirements must be verified first.
+
+## Current priority order
+1. Preserve this recovery manifest and SharePoint recovery pack.
+2. Resolve Supabase security ERROR items with an explicit policy/access review.
+3. Reconcile Asset Registry deployment names against the live Vercel team/account actually carrying each domain.
+4. Update the Asset Registry only after each mapping is proven.
+5. Verify the recovery of one full vertical slice end to end before changing or retiring legacy infrastructure.

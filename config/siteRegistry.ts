@@ -109,6 +109,14 @@ export const siteRegistry: SiteRegistryEntry[] = [
     requiredSections:commercialSections
   },
   {
+    id:"perspective", name:"ORVIA Perspective Room", domain:"perspective.orvia.org.uk", repo:"ORVIA-Oversight/Branding-and-Website",
+    family:"evidence", productMark:"P", status:"build", layout:"canonical-commercial",
+    commercial:{commercialMode:"scoped",commercialRegistryId:"perspective-room",allowDirectPurchase:false,requiresDiscovery:true,releaseState:"configured",releaseNote:"Book discovery / Request proposal only. Proposed product domain remains blocked from live status until DNS, Vercel, IRIS and onboarding are verified end to end."},
+    theme:{primary:ORVIA_COLOURS.navy,secondary:ORVIA_COLOURS.teal,accent:ORVIA_COLOURS.gold,soft:"#F3F7FA",ink:ORVIA_COLOURS.ink,use:"Human reasoning, perspective, safeguarding judgement and evidence-led recruitment"},
+    requiredSections:["Hero","How it works","Assessment journey","What is assessed","Health & Social Care","Safeguarding & judgement","For employers","Candidate experience","Evidence & human review","Commercial offer / discovery","Case studies / pilots","FAQ","Trust & boundaries","Contact / conversion"],
+    notes:"First live template proof job for the ORVIA Brand & Web System. Reusable patterns created here should be promoted back into the canonical system."
+  },
+  {
     id:"web", name:"ORVIA Web", domain:"web.orvia.org.uk", repo:"ORVIA-Oversight/web",
     family:"digital", productMark:"A", status:"live", layout:"canonical-commercial",
     commercial:{commercialMode:"fixed_price",commercialRegistryId:"web",allowDirectPurchase:false,requiresDiscovery:false,releaseState:"configured",releaseNote:"Direct purchase becomes available only for fixed packages with verified payment and onboarding routes."},

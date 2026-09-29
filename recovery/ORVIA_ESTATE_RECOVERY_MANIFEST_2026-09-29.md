@@ -174,3 +174,47 @@ No remediation was auto-applied because access requirements must be verified fir
 3. Reconcile Asset Registry deployment names against the live Vercel team/account actually carrying each domain.
 4. Update the Asset Registry only after each mapping is proven.
 5. Verify the recovery of one full vertical slice end to end before changing or retiring legacy infrastructure.
+
+
+## Security remediation completed — 29 September
+
+Two Supabase security ERROR findings have now been remediated and rechecked:
+
+1. `public.brand_social_provider_accounts`
+   - RLS enabled.
+   - Added authenticated internal-read policy tied to `admin_user_access`.
+   - No broad write policy was added.
+   - Supabase advisor no longer reports RLS disabled for this table.
+
+2. `public.admin_iris_queue_health`
+   - View changed to `security_invoker = true`.
+   - Supabase advisor no longer reports the SECURITY DEFINER view error.
+
+Remaining advisor items:
+- WARN: leaked-password protection remains disabled in Supabase Auth.
+- INFO: 66 tables have RLS enabled with no policy. These require classification before policy creation; many may intentionally be server-only. Do not auto-open them to client roles.
+
+## DNS evidence captured — 29 September
+
+Current DNS inspection confirms active Vercel-style routing for:
+- `web.orvia.org.uk`
+- `mia.orvia.org.uk`
+- `command.orvia.org.uk`
+- `iris.orvia.org.uk`
+- `brand.orvia.org.uk`
+- `brand-control.orvia.org.uk`
+- `security.orvia.org.uk`
+- `workspace.orvia.org.uk`
+
+`orvia.org.uk`, `orviavoice.co.uk`, and `orviainsight.co.uk` also resolve at DNS level.
+
+DNS inspection failed to obtain answers for:
+- `threshold-review.co.uk`
+- `witnessroom.co.uk`
+
+Treat those as DNS REVIEW REQUIRED until independently rechecked. Do not infer domain loss solely from this lookup failure.
+
+## Vercel evidence captured — 29 September
+
+- `orvia-oversight` project is visible in the connected Vercel team and has current READY production deployments from `ORVIA-Oversight/orvia-public-website`.
+- Asset Registry stores Threshold project id `prj_Qr7pUuCI1ZT9zJ4E2o3iiG9oYlLc`; querying that project id returned READY production deployments named `orvia-threshold`. This proves the current Vercel list label `legacy-orvia-threshold-review` maps to a project whose deployments are still named `orvia-threshold`. Do not retire it until domain/source mapping is reconciled.

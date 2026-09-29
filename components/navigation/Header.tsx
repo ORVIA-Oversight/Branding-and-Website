@@ -30,23 +30,6 @@ function NavGroup({label,items}:{label:string;items:readonly {label:string;href:
   </details>;
 }
 
-function CustomerMenu(){
-  return <details className="nav-group customer-login-menu">
-    <summary>Customer Login</summary>
-    <div className="nav-dropdown customer-login-dropdown">
-      <div className="customer-login-heading">
-        <strong>ORVIA Access</strong>
-        <span>Choose the service you need.</span>
-      </div>
-      {customerAccessNav.map(item=><a key={item.label} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
-        <span><strong>{item.label}</strong><small>{item.description}</small></span>
-        <em className={"access-status "+item.status}>{item.status}</em>
-      </a>)}
-      <Link className="customer-login-manage" href="/customer-login">View all access options →</Link>
-    </div>
-  </details>;
-}
-
 export function ProductHeader({
   productName="Brand & Web System",
   productMark="B",

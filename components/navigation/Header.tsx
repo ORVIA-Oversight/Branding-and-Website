@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navigationGroups, customerAccessNav } from "@/config/navigation";
 import { productConfig } from "@/config/products";
+import { brandAssets, masterBrandAssets, type BrandAssetKey } from "@/config/brandAssets";
 
 type ProductHeaderProps = {
   productName?: string;
@@ -8,6 +9,7 @@ type ProductHeaderProps = {
   productIconSrc?: string;
   productAccent?: string;
   productHref?: string;
+  brandAssetKey?: BrandAssetKey;
   ctaLabel?: string;
   ctaHref?: string;
 };
@@ -36,9 +38,12 @@ export function ProductHeader({
   productIconSrc,
   productAccent=productConfig.accent,
   productHref="/",
+  brandAssetKey,
   ctaLabel="Talk to ORVIA",
   ctaHref="/contact"
 }:ProductHeaderProps) {
+  const resolvedProductLogo = brandAssetKey ? brandAssets[brandAssetKey].logo.transparent : productIconSrc;
+
   return <>
     <div className="utility-bar">
       <div className="shell utility-inner">
@@ -54,14 +59,14 @@ export function ProductHeader({
       <div className="shell nav-wrap">
         <div className="estate-masthead">
           <Link href="https://orvia.org.uk" className="master-brand" aria-label="ORVIA Oversight">
-            <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA"/>
+            <img src={masterBrandAssets.logo} alt="ORVIA"/>
           </Link>
           <span className="brand-divider" aria-hidden="true"/>
           <Link href={productHref} className="product-brand" style={{"--product-accent":productAccent} as React.CSSProperties}>
-            {productIconSrc
-              ? <img className="product-brand-image" src={productIconSrc} alt=""/>
+            {resolvedProductLogo
+              ? <img className="product-brand-image" src={resolvedProductLogo} alt={productName}/>
               : <span className="product-brand-icon">{productMark}</span>}
-            <span className="product-brand-copy"><strong>{productName}</strong></span>
+            {!resolvedProductLogo && <span className="product-brand-copy"><strong>{productName}</strong></span>}
           </Link>
         </div>
 

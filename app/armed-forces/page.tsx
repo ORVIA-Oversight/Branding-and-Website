@@ -86,11 +86,11 @@ export default function ArmedForcesPage(){
         </a>
         <div className="af-proof-card">
           <img src={armedForcesAssets.bronze.src} alt={armedForcesAssets.bronze.alt}/>
-          <span><strong>ERS Bronze Award</strong>Current award holder</span>
+          <span><strong>ERS Bronze Award</strong>Current award holder · confirmed 22 Sep 2026</span>
         </div>
         <a className="af-proof-card af-proof-text" href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer">
           <span className="af-proof-monogram">TAV</span>
-          <span><strong>Trust A Veteran</strong>ORVIA public profile</span>
+          <span><strong>Trust A Veteran</strong>Current member · authorised public profile</span>
         </a>
         <div className="af-proof-card af-proof-next">
           <span className="af-proof-monogram">→</span>

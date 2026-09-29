@@ -845,3 +845,64 @@ background-size:52px 52px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),tr
 .lean-footer{background:#07131f;color:#cbd6df;padding:64px 0 24px}.lean-footer-top{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:56px}.lean-footer-brand img{width:180px;filter:brightness(0) invert(1);opacity:.95}.lean-footer-brand p{max-width:390px;color:#91a2b4;line-height:1.65}.lean-footer h3{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#fff}.lean-footer-top>div:not(:first-child){display:flex;flex-direction:column;gap:10px}.lean-footer a{font-size:.88rem;color:#bac7d2}.lean-footer-bottom{display:flex;align-items:center;gap:24px;border-top:1px solid rgba(255,255,255,.1);padding-top:22px;margin-top:46px;font-size:.74rem;color:#7f91a2}.lean-footer-bottom>div{margin-left:auto;display:flex;gap:18px}
 @media(max-width:1180px){.lean-desktop-nav{display:none}.lean-mobile-nav{display:block;position:relative}.lean-mobile-nav summary{list-style:none;cursor:pointer;font-weight:750}.lean-mobile-nav>div{position:absolute;right:0;top:42px;width:250px;padding:16px;background:#fff;border:1px solid #dfe6ec;border-radius:16px;box-shadow:0 18px 50px rgba(15,23,32,.12);display:flex;flex-direction:column;gap:8px}.lean-mobile-nav a{padding:9px 10px}.lean-header-actions{display:none}.lean-hero-grid,.lean-section-heading,.lean-trust-grid{grid-template-columns:1fr}.lean-need-grid{grid-template-columns:1fr 1fr}.lean-outcome-grid{grid-template-columns:1fr 1fr}.lean-process{grid-template-columns:1fr}.lean-process>div{min-height:auto;border-right:0;border-bottom:1px solid #d8e1e8}.lean-process>div:last-child{border-bottom:0}.lean-process strong{margin-top:18px}.lean-footer-top{grid-template-columns:1fr 1fr}}
 @media(max-width:720px){.lean-utility-inner>span{display:none}.lean-utility-inner{justify-content:flex-end}.lean-utility-inner>div{gap:12px}.lean-master-brand img{width:132px}.lean-brand-rule{display:none}.lean-product-brand span:last-child{display:none}.lean-header-inner{min-height:68px}.lean-hero{padding:58px 0 64px}.lean-hero-grid{gap:36px}.lean-hero h1{font-size:clamp(3rem,14vw,4.6rem)}.lean-hero-panel{min-height:430px}.lean-node{min-width:122px;padding:10px 12px}.lean-node span{font-size:.67rem}.lean-actions{align-items:flex-start;flex-direction:column}.lean-section{padding:74px 0}.lean-need-grid,.lean-outcome-grid,.lean-product-grid,.lean-governance-grid{grid-template-columns:1fr}.lean-product-grid article{grid-template-columns:54px 1fr}.lean-product-grid article>a{grid-column:2}.lean-footer-top{grid-template-columns:1fr}.lean-footer-bottom{align-items:flex-start;flex-direction:column}.lean-footer-bottom>div{margin-left:0;flex-wrap:wrap}.lean-final .shell{align-items:flex-start;flex-direction:column}}
+
+
+/* Armed Forces & Careers V3 — empathetic image-led heroes */
+.af-v3-hero,.careers-v3-hero{
+  position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;background:#081421;color:#fff
+}
+.af-v3-hero-image,.careers-v3-hero-image{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center
+}
+.af-v3-hero-overlay,.careers-v3-hero-overlay{
+  position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,17,31,.94) 0%,rgba(8,28,49,.80) 42%,rgba(8,28,49,.38) 72%,rgba(8,28,49,.18) 100%)
+}
+.af-v3-hero-content,.careers-v3-content{
+  position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:42px;align-items:end;padding-top:62px;padding-bottom:62px
+}
+.af-v3-hero .af-v2-copy,.careers-v3-hero .careers-v2-copy{max-width:760px}
+.af-v3-hero h1,.careers-v3-hero h1{
+  font-size:clamp(3rem,5.1vw,5.25rem);line-height:.95;letter-spacing:-.05em;margin:0 0 20px;color:#fff
+}
+.af-v3-hero h1 span,.careers-v3-hero h1 span{color:#efc256}
+.af-v3-hero .lead,.careers-v3-hero .lead{
+  font-size:1.05rem;line-height:1.62;color:#eef4f8;max-width:700px
+}
+.af-v3-hero .actions,.careers-v3-hero .actions{margin:26px 0 18px}
+.af-v3-hero .af-v2-principle,.careers-v3-hero .af-v2-principle{
+  font-size:.71rem;letter-spacing:.17em;color:#d6e1e9;margin-top:16px
+}
+.af-v3-family-note,.careers-v3-note{
+  align-self:end;border:1px solid rgba(255,255,255,.26);border-radius:20px;background:rgba(7,22,38,.64);
+  backdrop-filter:blur(10px);padding:18px;color:#fff;box-shadow:0 18px 48px rgba(0,0,0,.18)
+}
+.af-v3-family-note{display:grid;grid-template-columns:92px 1fr;gap:15px;align-items:center}
+.af-v3-family-note img{width:92px;height:92px;object-fit:cover;border-radius:13px}
+.af-v3-family-note p{margin:0;font-size:.87rem;line-height:1.5;color:#e8eff4}
+.careers-v3-note{display:flex;flex-direction:column;gap:7px}
+.careers-v3-note strong{font-size:1.1rem}.careers-v3-note span{font-size:.87rem;line-height:1.5;color:#e4edf3}
+
+/* slightly reduce density/scale on the Armed Forces and Careers templates */
+.af-service-grid,.career-group-grid{min-height:82px}
+.af-service-grid article,.career-group-grid article{padding:16px 14px}
+.af-service-grid strong,.career-group-grid strong{font-size:.78rem}
+.af-service-grid span,.career-group-grid span{font-size:.72rem;line-height:1.35}
+.af-proof-strip{padding:18px 0}
+.af-proof-card{min-height:94px}
+.af-proof-card img{max-height:58px}
+.af-story-grid,.careers-story-grid{gap:58px}
+.af-story-grid .lead,.careers-story-grid .lead{font-size:1.08rem}
+.af-strength-grid article,.career-value-grid article{min-height:210px}
+.af-pathway-grid article{padding:18px 0}
+
+@media(max-width:1000px){
+  .af-v3-hero-content,.careers-v3-content{grid-template-columns:1fr}
+  .af-v3-family-note,.careers-v3-note{max-width:560px}
+}
+@media(max-width:700px){
+  .af-v3-hero,.careers-v3-hero{min-height:620px}
+  .af-v3-hero-content,.careers-v3-content{padding-top:46px;padding-bottom:46px;gap:24px}
+  .af-v3-hero h1,.careers-v3-hero h1{font-size:clamp(2.8rem,13vw,4.2rem)}
+  .af-v3-hero-overlay,.careers-v3-hero-overlay{background:linear-gradient(180deg,rgba(5,17,31,.88),rgba(5,17,31,.78))}
+  .af-v3-family-note{grid-template-columns:72px 1fr}.af-v3-family-note img{width:72px;height:72px}
+}

@@ -1,5 +1,5 @@
 export const websiteBuildStandard = {
-  version:"1.1.0",
+  version:"1.2.0",
   principle:"A new ORVIA website is an operating surface, not an isolated marketing page.",
   customerUxDoctrine:{
     hierarchy:"ANSWER FIRST → DETAIL SECOND → EVIDENCE THIRD",
@@ -72,7 +72,7 @@ export const websiteBuildStandard = {
   ],
   inheritedControls:[
     "ORVIA parent identity",
-    "product colour family",
+    "controlled v3.0 product palette allocation",
     "canonical header",
     "canonical light footer",
     "task-appropriate navigation architecture",
@@ -88,7 +88,9 @@ export const websiteBuildStandard = {
     "lean UX gate",
     "full-bleed page hero standard",
     "product visual storytelling standard",
-    "shared platform template and controlled content/media slots"
+    "shared platform template and controlled content/media slots",
+    "public exposure and employer-brand boundary",
+    "WEB-QA-01 100% release gate"
   ],
   leanUxGate:{
     failureState:"LEAN_UX_GATE_FAILED",
@@ -102,7 +104,10 @@ export const websiteBuildStandard = {
       "Mobile users can reach the primary action without navigating multi-level architecture.",
       "No build notes, placeholder copy or internal-only controls are exposed publicly.",
       "Major public pages use the approved full-bleed hero pattern unless a documented exception applies.",
-      "Product pages retain visual explainer imagery that communicates the product without relying on long copy."
+      "Product pages retain visual explainer imagery that communicates the product without relying on long copy.",
+      "Public copy explains outcomes, evidence, culture and customer value without exposing proprietary engineering, prompts, orchestration, security topology or reproducible internal operating procedures.",
+      "Employer-facing content makes the standard, meaning of the work, learning culture and human accountability clear without inventing benefits, offices, customers or career guarantees.",
+      "The allocated palette comes from the controlled Brand Palette Library; new builds do not invent ad hoc palettes."
     ]
   },
   releaseEvidence:[

@@ -797,3 +797,33 @@ background-size:52px 52px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),tr
 .practitioner-authorisation-box ul{margin:0;padding-left:20px;color:#e1e9ef;line-height:1.75}
 @media(max-width:1000px){.practitioner-casework-modules{grid-template-columns:1fr 1fr}.practitioner-authorisation-box{grid-template-columns:1fr}}
 @media(max-width:680px){.practitioner-casework-modules{grid-template-columns:1fr}}
+
+
+/* Founder premium + practitioner package system */
+.work-john-founder-value{background:linear-gradient(180deg,#fff,#f7fafc)}
+.work-john-value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.work-john-value-grid article{padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff;min-height:150px}
+.work-john-value-grid article>span{font-family:var(--font-mono);font-size:.67rem;color:#8896a5}
+.work-john-value-grid p{margin:16px 0 0;color:#44566a;line-height:1.58;font-weight:650}
+.work-john-founder-statement{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start;margin-top:18px;padding:30px;border-radius:26px;background:linear-gradient(135deg,#0b2d5c,#123f69);color:#fff}
+.work-john-founder-statement h3{margin:12px 0 0;color:#fff;font-size:clamp(1.8rem,3vw,3rem)}
+.work-john-founder-statement p{margin:0;color:#d7e3eb;line-height:1.7}
+
+.practitioner-quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.practitioner-quality-grid article{padding:24px;border:1px solid var(--line);border-radius:20px;background:#fff;min-height:210px}
+.practitioner-quality-grid article>span,.practitioner-package-grid article>span{font-family:var(--font-mono);font-size:.67rem;color:#8795a3}
+.practitioner-quality-grid h3,.practitioner-package-grid h3{margin:18px 0 9px;color:var(--navy);font-size:1.12rem}
+.practitioner-quality-grid p,.practitioner-package-grid p{margin:0;color:var(--muted);line-height:1.6}
+.practitioner-package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.practitioner-package-grid article{padding:26px;border:1px solid var(--line);border-radius:22px;background:#fff;display:flex;flex-direction:column;min-height:330px}
+.practitioner-package-grid article>strong{margin-top:20px;color:var(--navy);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
+.practitioner-package-grid ul{padding-left:18px;margin:10px 0 0;color:#536477;line-height:1.65;font-size:.88rem}
+
+@media(max-width:1050px){
+ .work-john-value-grid{grid-template-columns:1fr 1fr}
+ .work-john-founder-statement{grid-template-columns:1fr}
+ .practitioner-quality-grid,.practitioner-package-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+ .work-john-value-grid,.practitioner-quality-grid,.practitioner-package-grid{grid-template-columns:1fr}
+}

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { founderStory } from "@/config/founder";
+import { founderCredentials } from "@/config/founderCredentials";
+import { WorkingPractice } from "@/components/orvia/WorkingPractice";
 
 export const metadata:Metadata={
   title:"Work with John McGill | ORVIA Oversight",
@@ -115,6 +117,53 @@ export default function WorkWithJohnPage(){
           <span><strong>I will not</strong> tell a board, manager or founder what they want to hear just to preserve comfort.</span>
           <span><strong>I will</strong> explain the evidence, the gap, the consequence and the practical options.</span>
         </div>
+      </div>
+    </section>
+
+
+    <section className="section section-soft">
+      <div className="shell">
+        <div className="section-head">
+          <div><div className="eyebrow">CREDENTIALS & OPERATING EXPERIENCE</div><h2>Experience you can verify. Judgement you can test.</h2></div>
+          <p>{founderCredentials.intro}</p>
+        </div>
+        <div className="work-john-credential-grid">
+          {founderCredentials.assurance.map(item=><article key={item.label}>
+            <span>{item.label}</span>
+            <h3>{item.value}</h3>
+            <p>{item.note}</p>
+          </article>)}
+        </div>
+        <div className="work-john-experience-band">
+          <div><div className="eyebrow">OPERATING BACKGROUND</div><h3>{founderCredentials.headline}</h3></div>
+          <ul>{founderCredentials.experience.map(item=><li key={item}>{item}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+
+    <WorkingPractice/>
+
+    <section className="section work-john-practitioner-layer">
+      <div className="shell work-john-two-col">
+        <div>
+          <div className="eyebrow">WORK WITH ORVIA PRACTITIONERS</div>
+          <h2>John does not have to be the only person in the room.</h2>
+          <p className="lead">Where the assignment needs a broader skill mix, ORVIA can bring practitioners around the problem: governance, safeguarding, evidence, operations, quality, systems, implementation and assurance.</p>
+          <p>{founderCredentials.practitionerPromise}</p>
+        </div>
+        <article className="work-john-receive">
+          <div className="eyebrow">AUGMENT, DON'T REPLACE</div>
+          <h3>Use the capability you already have.</h3>
+          <ul>
+            <li>Work alongside your existing leadership and specialist teams</li>
+            <li>Bring in additional practitioner capability only where the evidence shows a gap</li>
+            <li>Recommend your existing software when it is fit for purpose</li>
+            <li>Recommend third-party, white-label or ORVIA software only where justified</li>
+            <li>Define specialist legal, HR, clinical or regulatory hand-offs clearly</li>
+            <li>Verify whether the intervention actually improved the problem</li>
+          </ul>
+          <Link className="button" href="/practitioner-network">See the practitioner model</Link>
+        </article>
       </div>
     </section>
 

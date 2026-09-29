@@ -1066,3 +1066,68 @@ background-size:52px 52px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),tr
 .platform-media-grid strong{display:block;font-size:.92rem;margin-bottom:4px}.platform-media-grid span{display:block;color:#cbd7e1;font-size:.78rem;line-height:1.4}
 @media(max-width:1100px){.platform-heading{grid-template-columns:1fr;gap:16px}.platform-step-grid{grid-template-columns:repeat(2,1fr)}.platform-media-panel{grid-template-columns:1fr}}
 @media(max-width:700px){.platform-system-section{padding:66px 0}.platform-step-grid{grid-template-columns:1fr}.platform-step-grid article{min-height:auto}.platform-media-grid{grid-template-columns:1fr}.platform-media-grid>div:last-child{grid-column:auto}}
+
+
+/* ORVIA family identity + richer explainer cards */
+.lean-need-grid article{position:relative;padding-top:30px}
+.lean-card-icon{
+  width:52px;height:52px;border-radius:16px;
+  display:grid;place-items:center;
+  background:rgba(43,146,157,.10);
+  color:var(--teal);
+  margin-bottom:22px;
+}
+.lean-need-grid article:nth-child(2) .lean-card-icon{background:rgba(11,36,80,.08);color:var(--navy)}
+.lean-need-grid article:nth-child(3) .lean-card-icon{background:rgba(130,65,143,.09);color:var(--purple)}
+.lean-need-grid article:nth-child(4) .lean-card-icon{background:rgba(234,170,0,.12);color:#9a7000}
+.lean-need-grid article:nth-child(5) .lean-card-icon{background:rgba(231,70,18,.08);color:var(--orange)}
+.lean-need-grid article:nth-child(6) .lean-card-icon{background:rgba(11,36,80,.08);color:var(--navy)}
+
+.lean-product-mark-card{
+  width:56px;height:56px;
+  display:grid;place-items:center;
+  border-radius:17px;
+  background:var(--navy);
+  color:#fff;
+}
+.lean-product-grid article:nth-child(2) .lean-product-mark-card{background:var(--purple)}
+.lean-product-grid article:nth-child(3) .lean-product-mark-card{background:var(--teal)}
+.lean-product-grid article:nth-child(4) .lean-product-mark-card{background:#456878}
+.lean-product-grid article:nth-child(5) .lean-product-mark-card{background:var(--gold);color:#3b2a00}
+.lean-product-grid article:nth-child(6) .lean-product-mark-card{background:var(--orange)}
+
+.orvia-family-ribbon{
+  background:#fff;
+  border-top:1px solid rgba(11,36,80,.08);
+  border-bottom:1px solid rgba(11,36,80,.08);
+}
+.orvia-family-ribbon-inner{
+  min-height:112px;
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+.orvia-family-ribbon img{
+  width:190px;
+  height:auto;
+  object-fit:contain;
+}
+.orvia-family-ribbon-inner>div{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  padding-left:24px;
+  border-left:1px solid rgba(11,36,80,.12);
+}
+.orvia-family-ribbon strong{
+  color:var(--navy);
+  font-size:1.06rem;
+}
+.orvia-family-ribbon span{
+  color:#6a7480;
+  font-size:.9rem;
+}
+@media(max-width:700px){
+  .orvia-family-ribbon-inner{min-height:unset;padding-top:24px;padding-bottom:24px;align-items:flex-start;flex-direction:column}
+  .orvia-family-ribbon-inner>div{padding-left:0;border-left:0}
+}

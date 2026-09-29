@@ -3,6 +3,7 @@ import Link from "next/link";
 import { founderStory } from "@/config/founder";
 import { founderCredentials } from "@/config/founderCredentials";
 import { WorkingPractice } from "@/components/orvia/WorkingPractice";
+import { practitionerDeliveryModel } from "@/config/practitionerDelivery";
 
 export const metadata:Metadata={
   title:"Work with John McGill | ORVIA Oversight",
@@ -35,10 +36,10 @@ const services=[
 ] as const;
 
 const rates=[
-  ["Remote advice and mentoring","£624 per day, VAT included","£520 professional fee plus VAT where applicable"],
-  ["Operational consultancy or interim leadership","£720 per day, VAT included","£600 professional fee plus VAT where applicable"],
-  ["Specialist safeguarding, governance or assurance","£950 per day, VAT included","Higher-risk review work requiring defined findings or a formal written output."],
-  ["Urgent or weekend instruction","Applicable rate plus 25%","Accepted only where capacity and professional boundaries permit."]
+  ["Founder-led diagnostic / intervention","From £1,140 per day, VAT included","£950 professional fee plus VAT. Direct access to John for complex, stuck or cross-functional problems."],
+  ["Strategic operational leadership","Scoped from £950 + VAT per day","For stabilisation, mobilisation, turnaround, high-consequence delivery or executive-level operating support."],
+  ["Specialist safeguarding, governance or assurance","Scoped from £950 + VAT per day","For complex review work, formal findings, regulatory preparation or substantial written outputs."],
+  ["Urgent, weekend or exceptional-response instruction","Applicable rate plus 25%","Accepted only where capacity, competence and professional boundaries permit."]
 ] as const;
 
 export default function WorkWithJohnPage(){
@@ -48,7 +49,7 @@ export default function WorkWithJohnPage(){
         <div>
           <div className="eyebrow">WORK DIRECTLY WITH JOHN MCGILL</div>
           <h1>I am not there to tell you everything is fine.</h1>
-          <p className="lead work-john-lead">Bring me in when you need somebody prepared to look properly, test the explanation, raise what does not fit and help turn that into practical action.</p>
+          <p className="lead work-john-lead">Bring me in when the problem crosses functions, the obvious answer is not working, or you need someone who can move from evidence to operations to systems and find a route through.</p>
           <div className="work-john-challenge-line">
             <strong>If I believe something needs fixing, I will raise it.</strong>
             <span>Clearly, respectfully and with the evidence behind the challenge.</span>
@@ -72,10 +73,30 @@ export default function WorkWithJohnPage(){
           <blockquote>“You are not paying me to agree with you. You are bringing me in to help you see the position clearly and deal with what the evidence actually shows.”</blockquote>
           <div className="work-john-rate-card">
             <small>Consultancy from</small>
-            <strong>£520 + VAT / day</strong>
-            <span>Scope and rate confirmed before work begins.</span>
+            <strong>£950 + VAT / day</strong>
+            <span>Founder-led work. Scope and rate confirmed before work begins.</span>
           </div>
         </aside>
+      </div>
+    </section>
+
+
+    <section className="section work-john-founder-value">
+      <div className="shell">
+        <div className="section-head">
+          <div><div className="eyebrow">WHY ENGAGE JOHN PERSONALLY</div><h2>A particular set of eyes built across very different operating environments.</h2></div>
+          <p>Founder-led work is priced above the practitioner rate because the value is the combination: operator, business builder, safeguarding and governance leader, systems thinker and experienced decision-maker under pressure.</p>
+        </div>
+        <div className="work-john-value-grid">
+          {practitionerDeliveryModel.founder.value.map((item,index)=><article key={item}><span>{String(index+1).padStart(2,"0")}</span><p>{item}</p></article>)}
+        </div>
+        <div className="work-john-founder-statement">
+          <div>
+            <div className="eyebrow light">FOUNDER-LED INTERVENTION</div>
+            <h3>From £{practitionerDeliveryModel.founder.fromExVat} + VAT per day.</h3>
+          </div>
+          <p>{practitionerDeliveryModel.founder.positioning}</p>
+        </div>
       </div>
     </section>
 

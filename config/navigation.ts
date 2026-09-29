@@ -39,6 +39,7 @@ export const navigationGroups: readonly NavGroup[] = [
     label: "Company",
     items: [
       { label: "Founder Story", href: "/founder", description: "Why John built ORVIA and what drives the company." },
+      { label: "Work with ORVIA", href: "/work-with-orvia", description: "Evidence-led practitioner support, operational improvement and fixing work." },
       { label: "Work with John", href: "/work-with-john", description: "Direct consultancy, challenge and operational support." },
       { label: "Practitioners", href: "/practitioner-network", description: "Our practitioner model and capability pathway." },
       { label: "Armed Forces", href: "/armed-forces", description: "Veterans, Service leavers, families and transferable skills." },
@@ -92,6 +93,7 @@ export const customerAccessNav = [
 export const footerNavigation = {
   startHere: [
     { label:"Why ORVIA", href:"/founder" },
+    { label:"Work with ORVIA", href:"/work-with-orvia" },
     { label:"Work with John", href:"/work-with-john" },
     { label:"Products", href:"/products" },
     { label:"Case Studies", href:"/case-studies" },
@@ -109,6 +111,7 @@ export const footerNavigation = {
   ],
   company: [
     { label:"Founder Story", href:"/founder" },
+    { label:"Work with ORVIA", href:"/work-with-orvia" },
     { label:"Work with John", href:"/work-with-john" },
     { label:"Insights", href:"/insights" },
     { label:"Armed Forces", href:"/armed-forces" },

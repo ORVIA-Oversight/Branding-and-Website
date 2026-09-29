@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { primaryNav } from "@/config/navigation";
+import { primaryNav, customerAccessNav } from "@/config/navigation";
 import { productConfig } from "@/config/products";
 
 type ProductHeaderProps = {
@@ -55,6 +55,20 @@ export function ProductHeader({
 
         <nav aria-label="Primary navigation">
           {primaryNav.map(([label,href])=><Link key={href} href={href}>{label}</Link>)}
+          <details className="customer-login-menu">
+            <summary>Customer Login</summary>
+            <div className="customer-login-dropdown">
+              <div className="customer-login-heading">
+                <strong>ORVIA Access</strong>
+                <span>Choose the service you need.</span>
+              </div>
+              {customerAccessNav.map(item=><a key={item.label} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
+                <span><strong>{item.label}</strong><small>{item.description}</small></span>
+                <em className={"access-status "+item.status}>{item.status}</em>
+              </a>)}
+              <Link className="customer-login-manage" href="/customer-login">View all access options →</Link>
+            </div>
+          </details>
         </nav>
 
         <Link href={ctaHref} className="button button-small estate-cta">{ctaLabel}</Link>

@@ -1,4 +1,4 @@
-# ORVIA Brand & Web System v1.0
+# ORVIA Brand & Web System v1.1
 
 Canonical brand, component and public-web reference implementation for the ORVIA estate.
 
@@ -41,3 +41,7 @@ npm run dev
 6. Complete legal/trust review.
 7. Run device, accessibility, telemetry and post-deploy QA.
 8. Roll out product sites only from this approved system.
+
+## Deployment trigger
+
+Production changes are made on `main`. The canonical Vercel project is `branding-and-website` and the canonical domain is `brand.orvia.org.uk`. This repository is the production source of truth for the Brand & Web System.

@@ -12,42 +12,46 @@ export type NavGroup = {
 
 export const navigationGroups: readonly NavGroup[] = [
   {
-    label: "What we do",
+    label: "Platform",
     items: [
-      { label: "Work with ORVIA", href: "/work-with-orvia", description: "Evidence-led support, assurance, investigation and operational improvement." },
-      { label: "Work with John", href: "/work-with-john", description: "Founder-led intervention for complex or stuck problems." },
-      { label: "Products", href: "/products", description: "Plain-English routes into the current ORVIA product estate." },
-      { label: "Case studies", href: "/case-studies", description: "See ORVIA operating models and builds in practice." }
-    ]
-  },
-  {
-    label: "Who we help",
-    items: [
-      { label: "Organisations & leaders", href: "/work-with-orvia", description: "Governance, safeguarding, assurance, operations and improvement." },
-      { label: "Professionals & practitioners", href: "/practitioner-network", description: "ORVIA practitioner capability, training and delivery." },
-      { label: "Veterans & Armed Forces community", href: "/armed-forces", description: "Our commitments, opportunities and verified Armed Forces links." },
-      { label: "Human reasoning & recruitment", href: "/perspective-room", description: "Evidence-led assessment of reasoning, judgement and perspective." }
+      { label: "Platform overview", href: "/#platform", description: "How the ORVIA operating system fits together." },
+      { label: "ORVIA Method", href: "/#method", description: "Observe. Review. Verify. Interpret. Act." },
+      { label: "Systems", href: "/systems", description: "IRIS, HIVE, VITA, VERA, Command and AI." },
+      { label: "Commercial Standard", href: "/commercial", description: "The release gate from offer to governed delivery." },
+      { label: "Sales Operating Model", href: "/sales", description: "Lead capture, ownership, follow-up and conversion under IRIS." },
+      { label: "Website Estate", href: "/estate", description: "Review and migrate every ORVIA site into the canonical build." }
     ]
   },
   {
     label: "Products",
     items: [
-      { label: "ORVIA Voice", href: "https://voice.orvia.org.uk", description: "24/7 call capture and accountable follow-up.", external:true },
-      { label: "Witness Room", href: "https://witness.orvia.org.uk", description: "Structured evidence preparation and challenge.", external:true },
-      { label: "Perspective Room", href: "/perspective-room", description: "Human reasoning, judgement and evidence-led assessment." },
-      { label: "ORVIA Web", href: "https://web.orvia.org.uk", description: "Lean commercial websites and managed web delivery.", external:true },
+      { label: "All products", href: "/products", description: "See the current ORVIA product and service estate." },
+      { label: "ORVIA Voice", href: "https://voice.orvia.org.uk", description: "Call capture, routing and accountable follow-up.", external:true },
+      { label: "Witness Room", href: "https://witness.orvia.org.uk", description: "Evidence preparation, challenge and controlled perspectives.", external:true },
+      { label: "Perspective Room", href: "/perspective-room", description: "Human reasoning, safeguarding judgement and evidence-led recruitment." },
+
+      { label: "ORVIA Web", href: "https://web.orvia.org.uk", description: "Rapid commercial website builds and managed web delivery.", external:true },
       { label: "MIA", href: "https://mia.orvia.org.uk", description: "Memory preservation, family archive and legacy.", external:true },
       { label: "Threshold", href: "https://threshold.orvia.org.uk", description: "Structured concern and evidence review.", external:true }
     ]
   },
   {
-    label: "About",
+    label: "Company",
     items: [
-      { label: "Founder Story", href: "/founder", description: "Why ORVIA exists and the experience behind it." },
+      { label: "Founder Story", href: "/founder", description: "Why John built ORVIA and what drives the company." },
+      { label: "Work with ORVIA", href: "/work-with-orvia", description: "Evidence-led practitioner support, operational improvement and fixing work." },
+      { label: "Work with John", href: "/work-with-john", description: "Direct consultancy, challenge and operational support." },
+      { label: "Practitioners", href: "/practitioner-network", description: "Our practitioner model and capability pathway." },
+      { label: "Armed Forces", href: "/armed-forces", description: "Veterans, Service leavers, families and transferable skills." },
+      { label: "Careers", href: "/careers", description: "Join ORVIA and build capability with us." }
+    ]
+  },
+  {
+    label: "Resources",
+    items: [
+      { label: "Case Studies", href: "/case-studies", description: "See ORVIA builds and operating models in practice." },
+      { label: "Insights", href: "/insights", description: "ORVIA thinking, updates and explainers." },
       { label: "Trust Centre", href: "/trust", description: "Governance, controls, boundaries and verified trust." },
-      { label: "Armed Forces", href: "/armed-forces", description: "Covenant, ERS Bronze and veteran commitment." },
-      { label: "Careers", href: "/careers", description: "Join ORVIA and build capability with us." },
-      { label: "Brand & system reference", href: "/estate", description: "Deeper governance and website-estate reference." },
       { label: "Contact", href: "/contact", description: "Talk to ORVIA." }
     ]
   }
@@ -71,35 +75,51 @@ export const customerAccessNav = [
     href:"https://witness.orvia.org.uk",
     description:"Structured preparation, evidence and perspective testing.",
     status:"live"
+  },
+  {
+    label:"Command",
+    href:"https://command.orvia.org.uk",
+    description:"Restricted ORVIA operational command environment.",
+    status:"restricted"
+  },
+  {
+    label:"Brand Control",
+    href:"/customer-login#brand-control",
+    description:"Internal controlled brand and website administration.",
+    status:"restricted"
   }
 ] as const;
 
 export const footerNavigation = {
   startHere: [
+    { label:"Why ORVIA", href:"/founder" },
     { label:"Work with ORVIA", href:"/work-with-orvia" },
     { label:"Work with John", href:"/work-with-john" },
     { label:"Products", href:"/products" },
     { label:"Case Studies", href:"/case-studies" },
-    { label:"Customer Access", href:"/customer-login" },
     { label:"Contact", href:"/contact" }
   ],
   methodProducts: [
+    { label:"ORVIA Method", href:"/#method" },
     { label:"ORVIA Systems", href:"/systems" },
     { label:"Commercial Standard", href:"/commercial" },
     { label:"Sales Operating Model", href:"/sales" },
     { label:"Website Estate", href:"/estate" },
     { label:"ORVIA Voice", href:"https://voice.orvia.org.uk", external:true },
-    { label:"Witness Room", href:"https://witness.orvia.org.uk", external:true }
+    { label:"Witness Room", href:"https://witness.orvia.org.uk", external:true },
+    { label:"Customer Access", href:"/customer-login" }
   ],
   company: [
     { label:"Founder Story", href:"/founder" },
-    { label:"Practitioners", href:"/practitioner-network" },
+    { label:"Work with ORVIA", href:"/work-with-orvia" },
+    { label:"Work with John", href:"/work-with-john" },
     { label:"Insights", href:"/insights" },
     { label:"Armed Forces", href:"/armed-forces" },
     { label:"Careers", href:"/careers" },
     { label:"Trust Centre", href:"/trust" }
   ]
 } as const;
+
 
 // Backward-compatible flat navigation for any legacy component still importing primaryNav.
 export const primaryNav = navigationGroups.flatMap(group => group.items.map(item => [item.label, item.href] as const));

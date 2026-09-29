@@ -14,7 +14,7 @@ export const products = {
     name: "ORVIA Oversight",
     shortName: "Oversight",
     mark: "O",
-    accent: "#0B2D5C",
+    accent: "#0B2450",
     url: "https://orvia.org.uk",
     descriptor: "Corporate authority, governance and assurance",
     visualCue: "Orbit / connected oversight"
@@ -23,7 +23,7 @@ export const products = {
     name: "ORVIA Voice",
     shortName: "Voice",
     mark: "R",
-    accent: "#2F7F86",
+    accent: "#2B929D",
     url: "https://voice.orvia.org.uk",
     descriptor: "Communications, capture and routing",
     visualCue: "Signal / conversation / connection"
@@ -32,7 +32,7 @@ export const products = {
     name: "ORVIA Threshold",
     shortName: "Threshold",
     mark: "V",
-    accent: "#F0A51A",
+    accent: "#EAAA00",
     url: "https://threshold.orvia.org.uk",
     descriptor: "Structured concern and decision support",
     visualCue: "Threshold / doorway / decision point"
@@ -41,7 +41,7 @@ export const products = {
     name: "MIA",
     shortName: "MIA",
     mark: "I",
-    accent: "#6A2E7C",
+    accent: "#82418F",
     url: "https://mia.orvia.org.uk",
     descriptor: "Memory, story and human legacy",
     visualCue: "Human connection / memory / continuity"
@@ -59,7 +59,7 @@ export const products = {
     name: "ORVIA Perspective Room",
     shortName: "Perspective Room",
     mark: "P",
-    accent: "#2F7F86",
+    accent: "#2B929D",
     url: "https://perspective.orvia.org.uk",
     descriptor: "Human reasoning, safeguarding judgement and evidence-led recruitment",
     visualCue: "Perspective / layered evidence / human review"
@@ -86,7 +86,7 @@ export const products = {
     name: "ORVIA Web",
     shortName: "Web",
     mark: "A",
-    accent: "#E34B23",
+    accent: "#E74612",
     url: "https://web.orvia.org.uk",
     descriptor: "Governed websites and digital delivery",
     visualCue: "Build / publish / connect"

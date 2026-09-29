@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { armedForcesAssets } from "@/config/armedForces";
 
 const communities = [
   ["Veterans & Service leavers","Turn Service experience into a credible civilian practice pathway without forcing it into a conventional CV shape."],
@@ -35,18 +36,14 @@ export default function ArmedForcesPage(){
           </div>
         </div>
         <div className="official-assets-panel">
-          <div className="official-asset-slot">
-            <strong>OFFICIAL COVENANT LOGO</strong>
-            <span>Use approved Armed Forces Covenant master artwork only.</span>
-          </div>
-          <div className="official-asset-slot">
-            <strong>OFFICIAL ERS BRONZE BADGE</strong>
-            <span>Use approved Employer Recognition Scheme artwork only.</span>
-          </div>
-          <div className="official-asset-slot">
-            <strong>TRUST A VETERAN APPROVED ASSET</strong>
-            <span>Use only the authorised partner/member artwork supplied for ORVIA.</span>
-          </div>
+          <figure className="official-asset-card">
+            <img src={armedForcesAssets.covenant.src} alt={armedForcesAssets.covenant.alt}/>
+            <figcaption><strong>Armed Forces Covenant</strong><span>Official positive master artwork.</span></figcaption>
+          </figure>
+          <figure className="official-asset-card">
+            <img src={armedForcesAssets.bronze.src} alt={armedForcesAssets.bronze.alt}/>
+            <figcaption><strong>ERS Bronze Award</strong><span>Official issued Bronze recognition artwork.</span></figcaption>
+          </figure>
         </div>
       </div>
     </section>

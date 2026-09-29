@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { practitionerCaseworkGate } from "@/config/practitionerTraining";
 
 const mindset = [
   ["Read the room","Notice what is said, what is avoided, what does not fit, where confidence is misplaced and where a system is quietly telling you something is wrong."],
@@ -107,6 +108,31 @@ export default function PractitionerNetworkPage(){
       </div>
     </section>
 
+
+    <section className="section practitioner-casework-gate">
+      <div className="shell">
+        <div className="section-head">
+          <div><div className="eyebrow">CASEWORK AUTHORISATION GATE</div><h2>No practitioner goes onto ORVIA casework simply because they are experienced or qualified.</h2></div>
+          <p>{practitionerCaseworkGate.rule}</p>
+        </div>
+        <div className="practitioner-casework-modules">
+          {practitionerCaseworkGate.mandatoryModules.map((module,index)=><article key={module.id}>
+            <span>{String(index+1).padStart(2,"0")}</span>
+            <h3>{module.title}</h3>
+            <p>{module.outcome}</p>
+          </article>)}
+        </div>
+        <div className="practitioner-authorisation-box">
+          <div>
+            <div className="eyebrow light">AUTHORITY MUST BE RECORDED</div>
+            <h3>{practitionerCaseworkGate.failureState}</h3>
+            <p>No case allocation until the training, assessment, supervision and authority record are complete.</p>
+          </div>
+          <ul>{practitionerCaseworkGate.authorisationRequires.map(item=><li key={item}>{item}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+
     <section className="section">
       <div className="shell">
         <div className="eyebrow">FROM CAPABILITY TO PRACTICE</div>
@@ -185,6 +211,17 @@ export default function PractitionerNetworkPage(){
       <div className="shell covert-boundary">
         <strong>Important boundary</strong>
         <p>Covert work is not a general investigation product, a staff-monitoring shortcut or a way to bypass privacy rights. Any such engagement requires senior approval, legal and data-protection review, a defined purpose and timeframe, strict access controls and an appropriate DPIA before work begins. In regulated care settings, CQC privacy, dignity, consent and surveillance guidance must also be addressed.</p>
+      </div>
+    </section>
+
+
+    <section className="section section-soft">
+      <div className="shell governance-callout">
+        <div>
+          <div className="eyebrow">CLIENT PRICING</div>
+          <h2>ORVIA practitioner-led casework from £520 + VAT per day.</h2>
+        </div>
+        <p>The rate follows the responsibility, specialist input, urgency and required outputs. Every engagement is scoped before work begins, and practitioners only take casework after ORVIA training and formal authorisation.</p>
       </div>
     </section>
 

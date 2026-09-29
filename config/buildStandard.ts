@@ -17,6 +17,27 @@ export const websiteBuildStandard = {
       "Internal applications are role, authority and evidence-first."
     ]
   },
+  visualStorytelling:{
+    pageHeroStandard:[
+      "Every major public page opens with a full-bleed cinematic hero image.",
+      "Hero copy overlays the image using a controlled ORVIA gradient for readability.",
+      "Hero content is limited to eyebrow, large statement, short lead, primary CTA and optional proof line.",
+      "Each page uses a context-specific image; do not reuse one generic visual across the estate.",
+      "Important visual subjects should be composed away from primary text placement where possible."
+    ],
+    productExplainerStandard:[
+      "Retain strong visual product-explainer imagery below the hero; do not replace it with text-only cards.",
+      "Use branded scenario imagery to explain what the product does, who is involved and what changes as a result.",
+      "Product imagery should be designed as reusable storyboards for short-form video and motion explainers.",
+      "Where useful, show people, evidence, workflow state, callsigns, interfaces or operational context rather than abstract decoration.",
+      "Every image must have a clear communication purpose and should reduce the amount of copy needed to understand the product."
+    ],
+    mediaReuse:[
+      "Approved product explainer stills should be reusable as keyframes, posters and scene references for 10-second and longer explainer films.",
+      "Hero photography and product-explainer imagery serve different purposes and should both be retained.",
+      "Product-specific accent, logo and visual cues must remain consistent across stills, video and page UI."
+    ]
+  },
   mandatoryConnections:[
     "Brand registry",
     "Commercial registry",
@@ -46,7 +67,9 @@ export const websiteBuildStandard = {
     "SEO release gate",
     "sales release gate",
     "case-study publication boundary",
-    "lean UX gate"
+    "lean UX gate",
+    "full-bleed page hero standard",
+    "product visual storytelling standard"
   ],
   leanUxGate:{
     failureState:"LEAN_UX_GATE_FAILED",
@@ -58,7 +81,9 @@ export const websiteBuildStandard = {
       "Distress-sensitive routes use the distress-safe pattern where applicable.",
       "Depth and governance detail remain available through progressive disclosure or deeper pages.",
       "Mobile users can reach the primary action without navigating multi-level architecture.",
-      "No build notes, placeholder copy or internal-only controls are exposed publicly."
+      "No build notes, placeholder copy or internal-only controls are exposed publicly.",
+      "Major public pages use the approved full-bleed hero pattern unless a documented exception applies.",
+      "Product pages retain visual explainer imagery that communicates the product without relying on long copy."
     ]
   },
   releaseEvidence:[
@@ -68,6 +93,8 @@ export const websiteBuildStandard = {
     "all navigation links tested",
     "all CTAs tested",
     "lean UX gate passed",
+    "page hero imagery verified",
+    "product explainer imagery verified",
     "commercial route tested",
     "IRIS workflow creation tested",
     "owner and timer tested",

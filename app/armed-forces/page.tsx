@@ -43,31 +43,23 @@ const pathway = [
 
 export default function ArmedForcesPage(){
   return <>
-    <section className="af-v2-hero">
-      <div className="shell af-v2-hero-grid">
+    <section className="af-v2-hero af-v3-hero" aria-label="Armed Forces, veterans and families">
+      <img className="af-v3-hero-image" src="/armed-forces/service-team.jpg" alt="People from service backgrounds working together"/>
+      <div className="af-v3-hero-overlay"/>
+      <div className="shell af-v3-hero-content">
         <div className="af-v2-copy">
           <div className="eyebrow light">VETERANS · SERVICE LEAVERS · FAMILIES · PUBLIC SERVICE</div>
-          <h1>Different experiences.<br/><span>A shared purpose.</span></h1>
-          <p className="lead">John McGill is a military veteran. ORVIA takes that status seriously by creating work where judgement, resilience, curiosity and unconventional problem-solving can be used to protect people and improve organisations.</p>
+          <h1>Your service still has value.<br/><span>Your next chapter can too.</span></h1>
+          <p className="lead">Leaving service can mean leaving behind identity, routine, belonging and people who understood the world you came from. ORVIA wants to create a place where that experience is respected, translated and used well — without expecting you to become somebody else first.</p>
           <div className="actions">
             <Link className="button af-gold-button" href="/careers">Explore opportunities</Link>
-            <a className="button af-outline-button" href="#veteran-story">Our veteran story</a>
+            <a className="button af-outline-button" href="#veteran-story">Read our veteran story</a>
           </div>
-          <p className="af-v2-principle">HUMAN FIRST. HUMAN LAST.</p>
+          <p className="af-v2-principle">SERVICE INFORMS PURPOSE · PEOPLE COME FIRST</p>
         </div>
-
-        <div className="af-v2-media" aria-label="ORVIA Armed Forces and family imagery">
-          <div className="af-v2-main-image">
-            <img src="/armed-forces/service-team.jpg" alt="Team working together outdoors"/>
-            <div className="af-v2-image-label">SERVICE INFORMS PURPOSE</div>
-          </div>
-          <div className="af-v2-side-grid">
-            <figure><img src="/armed-forces/family.webp" alt="Family together"/></figure>
-            <div className="af-v2-placeholder" aria-label="Reserved for approved Armed Forces image">
-              <span>NEW APPROVED IMAGE</span>
-              <strong>Reserved visual slot</strong>
-            </div>
-          </div>
+        <div className="af-v3-family-note">
+          <img src="/armed-forces/family.webp" alt="Military family together"/>
+          <p><strong>Families matter too.</strong><br/>Service affects more than the person in uniform. Partners, children and support networks are part of the story.</p>
         </div>
       </div>
     </section>

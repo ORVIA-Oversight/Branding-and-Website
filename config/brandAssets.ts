@@ -87,9 +87,9 @@ export const brandAssets: Record<BrandAssetKey, BrandAssetRecord> = {
 };
 
 export const masterBrandAssets = {
-  logo: `${assetRoot}/master/ORVIA_Master_Primary_Horizontal_Transparent_v2.png`,
-  wordmark: `${assetRoot}/master/ORVIA_Master_Wordmark_FiveColour_Transparent_CLEAN_v2.png`,
-  globe: `${assetRoot}/master/ORVIA_Master_Globe_FullColour_Transparent_v2.png`,
+  logo: "/brand/ORVIA-Oversight-master.png",
+  wordmark: "/brand/ORVIA-Oversight-master.png",
+  globe: "/brand/ORVIA-Oversight-master.png",
   favicon32: `${assetRoot}/icons/orvia-master-icon-32.png`,
   appleTouch180: `${assetRoot}/icons/orvia-master-icon-180.png`,
   pwa192: `${assetRoot}/icons/orvia-master-icon-192.png`,

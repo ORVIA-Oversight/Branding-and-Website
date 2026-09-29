@@ -21,12 +21,12 @@ const outcomes = [
 ] as const;
 
 const products = [
-  ["ORVIA Voice","24/7 call capture and accountable follow-up.","https://voice.orvia.org.uk","V"],
-  ["Witness Room","Structured evidence preparation and challenge.","https://witness.orvia.org.uk","W"],
-  ["Perspective Room","Human reasoning and evidence-led assessment.","/perspective-room","P"],
-  ["ORVIA Web","Lean commercial websites and managed delivery.","https://web.orvia.org.uk","O"],
-  ["MIA","Memory preservation, family archive and legacy.","https://mia.orvia.org.uk","M"],
-  ["Threshold","Structured concern and evidence review.","https://threshold.orvia.org.uk","T"]
+  ["ORVIA Voice","24/7 call capture and accountable follow-up.","https://voice.orvia.org.uk","V","voice"],
+  ["Witness Room","Structured evidence preparation and challenge.","https://witness.orvia.org.uk","W","witness-room"],
+  ["Perspective Room","Human reasoning and evidence-led assessment.","/perspective-room","P","perspective-room"],
+  ["ORVIA Web","Lean commercial websites and managed delivery.","https://web.orvia.org.uk","O","web"],
+  ["MIA","Memory preservation, family archive and legacy.","https://mia.orvia.org.uk","M","mia"],
+  ["Threshold","Structured concern and evidence review.","https://threshold.orvia.org.uk","T","threshold"]
 ] as const;
 
 const productIcons = ["voice","evidence","perspective","web","family","threshold"] as const;
@@ -154,12 +154,15 @@ export default function Home(){
           <p>Product names are secondary. Each service is presented with a plain-English purpose and a real next action.</p>
         </div>
         <div className="lean-product-grid">
-          {products.map(([name,body,href,mark],i)=><article key={name}>
+          {products.map(([name,body,href,mark,guide],i)=><article key={name}>
             <span className="lean-product-mark-card" aria-label={`${name} icon`}><HomeIcon name={productIcons[i]}/></span>
             <div><h3>{name}</h3><p>{body}</p></div>
-            {href.startsWith("http")
-              ? <a href={href} target="_blank" rel="noreferrer">Open service →</a>
-              : <Link href={href}>Open service →</Link>}
+            <div className="lean-product-actions">
+              <Link href={`/services/${guide}`}>Service information →</Link>
+              {href.startsWith("http")
+                ? <a href={href} target="_blank" rel="noreferrer">Open service →</a>
+                : <Link href={href}>Open service →</Link>}
+            </div>
           </article>)}
         </div>
       </div>

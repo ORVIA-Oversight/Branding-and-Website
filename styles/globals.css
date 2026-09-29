@@ -105,3 +105,20 @@ select{font:inherit;padding:14px;border:1px solid #bcc7d2;border-radius:12px;bac
 .product-brand-copy strong{font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:190px}
 @media(max-width:1200px){.master-brand img{width:160px}.product-brand-copy strong{max-width:150px}.nav-wrap{gap:20px}}
 @media(max-width:700px){.master-brand img{width:138px}.brand-divider{height:36px}.product-brand-copy small{display:none}.product-brand-copy strong{max-width:120px;font-size:.84rem}.product-brand-icon{width:34px;height:34px;border-radius:10px}}
+
+
+/* Screenshot-approved dark estate masthead */
+.estate-header{background:#071a32;color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.estate-header .nav-wrap{min-height:76px}
+.estate-header nav a{color:rgba(255,255,255,.82)}
+.estate-header nav a:hover{color:#fff}
+.estate-header .master-brand img{width:174px;max-height:44px;filter:none}
+.estate-header .brand-divider{height:40px;background:rgba(255,255,255,.26)}
+.estate-header .product-brand{color:#fff}
+.estate-header .product-brand-copy strong{font-size:1.04rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;max-width:205px}
+.estate-header .product-brand-icon{width:38px;height:38px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:color-mix(in srgb,var(--product-accent) 70%,#071a32);box-shadow:none}
+.estate-header .product-brand-image{width:38px;height:38px;object-fit:contain}
+.estate-header .estate-cta{background:#fff;color:#071a32;border-color:#fff}
+.estate-header .estate-cta:hover{background:var(--gold);border-color:var(--gold);color:#071a32}
+@media(max-width:1100px){.estate-header nav{display:none}.estate-header .nav-wrap{justify-content:space-between}}
+@media(max-width:700px){.estate-header .master-brand img{width:138px}.estate-header .product-brand-copy strong{max-width:125px;font-size:.82rem}.estate-header .brand-divider{height:34px}}

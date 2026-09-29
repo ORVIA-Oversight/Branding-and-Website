@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { primaryNav, customerAccessNav } from "@/config/navigation";
+import { navigationGroups, customerAccessNav } from "@/config/navigation";
 import { productConfig } from "@/config/products";
 
 type ProductHeaderProps = {
@@ -11,6 +11,41 @@ type ProductHeaderProps = {
   ctaLabel?: string;
   ctaHref?: string;
 };
+
+function NavGroup({label,items}:{label:string;items:readonly {label:string;href:string;description?:string;external?:boolean}[]}) {
+  return <details className="nav-group">
+    <summary>{label}</summary>
+    <div className="nav-dropdown">
+      {items.map(item => item.external || item.href.startsWith("http")
+        ? <a key={item.href} href={item.href} target="_blank" rel="noreferrer">
+            <strong>{item.label}</strong>
+            {item.description && <small>{item.description}</small>}
+          </a>
+        : <Link key={item.href} href={item.href}>
+            <strong>{item.label}</strong>
+            {item.description && <small>{item.description}</small>}
+          </Link>
+      )}
+    </div>
+  </details>;
+}
+
+function CustomerMenu(){
+  return <details className="nav-group customer-login-menu">
+    <summary>Customer Login</summary>
+    <div className="nav-dropdown customer-login-dropdown">
+      <div className="customer-login-heading">
+        <strong>ORVIA Access</strong>
+        <span>Choose the service you need.</span>
+      </div>
+      {customerAccessNav.map(item=><a key={item.label} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
+        <span><strong>{item.label}</strong><small>{item.description}</small></span>
+        <em className={"access-status "+item.status}>{item.status}</em>
+      </a>)}
+      <Link className="customer-login-manage" href="/customer-login">View all access options →</Link>
+    </div>
+  </details>;
+}
 
 export function ProductHeader({
   productName="Brand & Web System",
@@ -40,36 +75,35 @@ export function ProductHeader({
           <Link href="https://orvia.org.uk" className="master-brand" aria-label="ORVIA Oversight">
             <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA"/>
           </Link>
-
           <span className="brand-divider" aria-hidden="true"/>
-
           <Link href={productHref} className="product-brand" style={{"--product-accent":productAccent} as React.CSSProperties}>
             {productIconSrc
               ? <img className="product-brand-image" src={productIconSrc} alt=""/>
               : <span className="product-brand-icon">{productMark}</span>}
-            <span className="product-brand-copy">
-              <strong>{productName}</strong>
-            </span>
+            <span className="product-brand-copy"><strong>{productName}</strong></span>
           </Link>
         </div>
 
-        <nav aria-label="Primary navigation">
-          {primaryNav.map(([label,href])=><Link key={href} href={href}>{label}</Link>)}
-          <details className="customer-login-menu">
-            <summary>Customer Login</summary>
-            <div className="customer-login-dropdown">
-              <div className="customer-login-heading">
-                <strong>ORVIA Access</strong>
-                <span>Choose the service you need.</span>
-              </div>
-              {customerAccessNav.map(item=><a key={item.label} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
-                <span><strong>{item.label}</strong><small>{item.description}</small></span>
-                <em className={"access-status "+item.status}>{item.status}</em>
-              </a>)}
-              <Link className="customer-login-manage" href="/customer-login">View all access options →</Link>
-            </div>
-          </details>
+        <nav className="desktop-mega-nav" aria-label="Primary navigation">
+          {navigationGroups.map(group=><NavGroup key={group.label} label={group.label} items={group.items}/>)}
+          <CustomerMenu/>
         </nav>
+
+        <details className="mobile-hamburger">
+          <summary aria-label="Open navigation"><span></span><span></span><span></span><b>Menu</b></summary>
+          <div className="mobile-menu-panel">
+            {navigationGroups.map(group=><section key={group.label}>
+              <h3>{group.label}</h3>
+              {group.items.map(item => item.external || item.href.startsWith("http")
+                ? <a key={item.href} href={item.href} target="_blank" rel="noreferrer">{item.label}</a>
+                : <Link key={item.href} href={item.href}>{item.label}</Link>)}
+            </section>)}
+            <section>
+              <h3>Customer Login</h3>
+              {customerAccessNav.map(item=><a key={item.label} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>{item.label}</a>)}
+            </section>
+          </div>
+        </details>
 
         <Link href={ctaHref} className="button button-small estate-cta">{ctaLabel}</Link>
       </div>

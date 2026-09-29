@@ -28,6 +28,8 @@ export const navigationGroups = [
       { label: "All products", href: "/products", description: "See the current ORVIA product and service estate." },
       { label: "ORVIA Voice", href: "https://voice.orvia.org.uk", description: "Call capture, routing and accountable follow-up.", external:true },
       { label: "Witness Room", href: "https://witness.orvia.org.uk", description: "Evidence preparation, challenge and controlled perspectives.", external:true },
+      { label: "Perspective Room", href: "/perspective-room", description: "Human reasoning, safeguarding judgement and evidence-led recruitment." },
+
       { label: "ORVIA Web", href: "https://web.orvia.org.uk", description: "Rapid commercial website builds and managed web delivery.", external:true },
       { label: "MIA", href: "https://mia.orvia.org.uk", description: "Memory preservation, family archive and legacy.", external:true },
       { label: "Threshold", href: "https://threshold.orvia.org.uk", description: "Structured concern and evidence review.", external:true }

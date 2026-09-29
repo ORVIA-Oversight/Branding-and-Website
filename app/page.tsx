@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArmedForcesCommitment } from "@/components/trust/ArmedForcesCommitment";
+import { PlatformExplainer } from "@/components/marketing/PlatformExplainer";
 
 const needs = [
   ["I’m worried about something","Start with what happened. We help structure the concern, preserve the evidence and identify a proportionate next step.","/work-with-orvia"],
@@ -55,6 +56,8 @@ export default function Home(){
         </div>
       </div>
     </section>
+
+    <PlatformExplainer/>
 
     <section id="start" className="lean-section">
       <div className="shell">

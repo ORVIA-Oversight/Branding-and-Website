@@ -213,3 +213,49 @@ select{font:inherit;padding:14px;border:1px solid #bcc7d2;border-radius:12px;bac
   font-size:1rem;
 }
 .careers-v2-image-placeholder{border-radius:22px}
+
+
+/* Canonical light ORVIA estate masthead — approved correction */
+.estate-header{
+  background:rgba(255,255,255,.97)!important;
+  color:var(--ink)!important;
+  border-bottom:1px solid rgba(11,45,92,.10)!important;
+  box-shadow:0 8px 28px rgba(15,23,32,.05);
+  backdrop-filter:blur(16px);
+}
+.estate-header .nav-wrap{min-height:82px}
+.estate-header nav a{color:#24364a!important}
+.estate-header nav a:hover{color:var(--navy)!important}
+.estate-header .master-brand img{
+  width:188px!important;
+  max-height:52px!important;
+  object-fit:contain;
+  object-position:left center;
+}
+.estate-header .brand-divider{height:44px!important;background:#d9e1e8!important}
+.estate-header .product-brand{color:var(--ink)!important}
+.estate-header .product-brand-copy strong{
+  color:var(--navy)!important;
+  letter-spacing:.045em!important;
+  font-size:1rem!important;
+}
+.estate-header .product-brand-icon{
+  background:var(--product-accent)!important;
+  color:#fff!important;
+  border:0!important;
+  box-shadow:0 8px 20px color-mix(in srgb,var(--product-accent) 18%,transparent)!important;
+}
+.estate-header .estate-cta{
+  background:var(--navy)!important;
+  border-color:var(--navy)!important;
+  color:#fff!important;
+}
+.estate-header .estate-cta:hover{
+  background:var(--gold,#F0A51A)!important;
+  border-color:var(--gold,#F0A51A)!important;
+  color:#071a32!important;
+}
+@media(max-width:700px){
+  .estate-header .master-brand img{width:148px!important}
+  .estate-header .brand-divider{height:36px!important}
+}

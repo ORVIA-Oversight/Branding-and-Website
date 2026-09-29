@@ -5,6 +5,7 @@ export default function sitemap():MetadataRoute.Sitemap{
   const paths=[
     "",
     "/products",
+    "/perspective-room",
     "/systems",
     "/commercial",
     "/founder",

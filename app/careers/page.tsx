@@ -18,21 +18,23 @@ const groups=[
 
 export default function CareersPage(){
   return <>
-    <section className="careers-v2-hero">
-      <div className="shell careers-v2-grid">
+    <section className="careers-v2-hero careers-v3-hero" aria-label="Careers at ORVIA">
+      <img className="careers-v3-hero-image" src="/armed-forces/service-team.jpg" alt="People from different backgrounds working together"/>
+      <div className="careers-v3-hero-overlay"/>
+      <div className="shell careers-v3-content">
         <div className="careers-v2-copy">
           <div className="eyebrow light">CAREERS AT ORVIA</div>
-          <h1>Purpose. People.<br/><span>A fairer society.</span></h1>
-          <p className="lead">We bring together military veterans, people from other services and civilians who share a commitment to protect people, strengthen organisations and create lasting change.</p>
+          <h1>Bring your experience.<br/><span>Build something that matters.</span></h1>
+          <p className="lead">You do not need a perfect career history to belong here. We are interested in judgement, integrity, curiosity, resilience and the ability to learn — whether that comes from the Armed Forces, public service, regulated work, caring roles or somewhere completely different.</p>
           <div className="actions">
             <a className="button af-gold-button" href="#express-interest">Join our team</a>
-            <Link className="button af-outline-button" href="/armed-forces">Our veteran story</Link>
+            <Link className="button af-outline-button" href="/armed-forces">Veterans & families</Link>
           </div>
-          <p className="af-v2-principle">DIFFERENT EXPERIENCES. A SHARED PURPOSE.</p>
+          <p className="af-v2-principle">DIFFERENT EXPERIENCES · A SHARED PURPOSE</p>
         </div>
-        <div className="careers-v2-visual">
-          <img src="/armed-forces/service-team.jpg" alt="People working together in a demanding environment"/>
-          <div className="careers-v2-quote"><strong>Bring us what you’re capable of.</strong><span>Not just what your CV knows how to say.</span></div>
+        <div className="careers-v3-note">
+          <strong>Capability is bigger than a CV.</strong>
+          <span>We want to understand what you can do, how you think and what you could become.</span>
         </div>
       </div>
     </section>

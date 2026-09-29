@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { ArmedForcesCommitment } from "@/components/trust/ArmedForcesCommitment";
 
-const needs = [
+type RouteCard = {
+  title: string;
+  body: string;
+  href: string;
+  cta: string;
+  external?: boolean;
+};
+
+const needs: RouteCard[] = [
   {
     title:"I need help with a concern",
     body:"Start with what has happened. ORVIA helps structure the concern, preserve the evidence and identify a proportionate next step.",
@@ -41,31 +49,38 @@ const needs = [
     cta:"Customer workspace",
     external:true
   }
-] as const;
+];
 
-const outcomes = [
+const outcomes: [string,string][] = [
   ["See the real problem","Bring fragmented evidence, concerns, workflows and context into one clearer picture."],
   ["Know what needs action","Make ownership, deadlines, uncertainty and escalation visible."],
   ["Prove what changed","Keep the evidence showing what was found, what was done and whether the improvement worked."],
   ["Keep judgement human","Use technology to organise, compare and challenge without handing high-consequence decisions to a machine."]
-] as const;
+];
 
-const process = [
+const process: [string,string][] = [
   ["01","Tell us what is happening"],
   ["02","Preserve and structure the evidence"],
   ["03","Test what the evidence actually supports"],
   ["04","Agree the proportionate action"],
   ["05","Verify whether the change worked"]
-] as const;
+];
 
-const routes = [
-  ["ORVIA Voice","24/7 call capture and accountable follow-up.","https://voice.orvia.org.uk"],
-  ["Witness Room","Structured evidence preparation, challenge and controlled perspectives.","https://witness.orvia.org.uk"],
-  ["Perspective Room","Human reasoning, safeguarding judgement and evidence-led assessment.","/perspective-room"],
-  ["ORVIA Web","Lean commercial websites and managed web delivery.","https://web.orvia.org.uk"],
-  ["MIA","Memory preservation, family archive and legacy.","https://mia.orvia.org.uk"],
-  ["Threshold","Structured concern and evidence review.","https://threshold.orvia.org.uk"]
-] as const;
+const routes: RouteCard[] = [
+  {title:"ORVIA Voice",body:"24/7 call capture and accountable follow-up.",href:"https://voice.orvia.org.uk",cta:"Open service",external:true},
+  {title:"Witness Room",body:"Structured evidence preparation, challenge and controlled perspectives.",href:"https://witness.orvia.org.uk",cta:"Open service",external:true},
+  {title:"Perspective Room",body:"Human reasoning, safeguarding judgement and evidence-led assessment.",href:"/perspective-room",cta:"Open service"},
+  {title:"ORVIA Web",body:"Lean commercial websites and managed web delivery.",href:"https://web.orvia.org.uk",cta:"Open service",external:true},
+  {title:"MIA",body:"Memory preservation, family archive and legacy.",href:"https://mia.orvia.org.uk",cta:"Open service",external:true},
+  {title:"Threshold",body:"Structured concern and evidence review.",href:"https://threshold.orvia.org.uk",cta:"Open service",external:true}
+];
+
+function RouteLink({item}:{item:RouteCard}) {
+  if (item.external) {
+    return <a className="text-link" href={item.href} target="_blank" rel="noreferrer">{item.cta} →</a>;
+  }
+  return <Link className="text-link" href={item.href}>{item.cta} →</Link>;
+}
 
 export default function Home(){
   return <>
@@ -77,7 +92,7 @@ export default function Home(){
           <p>ORVIA helps people and organisations understand concerns, strengthen governance, test evidence and turn findings into accountable improvement.</p>
           <div className="actions">
             <Link className="button" href="/work-with-orvia">Tell us what is happening</Link>
-            <Link className="button secondary" href="#start">Choose what you need</Link>
+            <a className="button secondary" href="#start">Choose what you need</a>
           </div>
           <div className="trust-inline">
             <span>Independent</span>
@@ -113,9 +128,7 @@ export default function Home(){
           {needs.map(item => <article className="feature-card" key={item.title}>
             <h3>{item.title}</h3>
             <p>{item.body}</p>
-            {"external" in item && item.external
-              ? <a className="text-link" href={item.href} target="_blank" rel="noreferrer">{item.cta} →</a>
-              : <Link className="text-link" href={item.href}>{item.cta} →</Link>}
+            <RouteLink item={item}/>
           </article>)}
         </div>
       </div>
@@ -151,12 +164,10 @@ export default function Home(){
           <p>Product names should never be a barrier. Every ORVIA service is paired with a plain-English purpose.</p>
         </div>
         <div className="card-grid">
-          {routes.map(([name,body,href]) => <article className="feature-card" key={name}>
-            <h3>{name}</h3>
-            <p>{body}</p>
-            {href.startsWith("http")
-              ? <a className="text-link" href={href} target="_blank" rel="noreferrer">Open service →</a>
-              : <Link className="text-link" href={href}>Open service →</Link>}
+          {routes.map(item => <article className="feature-card" key={item.title}>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+            <RouteLink item={item}/>
           </article>)}
         </div>
       </div>
@@ -186,7 +197,7 @@ export default function Home(){
       <div className="shell">
         <div className="section-head">
           <div><div className="eyebrow">BRAND & WEB GOVERNANCE</div><h2>Need the system underneath the experience?</h2></div>
-          <p>This site also remains the canonical reference for teams building and governing the wider ORVIA estate. Depth is available, but it is no longer imposed on the first-time user.</p>
+          <p>This site remains the canonical reference for teams building and governing the wider ORVIA estate. Depth is available, but it is no longer imposed on the first-time user.</p>
         </div>
         <div className="card-grid">
           <article className="feature-card"><h3>ORVIA systems</h3><p>IRIS, HIVE, VITA, VERA, Command and the controlled AI architecture.</p><Link className="text-link" href="/systems">Open systems reference →</Link></article>

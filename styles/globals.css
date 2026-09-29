@@ -906,3 +906,117 @@ background-size:52px 52px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),tr
   .af-v3-hero-overlay,.careers-v3-hero-overlay{background:linear-gradient(180deg,rgba(5,17,31,.88),rgba(5,17,31,.78))}
   .af-v3-family-note{grid-template-columns:72px 1fr}.af-v3-family-note img{width:72px;height:72px}
 }
+
+
+/* Homepage cinematic full-bleed hero */
+.home-cinematic-hero{
+  position:relative;
+  min-height:78vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:#07182b;
+  color:#fff;
+}
+.home-hero-media{position:absolute;inset:0;overflow:hidden}
+.home-hero-image{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 78% 30%,rgba(47,127,134,.34),transparent 26%),
+    radial-gradient(circle at 68% 62%,rgba(240,165,26,.16),transparent 22%),
+    linear-gradient(135deg,#0B2D5C 0%,#123e63 48%,#2F7F86 100%);
+  transform:scale(1.02);
+}
+.home-hero-image:after{
+  content:"";
+  position:absolute;inset:0;
+  background-image:url("/brand/ORVIA-Oversight-master.png");
+  background-repeat:no-repeat;
+  background-position:82% 50%;
+  background-size:min(42vw,640px) auto;
+  opacity:.14;
+  filter:saturate(.85) brightness(1.15);
+}
+.home-hero-film-overlay{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,rgba(4,18,34,.96) 0%,rgba(4,18,34,.88) 36%,rgba(4,18,34,.46) 67%,rgba(4,18,34,.16) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.22));
+}
+.home-hero-content{
+  position:relative;z-index:2;
+  width:100%;
+  padding-top:88px;
+  padding-bottom:72px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:78vh;
+}
+.home-hero-copy{max-width:900px}
+.home-cinematic-hero .lean-kicker{color:#8fd0d0}
+.home-cinematic-hero h1{
+  font-size:clamp(4.25rem,7.2vw,7.25rem);
+  line-height:.9;
+  letter-spacing:-.06em;
+  margin:0 0 26px;
+  color:#fff;
+  max-width:1050px;
+}
+.home-cinematic-hero h1 span{color:#f0b23a}
+.home-cinematic-hero p{
+  max-width:780px;
+  font-size:1.18rem;
+  line-height:1.65;
+  color:#e6eef5;
+}
+.home-hero-primary{
+  background:#fff;
+  color:#0B2D5C;
+  border-color:#fff;
+}
+.home-hero-secondary{
+  display:inline-flex;align-items:center;
+  color:#fff;
+  font-weight:700;
+  border-bottom:1px solid rgba(255,255,255,.55);
+  padding-bottom:4px;
+}
+.home-hero-proof span{
+  background:rgba(255,255,255,.10);
+  border-color:rgba(255,255,255,.20);
+  color:#fff;
+  backdrop-filter:blur(8px);
+}
+.home-hero-method{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  padding-top:34px;
+  font-size:.72rem;
+  letter-spacing:.14em;
+  font-weight:800;
+  color:#d9e8f1;
+}
+.home-hero-method span{
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(6,25,46,.45);
+  border-radius:999px;
+  padding:9px 13px;
+}
+.home-hero-method i{font-style:normal;color:#efc256}
+
+@media(max-width:900px){
+  .home-cinematic-hero,.home-hero-content{min-height:72vh}
+  .home-hero-image:after{background-position:115% 50%;background-size:70vw auto;opacity:.10}
+  .home-hero-film-overlay{background:linear-gradient(90deg,rgba(4,18,34,.96),rgba(4,18,34,.72))}
+}
+@media(max-width:700px){
+  .home-cinematic-hero,.home-hero-content{min-height:680px}
+  .home-hero-content{padding-top:56px;padding-bottom:44px}
+  .home-cinematic-hero h1{font-size:clamp(3.2rem,14vw,4.9rem)}
+  .home-cinematic-hero p{font-size:1rem}
+  .home-hero-film-overlay{background:linear-gradient(180deg,rgba(4,18,34,.92),rgba(4,18,34,.80))}
+  .home-hero-image:after{background-position:50% 82%;background-size:88vw auto;opacity:.08}
+}

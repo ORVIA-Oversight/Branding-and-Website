@@ -738,3 +738,47 @@ background-size:52px 52px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),tr
   .work-john-no-yes-grid,.work-john-engage-grid{gap:42px}
   .work-john-mid-cta{align-items:flex-start;flex-direction:column}
 }
+
+
+/* Working practice + founder credential layer */
+.work-john-credential-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.work-john-credential-grid article{padding:24px;border:1px solid var(--line);border-radius:20px;background:#fff;min-height:200px}
+.work-john-credential-grid article>span{display:block;font-size:.67rem;letter-spacing:.11em;text-transform:uppercase;color:var(--teal);font-weight:800}
+.work-john-credential-grid h3{font-size:1.08rem;line-height:1.35;margin:16px 0 9px;color:var(--navy)}
+.work-john-credential-grid p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.58}
+.work-john-experience-band{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start;margin-top:18px;padding:28px;border-radius:22px;background:#fff;border:1px solid var(--line)}
+.work-john-experience-band h3{font-size:1.55rem;color:var(--navy);margin:12px 0 0}
+.work-john-experience-band ul{margin:0;padding-left:20px;color:#4f6072;line-height:1.72}
+.work-john-practitioner-layer{background:linear-gradient(180deg,#fff,#f8fafc)}
+
+.working-practice{background:#fff}
+.working-practice-lenses{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.working-practice-lenses article{padding:26px;border:1px solid var(--line);border-radius:22px;background:#fff}
+.working-practice-lenses article>span{font-family:var(--font-mono);font-size:.68rem;color:#8b99a8}
+.working-practice-lenses h3{font-size:1.16rem;color:var(--navy);margin:18px 0 9px}
+.working-practice-lenses p{margin:0;color:var(--muted);line-height:1.62}
+.working-practice-guarantee{display:grid;grid-template-columns:1.12fr .88fr;gap:62px;align-items:start;margin-top:22px;padding:34px;border-radius:28px;background:linear-gradient(135deg,#0b2d5c,#14466c);color:#fff;box-shadow:0 24px 60px rgba(11,45,92,.14)}
+.working-practice-guarantee h3{font-size:clamp(1.65rem,2.6vw,2.65rem);line-height:1.18;letter-spacing:-.025em;color:#fff;margin:14px 0 0}
+.working-practice-guarantee p{color:#d5e1e9;line-height:1.7;margin:0}
+.working-practice-examples{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px;align-items:start;margin-top:58px}
+.working-practice-examples h2{font-size:clamp(2.25rem,4vw,4rem);line-height:1.02;letter-spacing:-.04em;color:var(--navy);margin:14px 0}
+.working-practice-example-list{display:grid;gap:12px}
+.working-practice-example-list article{padding:20px 22px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.working-practice-example-list strong{color:var(--navy)}
+.working-practice-example-list p{margin:7px 0 0;color:var(--muted);line-height:1.58;font-size:.9rem}
+.working-practice-flow{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:34px}
+.working-practice-flow>div{padding:16px 14px;border-radius:14px;background:#f3f7f9}
+.working-practice-flow span{display:block;font-family:var(--font-mono);font-size:.64rem;color:#8392a1;margin-bottom:7px}
+.working-practice-flow strong{font-size:.84rem;color:var(--navy);line-height:1.3}
+
+@media(max-width:1050px){
+  .work-john-credential-grid,.working-practice-lenses{grid-template-columns:1fr 1fr}
+  .work-john-experience-band,.working-practice-guarantee,.working-practice-examples{grid-template-columns:1fr}
+  .working-practice-flow{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:680px){
+  .work-john-credential-grid,.working-practice-lenses,.working-practice-flow{grid-template-columns:1fr}
+  .work-john-experience-band{gap:24px}
+  .working-practice-guarantee{gap:24px;padding:26px}
+  .working-practice-examples{gap:30px;margin-top:42px}
+}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArmedForcesCommitment } from "@/components/trust/ArmedForcesCommitment";
 import { CustomerExplainer } from "@/components/marketing/CustomerExplainer";
 
@@ -21,12 +22,66 @@ const outcomes = [
 ] as const;
 
 const products = [
-  ["ORVIA Voice","24/7 call capture and accountable follow-up.","https://voice.orvia.org.uk","V","voice"],
-  ["Witness Room","Structured evidence preparation and challenge.","https://witness.orvia.org.uk","W","witness-room"],
-  ["Perspective Room","Human reasoning and evidence-led assessment.","/perspective-room","P","perspective-room"],
-  ["ORVIA Web","Lean commercial websites and managed delivery.","https://web.orvia.org.uk","O","web"],
-  ["MIA","Memory preservation, family archive and legacy.","https://mia.orvia.org.uk","M","mia"],
-  ["Threshold","Structured concern and evidence review.","https://threshold.orvia.org.uk","T","threshold"]
+  {
+    name:"ORVIA Voice",
+    summary:"A 24/7 call-capture and follow-up service for organisations that cannot afford enquiries, incidents or customer requests to disappear into voicemail.",
+    bestFor:"Missed calls, out-of-hours demand, routing and accountable follow-up",
+    outcome:"Every important call is captured, owned and moved to a next action.",
+    href:"https://voice.orvia.org.uk",
+    guide:"voice",
+    image:"/products/voice.svg",
+    alt:"Illustration of an accountable call capture and routing interface"
+  },
+  {
+    name:"Witness Room",
+    summary:"A structured preparation space for complex evidence. It helps people build chronology, compare accounts, surface gaps and prepare for difficult professional or legal conversations.",
+    bestFor:"Evidence review, chronology, contradictions and structured challenge",
+    outcome:"A clearer, source-led account of what is supported, disputed or still missing.",
+    href:"https://witness.orvia.org.uk",
+    guide:"witness-room",
+    image:"/products/witness-room.svg",
+    alt:"Illustration of evidence documents being compared and reviewed"
+  },
+  {
+    name:"Perspective Room",
+    summary:"A human-reasoning assessment environment that explores how somebody handles ambiguity, evidence, competing perspectives and changing information.",
+    bestFor:"Recruitment, leadership development and professional judgement",
+    outcome:"Better evidence about how a person thinks — without reducing them to a score.",
+    href:"/perspective-room",
+    guide:"perspective-room",
+    image:"/products/perspective-room.svg",
+    alt:"Illustration of multiple viewpoints connecting to a shared human judgement"
+  },
+  {
+    name:"ORVIA Web",
+    summary:"A managed website service for small organisations that need a professional commercial site built, connected and maintained without becoming their own web team.",
+    bestFor:"Fast launches, service websites, lead capture and managed delivery",
+    outcome:"A finished customer journey with a real next action — not just a brochure page.",
+    href:"https://web.orvia.org.uk",
+    guide:"web",
+    image:"/products/web.svg",
+    alt:"Illustration of a modern commercial website interface"
+  },
+  {
+    name:"MIA",
+    summary:"A human-centred memory and family archive for preserving stories, voice, photographs, timelines and messages that should not be lost.",
+    bestFor:"Family history, life stories, remembrance and legacy",
+    outcome:"Important memories remain organised, accessible and recognisably the person's own.",
+    href:"https://mia.orvia.org.uk",
+    guide:"mia",
+    image:"/products/mia.svg",
+    alt:"Illustration of a personal memory and family archive"
+  },
+  {
+    name:"Threshold",
+    summary:"A structured concern-review route for situations where something may be wrong but the evidence, significance or proportionate next step is not yet clear.",
+    bestFor:"Concerns, early review, evidence gaps and escalation decisions",
+    outcome:"A clearer threshold for action without turning uncertainty into a finding of fault.",
+    href:"https://threshold.orvia.org.uk",
+    guide:"threshold",
+    image:"/products/threshold.svg",
+    alt:"Illustration of evidence reaching a decision threshold"
+  }
 ] as const;
 
 function HomeIcon({name}:{name:string}){
@@ -151,17 +206,31 @@ export default function Home(){
           </div>
           <p>Product names are secondary. Each service is presented with a plain-English purpose and a real next action.</p>
         </div>
-        <div className="lean-product-grid">
-          {products.map(([name,body,href,mark,guide])=><article key={name}>
-            <span className={`lean-product-identity identity-${guide}`} aria-label={`${name} product identity`}>
-              <b>ORVIA</b><i>{name.replace("ORVIA ","")}</i>
-            </span>
-            <div><h3>{name}</h3><p>{body}</p></div>
-            <div className="lean-product-actions">
-              <Link href={`/services/${guide}`}>Useful information →</Link>
-              {href.startsWith("http")
-                ? <a href={href} target="_blank" rel="noreferrer">Open service →</a>
-                : <Link href={href}>Open service →</Link>}
+        <div className="lean-product-grid lean-product-grid-visual">
+          {products.map((product)=><article key={product.name} className={`lean-product-card identity-${product.guide}`}>
+            <div className="lean-product-visual">
+              <Image src={product.image} alt={product.alt} width={1200} height={720}/>
+              <span className="lean-product-identity" aria-label={`${product.name} product identity`}>
+                <b>ORVIA</b><i>{product.name.replace("ORVIA ","")}</i>
+              </span>
+            </div>
+            <div className="lean-product-body">
+              <h3>{product.name}</h3>
+              <p className="lean-product-summary">{product.summary}</p>
+              <div className="lean-product-use">
+                <span>Best for</span>
+                <strong>{product.bestFor}</strong>
+              </div>
+              <div className="lean-product-outcome">
+                <span>What you get</span>
+                <p>{product.outcome}</p>
+              </div>
+              <div className="lean-product-actions">
+                <Link href={`/services/${product.guide}`}>Understand the service →</Link>
+                {product.href.startsWith("http")
+                  ? <a href={product.href} target="_blank" rel="noreferrer">Open {product.name} →</a>
+                  : <Link href={product.href}>Open {product.name} →</Link>}
+              </div>
             </div>
           </article>)}
         </div>

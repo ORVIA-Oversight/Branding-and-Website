@@ -84,6 +84,10 @@ export default function ArmedForcesPage(){
           <span className="af-proof-monogram">TAV</span>
           <span><strong>Trust A Veteran</strong>Current member · authorised public profile</span>
         </a>
+        <a className="af-proof-card af-proof-text" href="https://www.defencediscountservice.co.uk/en" target="_blank" rel="noreferrer">
+          <span className="af-proof-monogram">DDS</span>
+          <span><strong>Defence Discount Service</strong>Official MoD discount service for the Armed Forces community</span>
+        </a>
         <div className="af-proof-card af-proof-next">
           <span className="af-proof-monogram">→</span>
           <span><strong>Our next steps</strong>Silver aspiration · Gold longer-term ambition</span>
@@ -133,20 +137,12 @@ export default function ArmedForcesPage(){
     <section className="section section-ink af-tech-section">
       <div className="shell">
         <div className="section-head">
-          <div><div className="eyebrow light">HUMAN-LED TECHNOLOGY</div><h2>Use every tool available. Never hand the decision to the tool.</h2></div>
-          <p>ORVIA uses future-facing technology to widen the field of view, test more possibilities and preserve evidence — while keeping responsibility with a human.</p>
-        </div>
-        <div className="af-system-grid">
-          <article><strong>IRIS</strong><span>Coordinates work, owners, routing and escalation.</span></article>
-          <article><strong>HIVE</strong><span>Preserves evidence, provenance, versions and dissent.</span></article>
-          <article><strong>VITA</strong><span>Tests completeness, assurance and blind spots.</span></article>
-          <article><strong>VERA</strong><span>Verifies who checked what against which evidence.</span></article>
-          <article><strong>Command</strong><span>Provides operational visibility for authorised humans.</span></article>
-          <article><strong>AI</strong><span>Builds hypotheses, challenges theories and explores alternative explanations.</span></article>
+          <div><div className="eyebrow light">HUMAN-LED TECHNOLOGY</div><h2>Use technology to widen the view. Keep the responsibility human.</h2></div>
+          <p>ORVIA uses technology to organise information, preserve evidence and support structured challenge. It does not hand safeguarding, clinical, culpability or other high-consequence judgement to software.</p>
         </div>
         <div className="af-human-last">
-          <strong>Nothing high-consequence leaves a human.</strong>
-          <span>Technology can organise, compare, challenge and suggest. Safeguarding, clinical, culpability and other serious judgements remain human decisions.</span>
+          <strong>Human first. Human last.</strong>
+          <span>Technology supports the work; authorised people retain judgement, authority and accountability.</span>
         </div>
       </div>
     </section>

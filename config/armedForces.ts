@@ -18,6 +18,8 @@ export const armedForcesAssets = {
   trustAVeteran: {
     label:"Trust A Veteran",
     profile:"https://www.trustaveteran.com/team/orvia",
+    src:"https://static.wixstatic.com/media/085e97_9d637a9fcf5e46db864280144ae79e38~mv2.jpeg",
+    alt:"Trust A Veteran",
     status:"Current Trust A Veteran member with public ORVIA listing",
     verified:"2026-09-29",
     provenance:"Tony Howley, Trust A Veteran, confirmed ORVIA may promote its membership while the subscription remains current and instructed that supplied logo artwork must not be amended.",

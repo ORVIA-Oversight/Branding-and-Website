@@ -18,7 +18,12 @@ export default function ServicesPage(){
             <span>Service guide</span>
             <h2>{guide.name}</h2>
             <p>{guide.strapline}</p>
-            <Link href={"/services/"+guide.id}>Read information guide →</Link>
+            <div className="service-guide-index-actions">
+              <Link href={"/services/"+guide.id}>Read information guide →</Link>
+              {guide.serviceUrl.startsWith("http")
+                ? <a href={guide.serviceUrl} target="_blank" rel="noreferrer">Open / start service →</a>
+                : <Link href={guide.serviceUrl}>Open / start service →</Link>}
+            </div>
           </article>;
         })}
       </div>

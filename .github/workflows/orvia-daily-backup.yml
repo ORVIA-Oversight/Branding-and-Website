@@ -26,11 +26,13 @@ jobs:
           git rev-parse HEAD > backup-meta/COMMIT_SHA.txt
           git log -1 --format=fuller > backup-meta/LAST_COMMIT.txt
           git ls-files > backup-meta/FILE_MANIFEST.txt
-          tar --exclude='.git' --exclude='./backup-meta' -czf "${{ github.event.repository.name }}-${{ github.sha }}.tar.gz" .
+          git archive --format=tar.gz --output="$RUNNER_TEMP/${{ github.event.repository.name }}-${{ github.sha }}.tar.gz" HEAD
 
       - name: Upload backup artifact
         uses: actions/upload-artifact@v4
         with:
           name: website-source-backup
-          path: "*.tar.gz"
+          path: |
+            ${{ runner.temp }}/*.tar.gz
+            backup-meta/*.txt
           retention-days: 30

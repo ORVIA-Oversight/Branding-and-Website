@@ -1,5 +1,5 @@
 export const websiteBuildStandard = {
-  version:"1.2.0",
+  version:"1.3.0",
   principle:"A new ORVIA website is an operating surface, not an isolated marketing page.",
   customerUxDoctrine:{
     hierarchy:"ANSWER FIRST → DETAIL SECOND → EVIDENCE THIRD",
@@ -119,6 +119,8 @@ export const websiteBuildStandard = {
     "lean UX gate passed",
     "page hero imagery verified",
     "product explainer imagery verified",
+    "service information route verified where applicable",
+    "public navigation checked for internal-only architecture exposure",
     "commercial route tested",
     "IRIS workflow creation tested",
     "owner and timer tested",

@@ -13,8 +13,20 @@ export default async function ServiceGuidePage({params}:{params:Promise<{slug:st
   if(!guide) notFound();
 
   const isExternal=guide.serviceUrl.startsWith("http");
+  const currentIndex=serviceGuideOrder.indexOf(guide.id);
+  const previousId=serviceGuideOrder[(currentIndex-1+serviceGuideOrder.length)%serviceGuideOrder.length];
+  const nextId=serviceGuideOrder[(currentIndex+1)%serviceGuideOrder.length];
+  const previous=serviceGuides[previousId];
+  const next=serviceGuides[nextId];
 
   return <>
+    <nav className="service-switcher" aria-label="Browse ORVIA services">
+      <div className="shell service-switcher-inner">
+        <Link href={"/services/"+previous.id}>← {previous.name}</Link>
+        <Link className="service-switcher-all" href="/services">All services</Link>
+        <Link href={"/services/"+next.id}>{next.name} →</Link>
+      </div>
+    </nav>
     <section className="service-guide-hero" style={{"--service-accent":guide.accent} as React.CSSProperties}>
       <div className="shell service-guide-hero-grid">
         <div>
@@ -92,12 +104,22 @@ export default async function ServiceGuidePage({params}:{params:Promise<{slug:st
       <div className="shell service-guide-next">
         <div>
           <div className="eyebrow">CURRENT ROUTE</div>
-          <h2>Use the live service page for the current commercial position.</h2>
+          <h2>Ready to take the next step?</h2>
           <p>{guide.availabilityNote}</p>
         </div>
         {isExternal
-          ? <a className="button" href={guide.serviceUrl} target="_blank" rel="noreferrer">Continue to {guide.name}</a>
-          : <Link className="button" href={guide.serviceUrl}>Continue to {guide.name}</Link>}
+          ? <a className="button" href={guide.serviceUrl} target="_blank" rel="noreferrer">Open / start {guide.name}</a>
+          : <Link className="button" href={guide.serviceUrl}>Open / start {guide.name}</Link>}
+      </div>
+      <div className="shell service-guide-related">
+        <div>
+          <span>Previous service</span>
+          <Link href={"/services/"+previous.id}>← {previous.name}</Link>
+        </div>
+        <div>
+          <span>Next service</span>
+          <Link href={"/services/"+next.id}>{next.name} →</Link>
+        </div>
       </div>
     </section>
   </>;

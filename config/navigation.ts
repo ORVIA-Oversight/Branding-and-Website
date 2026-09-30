@@ -44,6 +44,7 @@ export const navigationGroups: readonly NavGroup[] = [
   {
     label: "About",
     items: [
+      { label: "About ORVIA", href: "/about", description: "What ORVIA is, why it exists and how the operating model works." },
       { label: "Founder Story", href: "/founder", description: "Why ORVIA exists and the experience behind it." },
       { label: "Trust Centre", href: "/trust", description: "Governance, controls, boundaries and verified trust." },
       { label: "Armed Forces", href: "/armed-forces", description: "Covenant, ERS Bronze and veteran commitment." },
@@ -92,6 +93,7 @@ export const footerNavigation = {
     { label:"Threshold", href:"https://threshold.orvia.org.uk", external:true }
   ],
   company: [
+    { label:"About ORVIA", href:"/about" },
     { label:"Founder Story", href:"/founder" },
     { label:"Practitioners", href:"/practitioner-network" },
     { label:"Insights", href:"/insights" },

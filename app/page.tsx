@@ -29,8 +29,6 @@ const products = [
   ["Threshold","Structured concern and evidence review.","https://threshold.orvia.org.uk","T","threshold"]
 ] as const;
 
-const productIcons = ["voice","evidence","perspective","web","family","threshold"] as const;
-
 function HomeIcon({name}:{name:string}){
   const p={width:28,height:28,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:1.8,strokeLinecap:"round" as const,strokeLinejoin:"round" as const,"aria-hidden":true};
   if(name==="alert") return <svg {...p}><path d="M12 3 2.8 19h18.4z"/><path d="M12 9v4M12 17h.01"/></svg>;
@@ -154,16 +152,52 @@ export default function Home(){
           <p>Product names are secondary. Each service is presented with a plain-English purpose and a real next action.</p>
         </div>
         <div className="lean-product-grid">
-          {products.map(([name,body,href,mark,guide],i)=><article key={name}>
-            <span className="lean-product-mark-card" aria-label={`${name} icon`}><HomeIcon name={productIcons[i]}/></span>
+          {products.map(([name,body,href,mark,guide])=><article key={name}>
+            <span className={`lean-product-identity identity-${guide}`} aria-label={`${name} product identity`}>
+              <b>ORVIA</b><i>{name.replace("ORVIA ","")}</i>
+            </span>
             <div><h3>{name}</h3><p>{body}</p></div>
             <div className="lean-product-actions">
-              <Link href={`/services/${guide}`}>Service information →</Link>
+              <Link href={`/services/${guide}`}>Useful information →</Link>
               {href.startsWith("http")
                 ? <a href={href} target="_blank" rel="noreferrer">Open service →</a>
                 : <Link href={href}>Open service →</Link>}
             </div>
           </article>)}
+        </div>
+      </div>
+    </section>
+
+    <section className="lean-section lean-commerce">
+      <div className="shell">
+        <div className="lean-section-heading">
+          <div>
+            <div className="lean-kicker">BUY & START</div>
+            <h2>Where checkout is live, buy it now. Where it needs scoping, start the right conversation.</h2>
+          </div>
+          <p>Only verified live checkout routes are labelled Buy now. Everything else routes to the correct start, discovery or quote journey.</p>
+        </div>
+        <div className="lean-commerce-grid">
+          <article className="lean-commerce-card commerce-voice">
+            <div><span>ORVIA VOICE</span><h3>Start with a live Voice package.</h3><p>For organisations that need calls captured, routed and owned rather than lost to voicemail.</p></div>
+            <div className="lean-commerce-options">
+              <a href="https://buy.stripe.com/14A7sKel27EG5m98zt0oM0G" target="_blank" rel="noreferrer"><b>Voice Essential</b><small>From £495/month</small><strong>Buy now →</strong></a>
+              <a href="https://buy.stripe.com/aFa6oG2Ck9MOg0N2b50oM0H" target="_blank" rel="noreferrer"><b>Voice Business</b><small>From £695/month</small><strong>Buy now →</strong></a>
+            </div>
+            <a className="lean-commerce-more" href="https://voice.orvia.org.uk/#pricing" target="_blank" rel="noreferrer">Compare Voice options →</a>
+          </article>
+          <article className="lean-commerce-card commerce-web">
+            <div><span>ORVIA WEB</span><h3>Buy a finished website route.</h3><p>For businesses that want the site built, connected and handed over without turning it into another technical project.</p></div>
+            <div className="lean-commerce-options">
+              <a href="https://buy.stripe.com/bJe00iccUaQS6qd02X0oM0L" target="_blank" rel="noreferrer"><b>One Page</b><small>£495 one-off</small><strong>Buy now →</strong></a>
+              <a href="https://buy.stripe.com/cNidR83Goe34aGt6rl0oM0M" target="_blank" rel="noreferrer"><b>Business</b><small>£795 one-off</small><strong>Buy now →</strong></a>
+            </div>
+            <a className="lean-commerce-more" href="https://web.orvia.org.uk/#pricing" target="_blank" rel="noreferrer">Compare Web options →</a>
+          </article>
+        </div>
+        <div className="lean-commerce-secondary">
+          <Link href="/services/witness-room">Witness Room — view useful information and current start route →</Link>
+          <Link href="/services">Browse every ORVIA service →</Link>
         </div>
       </div>
     </section>

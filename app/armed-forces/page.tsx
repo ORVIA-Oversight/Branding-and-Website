@@ -1,14 +1,6 @@
 import Link from "next/link";
 import { armedForcesAssets } from "@/config/armedForces";
 
-const serviceGroups = [
-  ["ARMY","Discipline · resilience · leadership"],
-  ["ROYAL NAVY","Adaptability · teamwork · perspective"],
-  ["ROYAL AIR FORCE","Precision · innovation · problem solving"],
-  ["VETERANS & FAMILIES","Support · opportunity · belonging"],
-  ["OTHER SERVICES","Police · Fire · NHS · Coastguard · Prison Service"]
-];
-
 const strengths = [
   ["resilience","Resilience","Stay steady when information is incomplete, difficult or changing."],
   ["strategy","Strategic thinking","See the wider system, dependencies and consequences."],
@@ -64,9 +56,10 @@ export default function ArmedForcesPage(){
       </div>
     </section>
 
-    <section className="af-service-strip">
-      <div className="shell af-service-grid">
-        {serviceGroups.map(([title,body])=><article key={title}><strong>{title}</strong><span>{body}</span></article>)}
+    <section className="af-service-strip af-service-inclusive">
+      <div className="shell af-service-inclusive-inner">
+        <strong>ALL SERVICES. ALL BRANCHES. ALL WELCOME.</strong>
+        <span>Army · Royal Navy · Royal Air Force · Royal Marines · Reserves · Veterans · Families · Emergency & public services</span>
       </div>
     </section>
 
@@ -80,12 +73,12 @@ export default function ArmedForcesPage(){
           <img src={armedForcesAssets.bronze.src} alt={armedForcesAssets.bronze.alt}/>
           <span><strong>ERS Bronze Award</strong>Current award holder · confirmed 22 Sep 2026</span>
         </div>
-        <a className="af-proof-card af-proof-text" href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer">
-          <span className="af-proof-monogram">TAV</span>
+        <a className="af-proof-card" href={armedForcesAssets.trustAVeteran.profile} target="_blank" rel="noreferrer">
+          <img className="af-proof-tav" src={armedForcesAssets.trustAVeteran.src} alt={armedForcesAssets.trustAVeteran.alt}/>
           <span><strong>Trust A Veteran</strong>Current member · authorised public profile</span>
         </a>
-        <a className="af-proof-card af-proof-text" href="https://www.defencediscountservice.co.uk/en" target="_blank" rel="noreferrer">
-          <span className="af-proof-monogram">DDS</span>
+        <a className="af-proof-card af-proof-resource" href="https://www.defencediscountservice.co.uk/en" target="_blank" rel="noreferrer">
+          <span className="af-proof-resource-label">OFFICIAL RESOURCE</span>
           <span><strong>Defence Discount Service</strong>Official MoD discount service for the Armed Forces community</span>
         </a>
         <div className="af-proof-card af-proof-next">

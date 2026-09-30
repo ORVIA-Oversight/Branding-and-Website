@@ -188,20 +188,13 @@ export default function Home(){
 
     <ArmedForcesCommitment/>
 
-    <section className="lean-section lean-governance">
-      <div className="shell">
-        <div className="lean-section-heading">
-          <div>
-            <div className="lean-kicker">BRAND & WEB GOVERNANCE</div>
-            <h2>The deeper system is still here — just no longer in the way.</h2>
-          </div>
-          <p>For teams building or governing ORVIA, the technical and commercial standards remain available as the canonical reference layer.</p>
+    <section className="lean-section lean-public-standard">
+      <div className="shell lean-section-heading">
+        <div>
+          <div className="lean-kicker">A CONTROLLED STANDARD</div>
+          <h2>One ORVIA standard. Different services. The same expectations.</h2>
         </div>
-        <div className="lean-governance-grid">
-          <Link href="/systems"><strong>Systems reference</strong><span>IRIS, HIVE, VITA, VERA and controlled AI architecture.</span></Link>
-          <Link href="/commercial"><strong>Commercial standard</strong><span>From offer to onboarding, ownership and governed delivery.</span></Link>
-          <Link href="/estate"><strong>Website estate</strong><span>Migration, release controls and shared UX standards.</span></Link>
-        </div>
+        <p>Across the ORVIA estate, services inherit the same core expectations: evidence before assumption, clear human accountability, consistent trust information, accessible design and a real next action for the person using the service.</p>
       </div>
     </section>
 

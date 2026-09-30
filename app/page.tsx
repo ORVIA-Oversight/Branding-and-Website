@@ -7,7 +7,7 @@ const needs = [
   ["I’m worried about something","Start with what happened. We help structure the concern, preserve the evidence and identify a proportionate next step.","/work-with-orvia"],
   ["I run a service or organisation","Strengthen governance, safeguarding, assurance, operational grip and evidence of improvement.","/work-with-orvia"],
   ["I need evidence reviewed","Prepare, test and challenge evidence without turning technology into the decision-maker.","https://witness.orvia.org.uk"],
-  ["I need calls captured properly","Use ORVIA Voice for accountable call capture, routing and follow-up.","https://voice.orvia.org.uk"],
+  ["I need calls captured properly","Use ORVIA Voice for accountable call capture, routing and follow-up.","https://orviavoice.co.uk"],
   ["I want to work with ORVIA","Explore founder-led, practitioner and career routes.","/work-with-orvia"],
   ["I’m already a customer","Go straight to your workspace, cases and current actions.","https://workspace.orvia.org.uk"]
 ] as const;
@@ -27,7 +27,7 @@ const products = [
     summary:"A 24/7 call-capture and follow-up service for organisations that cannot afford enquiries, incidents or customer requests to disappear into voicemail.",
     bestFor:"Missed calls, out-of-hours demand, routing and accountable follow-up",
     outcome:"Every important call is captured, owned and moved to a next action.",
-    href:"https://voice.orvia.org.uk",
+    href:"https://orviavoice.co.uk",
     guide:"voice",
     image:"/products/voice.svg",
     alt:"Illustration of an accountable call capture and routing interface"
@@ -253,7 +253,7 @@ export default function Home(){
               <a href="https://buy.stripe.com/14A7sKel27EG5m98zt0oM0G" target="_blank" rel="noreferrer"><b>Voice Essential</b><small>From £495/month</small><strong>Buy now →</strong></a>
               <a href="https://buy.stripe.com/aFa6oG2Ck9MOg0N2b50oM0H" target="_blank" rel="noreferrer"><b>Voice Business</b><small>From £695/month</small><strong>Buy now →</strong></a>
             </div>
-            <a className="lean-commerce-more" href="https://voice.orvia.org.uk/#pricing" target="_blank" rel="noreferrer">Compare Voice options →</a>
+            <a className="lean-commerce-more" href="https://orviavoice.co.uk/#pricing" target="_blank" rel="noreferrer">Compare Voice options →</a>
           </article>
           <article className="lean-commerce-card commerce-web">
             <div><span>ORVIA WEB</span><h3>Buy a finished website route.</h3><p>For businesses that want the site built, connected and handed over without turning it into another technical project.</p></div>

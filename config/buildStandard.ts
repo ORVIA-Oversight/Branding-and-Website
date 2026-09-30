@@ -1,5 +1,5 @@
 export const websiteBuildStandard = {
-  version:"1.3.0",
+  version:"1.4.0",
   principle:"A new ORVIA website is an operating surface, not an isolated marketing page.",
   customerUxDoctrine:{
     hierarchy:"ANSWER FIRST → DETAIL SECOND → EVIDENCE THIRD",
@@ -90,6 +90,10 @@ export const websiteBuildStandard = {
     "product visual storytelling standard",
     "shared platform template and controlled content/media slots",
     "public exposure and employer-brand boundary",
+    "official product-logo and trust-badge asset standard",
+    "service information / explainer navigation standard",
+    "commercial Buy / Start / Quote route standard",
+    "verified cross-service navigation",
     "WEB-QA-01 100% release gate"
   ],
   leanUxGate:{
@@ -107,7 +111,12 @@ export const websiteBuildStandard = {
       "Product pages retain visual explainer imagery that communicates the product without relying on long copy.",
       "Public copy explains outcomes, evidence, culture and customer value without exposing proprietary engineering, prompts, orchestration, security topology or reproducible internal operating procedures.",
       "Employer-facing content makes the standard, meaning of the work, learning culture and human accountability clear without inventing benefits, offices, customers or career guarantees.",
-      "The allocated palette comes from the controlled Brand Palette Library; new builds do not invent ad hoc palettes."
+      "The allocated palette comes from the controlled Brand Palette Library; new builds do not invent ad hoc palettes.",
+      "Service cards use approved product identity assets where available; generic placeholder icons are not the finished state.",
+      "Trust badges use the official supplied artwork only and are not recreated or approximated.",
+      "A visitor can move from service overview → useful information / explainer → commercial route → back to all services without dead ends.",
+      "Fixed-price offers expose a real Buy / Start route only when checkout is verified; scoped offers use a real Discovery / Quote route.",
+      "Unfinished service websites are not linked from the public master until that destination has passed the release gate."
     ]
   },
   releaseEvidence:[
@@ -119,9 +128,17 @@ export const websiteBuildStandard = {
     "lean UX gate passed",
     "page hero imagery verified",
     "product explainer imagery verified",
+    "approved product logos / service marks verified",
+    "Trust A Veteran, Armed Forces Covenant and ERS Bronze official assets verified where shown",
+    "canonical footer visible and complete",
+    "service-to-service previous / next / all-services navigation tested",
+    "useful information / explainer page and printable or downloadable copy tested",
     "service information route verified where applicable",
     "public navigation checked for internal-only architecture exposure",
     "commercial route tested",
+    "fixed-price Buy / Start checkout verified where applicable",
+    "scoped-service Discovery / Quote route verified where applicable",
+    "no unfinished service-site URL exposed",
     "IRIS workflow creation tested",
     "owner and timer tested",
     "onboarding destination tested",

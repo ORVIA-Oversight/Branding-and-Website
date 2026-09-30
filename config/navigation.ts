@@ -17,6 +17,7 @@ export const navigationGroups: readonly NavGroup[] = [
       { label: "Work with ORVIA", href: "/work-with-orvia", description: "Evidence-led support, assurance, investigation and operational improvement." },
       { label: "Work with John", href: "/work-with-john", description: "Founder-led intervention for complex or stuck problems." },
       { label: "Products", href: "/products", description: "Plain-English routes into the current ORVIA product estate." },
+      { label: "Service information", href: "/services", description: "Downloadable, plain-English guides to current ORVIA services." },
       { label: "Case studies", href: "/case-studies", description: "See ORVIA operating models and builds in practice." }
     ]
   },
@@ -47,7 +48,6 @@ export const navigationGroups: readonly NavGroup[] = [
       { label: "Trust Centre", href: "/trust", description: "Governance, controls, boundaries and verified trust." },
       { label: "Armed Forces", href: "/armed-forces", description: "Covenant, ERS Bronze and veteran commitment." },
       { label: "Careers", href: "/careers", description: "Join ORVIA and build capability with us." },
-      { label: "Brand & system reference", href: "/estate", description: "Deeper governance and website-estate reference." },
       { label: "Contact", href: "/contact", description: "Talk to ORVIA." }
     ]
   }
@@ -84,12 +84,12 @@ export const footerNavigation = {
     { label:"Contact", href:"/contact" }
   ],
   methodProducts: [
-    { label:"ORVIA Systems", href:"/systems" },
-    { label:"Commercial Standard", href:"/commercial" },
-    { label:"Sales Operating Model", href:"/sales" },
-    { label:"Website Estate", href:"/estate" },
+    { label:"ORVIA Method", href:"/method" },
+    { label:"Service Information", href:"/services" },
     { label:"ORVIA Voice", href:"https://voice.orvia.org.uk", external:true },
-    { label:"Witness Room", href:"https://witness.orvia.org.uk", external:true }
+    { label:"Witness Room", href:"https://witness.orvia.org.uk", external:true },
+    { label:"MIA", href:"https://mia.orvia.org.uk", external:true },
+    { label:"Threshold", href:"https://threshold.orvia.org.uk", external:true }
   ],
   company: [
     { label:"Founder Story", href:"/founder" },

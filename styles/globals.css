@@ -1275,3 +1275,115 @@ background-size:52px 52px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),tr
   .about-orvia-image img{height:360px}
   .founder-video-placeholder{min-height:300px}
 }
+
+
+/* 2026-09-30 visual service cards */
+.lean-product-grid-visual{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.lean-product-grid-visual .lean-product-card{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  padding:0;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:#fff;
+  overflow:hidden;
+  box-shadow:0 14px 40px rgba(11,36,80,.05);
+}
+.lean-product-visual{
+  position:relative;
+  aspect-ratio:5/2.55;
+  overflow:hidden;
+  background:#eef2f5;
+  border-bottom:1px solid var(--line);
+}
+.lean-product-visual img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+.lean-product-visual .lean-product-identity{
+  position:absolute;
+  left:20px;
+  bottom:20px;
+  width:auto;
+  min-width:108px;
+  min-height:66px;
+  box-shadow:0 12px 28px rgba(5,18,34,.18);
+}
+.lean-product-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  padding:28px 30px 30px;
+}
+.lean-product-body h3{
+  margin:0 0 12px;
+  color:var(--navy);
+  font-size:1.55rem;
+  letter-spacing:-.025em;
+}
+.lean-product-summary{
+  margin:0;
+  color:var(--muted);
+  line-height:1.68;
+  font-size:.98rem;
+}
+.lean-product-use,
+.lean-product-outcome{
+  display:grid;
+  gap:5px;
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+}
+.lean-product-use span,
+.lean-product-outcome span{
+  font-size:.68rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#7f8a95;
+  font-weight:850;
+}
+.lean-product-use strong{
+  color:var(--ink);
+  line-height:1.5;
+  font-size:.94rem;
+}
+.lean-product-outcome p{
+  margin:0;
+  color:#46515d;
+  line-height:1.58;
+  font-size:.92rem;
+}
+.lean-product-grid-visual .lean-product-actions{
+  margin-top:auto;
+  padding-top:24px;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+}
+.lean-product-grid-visual .lean-product-actions a:first-child{
+  color:var(--navy);
+  font-weight:800;
+}
+.lean-product-grid-visual .lean-product-actions a:last-child{
+  color:var(--muted);
+  font-size:.88rem;
+  font-weight:700;
+  text-align:right;
+}
+@media(max-width:1000px){
+  .lean-product-grid-visual{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .lean-product-body{padding:22px}
+  .lean-product-visual .lean-product-identity{left:14px;bottom:14px}
+  .lean-product-grid-visual .lean-product-actions{align-items:flex-start;flex-direction:column}
+  .lean-product-grid-visual .lean-product-actions a:last-child{text-align:left}
+}

@@ -42,7 +42,6 @@ export function Footer() {
           <strong>People first.<br/>A safer tomorrow.</strong>
           <span className="footer-signature-line"/>
           <div className="footer-socials" aria-label="Social and contact links">
-            <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
             <a href="mailto:hello@orvia.org.uk" aria-label="Email">@</a>
             <a href="tel:+443300433703" aria-label="Telephone">☎</a>
           </div>

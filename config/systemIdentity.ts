@@ -36,7 +36,7 @@ export const systemIdentities = {
     shortName: "Voice",
     icon: "V",
     accent: "#2B929D",
-    href: "https://voice.orvia.org.uk",
+    href: "https://orviavoice.co.uk",
     parent: "ORVIA Oversight"
   },
   threshold: {
@@ -60,7 +60,7 @@ export const systemIdentities = {
     shortName: "Insight",
     icon: "I",
     accent: "#82418F",
-    href: "https://insight.orvia.org.uk",
+    href: "https://orviainsight.co.uk",
     parent: "ORVIA Oversight"
   },
   business: {

@@ -46,6 +46,21 @@ export default function MethodPage(){
         <figure className="founder-story-explainer"><img src="/founder/human-first.svg" alt="Human-first ORVIA evidence and action diagram"/></figure>
       </div>
     </section>
+    <section className="section section-soft">
+      <div className="shell">
+        <div className="section-head">
+          <div><div className="eyebrow">FROM ACTION TO ASSURANCE</div><h2>“Done” is not the end of the method.</h2></div>
+          <p>ORVIA follows action through four assurance states so a recommendation is not mistaken for improvement.</p>
+        </div>
+        <div className="founder-aim-grid">
+          <article><span>01</span><h3>Implemented</h3><p>The agreed action was actually put in place.</p></article>
+          <article><span>02</span><h3>Verified</h3><p>Evidence confirms that implementation happened as intended.</p></article>
+          <article><span>03</span><h3>Effective</h3><p>The action improved the problem it was intended to address.</p></article>
+          <article><span>04</span><h3>Sustained</h3><p>The improvement remained in place when checked again over time.</p></article>
+        </div>
+      </div>
+    </section>
+
     <section className="final-cta"><div className="shell"><div><div className="eyebrow light">START WITH THE SITUATION</div><h2>Bring us what is happening. We will start with evidence, not a sales pitch.</h2></div><Link className="button light-button" href="/contact">Talk to ORVIA</Link></div></section>
   </>;
 }

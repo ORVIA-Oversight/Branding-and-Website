@@ -2,8 +2,10 @@ import Link from "next/link";
 import { navigationGroups, customerAccessNav } from "@/config/navigation";
 import { productConfig } from "@/config/products";
 import { EstateBar } from "@/components/navigation/EstateBar";
+import { activeSystem, masterIdentity, systemIdentities, type OrviaSystemId } from "@/config/systemIdentity";
 
 type ProductHeaderProps = {
+  systemId?: OrviaSystemId;
   productName?: string;
   productMark?: string;
   productIconSrc?: string;
@@ -36,19 +38,26 @@ function NavGroup({label,items}:{label:string;items:readonly {label:string;href:
 }
 
 export function ProductHeader({
-  productName="Brand & Web System",
-  productMark="B",
+  systemId,
+  productName,
+  productMark,
   productIconSrc,
-  productAccent=productConfig.accent,
-  productHref="/",
+  productAccent,
+  productHref,
   ctaLabel="Talk to ORVIA",
   ctaHref="/contact"
 }:ProductHeaderProps) {
+  const system = systemId ? systemIdentities[systemId] : activeSystem;
+  const resolvedName = productName ?? system.name;
+  const resolvedMark = productMark ?? system.icon;
+  const resolvedAccent = productAccent ?? system.accent;
+  const resolvedHref = productHref ?? system.href;
+
   return <>
     <EstateBar/>
     <div className="utility-bar">
       <div className="shell utility-inner">
-        <span>ORVIA Oversight Ltd</span>
+        <span>{masterIdentity.legalName}</span>
         <div className="utility-actions">
           <a href="tel:+443300433703">{productConfig.phone}</a>
           <a href={`mailto:${productConfig.email}`}>{productConfig.email}</a>
@@ -59,15 +68,21 @@ export function ProductHeader({
     <header className="main-header estate-header">
       <div className="shell nav-wrap">
         <div className="estate-masthead">
-          <Link href="https://orvia.org.uk" className="master-brand" aria-label="ORVIA Oversight">
-            <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA"/>
+          <Link href={masterIdentity.href} className="master-brand" aria-label="ORVIA Oversight">
+            <img src={masterIdentity.logoSrc} alt="ORVIA"/>
+            <span className="master-brand-descriptor">{masterIdentity.descriptor}</span>
           </Link>
+
           <span className="brand-divider" aria-hidden="true"/>
-          <Link href={productHref} className="product-brand" style={{"--product-accent":productAccent} as React.CSSProperties}>
+
+          <Link href={resolvedHref} className="product-brand" style={{"--product-accent":resolvedAccent} as React.CSSProperties}>
             {productIconSrc
               ? <img className="product-brand-image" src={productIconSrc} alt=""/>
-              : <span className="product-brand-icon">{productMark}</span>}
-            <span className="product-brand-copy"><strong>{productName}</strong></span>
+              : <span className="product-brand-icon" aria-hidden="true">{resolvedMark}</span>}
+            <span className="product-brand-copy">
+              <small>ORVIA SYSTEM</small>
+              <strong>{resolvedName}</strong>
+            </span>
           </Link>
         </div>
 

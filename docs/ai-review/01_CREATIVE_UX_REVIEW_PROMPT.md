@@ -39,3 +39,25 @@ For each homepage section, specify:
 - what should be removed.
 
 No decorative box should exist merely because there is space.
+
+
+## Mobile-first acceptance
+
+Review at minimum:
+- 320px, 360px, 390px and 768px widths;
+- navigation collapse and system identity legibility;
+- hero hierarchy above the fold;
+- card stacking and content order;
+- sticky CTA behaviour;
+- legal/trust copy legibility;
+- no horizontal overflow;
+- no CTA covering important content;
+- form controls usable with one hand;
+- touch targets preferably around 44×44 CSS px and never below applicable accessibility minimums without a valid exception;
+- focus visibility and keyboard operation;
+- contrast that does not depend on O/R/V/I/A colour alone.
+
+For every mobile issue use:
+**[Viewport] → [Component] → [Problem] → [Exact Fix] → [Acceptance Test]**
+
+Do not redesign a working desktop section in a way that creates a worse mobile story.

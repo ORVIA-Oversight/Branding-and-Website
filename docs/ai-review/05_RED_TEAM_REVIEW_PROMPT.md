@@ -65,3 +65,29 @@ For every separate public site ask:
 - could it be a route inside another site without losing value?
 - what would be lost by merging it?
 - can the current team realistically keep it current?
+
+
+## Mobile / interaction challenge
+
+Explicitly test:
+- 320px, 360px, 390px and 768px widths;
+- sticky CTA obstruction;
+- legal/trust disclaimer readability;
+- keyboard-only navigation;
+- visible focus;
+- touch-target spacing;
+- forms and validation;
+- modal/dialog escape and focus handling where present;
+- colour-independent meaning;
+- zoom/reflow;
+- whether a user under time pressure can reach the correct action without accidental taps.
+
+Treat any mobile pattern that hides important boundaries or trust information as a material issue.
+
+## Output discipline
+
+Do not praise the site and do not produce a general essay.
+Return a maximum of 20 material findings, ordered by severity.
+
+For each:
+**[Severity] [Component] [Evidence] [Risk] [Exact Fix] [Acceptance Test]**

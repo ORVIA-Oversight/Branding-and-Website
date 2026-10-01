@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CareerInterestForm } from "@/components/forms/CareerInterestForm";
 
 const values=[
   ["Meaningful work","Use your skills to make a practical difference in people’s lives and in the organisations that serve them."],
@@ -121,14 +122,7 @@ export default function CareersPage(){
             <span>What would you like to develop into?</span>
           </div>
         </div>
-        <form className="contact-form">
-          <label>Name<input name="name" required /></label>
-          <label>Email<input name="email" type="email" required /></label>
-          <label>Background / community<select name="background" defaultValue=""><option value="" disabled>Select if relevant</option><option>Veteran / Service leaver</option><option>Reservist</option><option>Military spouse / partner</option><option>Police / Fire / NHS / other service</option><option>Career changer</option><option>Experienced professional</option><option>Other</option></select></label>
-          <label>What can you do that your CV may not show?<textarea name="capability" rows={7} required /></label>
-          <label>What would you like to develop into?<textarea name="direction" rows={4} /></label>
-          <button className="button" type="submit">Send expression of interest</button>
-        </form>
+        <CareerInterestForm/>
       </div>
     </section>
   </>;

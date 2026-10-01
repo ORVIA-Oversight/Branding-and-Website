@@ -1,6 +1,6 @@
 export const founderCredentials = {
-  headline:"Operational credibility backed by current professional development.",
-  intro:"John combines senior operating experience with safeguarding, health and social care, leadership, training and strategic-management development. Credentials support the work; they do not replace evidence, competence boundaries or specialist advice.",
+  headline:"Multi-industry operational experience, brought together into one practical way of seeing and fixing systems.",
+  intro:"John's background spans UK Armed Forces service, austere and high-risk environments, ambulance operations, local government, regulated care, safeguarding and multi-site leadership. The value is not a list of job titles. It is the accumulated ability to understand a frontline reality, read the wider operating landscape, test the evidence and turn that understanding into practical action.",
   assurance:[
     {label:"Enhanced DBS",value:"Enhanced DBS; Update Service registered",note:"Verification details supplied privately during due diligence where required."},
     {label:"Health & Social Care",value:"Level 5 Health & Social Care",note:"Senior care-sector knowledge alongside registered-manager experience."},
@@ -10,12 +10,13 @@ export const founderCredentials = {
     {label:"Training & Communication",value:"PMVA Trainer, Makaton and Oliver McGowan training",note:"Practical focus on people, communication, safety and reasonable adjustment."}
   ],
   experience:[
-    "Former Managing Director and CQC Registered Manager of an independent ambulance provider",
-    "Registered-manager and regulated-care leadership experience",
-    "Local-government operational leadership",
-    "Overseas diplomatic close-protection and security-management leadership",
-    "Former UK paramedic experience; registration is no longer current",
-    "Major-incident, emergency-planning, training and operational-assurance experience"
+    "UK Armed Forces experience — learning discipline, responsibility, teamwork and how frontline detail connects to the wider operational picture",
+    "Operational work in austere and high-risk international environments, where situational awareness, judgement and composure mattered",
+    "Around 11 years across ambulance and healthcare operations, including ownership and operation of an independent ambulance service",
+    "Ambulance operations spanning mental-health work, patient transport, frontline activity, urgent care and specialist support",
+    "Multi-site operational leadership across public, private and regulated environments",
+    "Registered-manager experience in learning-disability and autism services, including around 16 months working closely with the people supported and the teams around them",
+    "Local-government operational leadership, safeguarding, governance, service improvement and evidence-led assurance"
   ],
   practitionerPromise:"ORVIA practitioners are selected and developed around evidence discipline, professional boundaries, safeguarding awareness, structured challenge, practical implementation and verification that the fix actually worked."
 } as const;

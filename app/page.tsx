@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArmedForcesCommitment } from "@/components/trust/ArmedForcesCommitment";
-import { MethodMarker } from "@/components/method/MethodMarker";
 
 const problems = [
   ["Pressure is building","Something keeps recurring, escalating or consuming management time."],
@@ -11,50 +10,14 @@ const problems = [
 ] as const;
 
 const fixes = [
-  {
-    stage:"O", title:"Observe", question:"What is actually happening?",
-    body:"Capture the signal properly: calls, concerns, evidence, activity and context.",
-    href:"/method"
-  },
-  {
-    stage:"R", title:"Review", question:"What does the record show?",
-    body:"Bring chronology, evidence, competing accounts and missing information together.",
-    href:"/method"
-  },
-  {
-    stage:"V", title:"Verify", question:"What can we prove?",
-    body:"Separate evidence from assumption and check whether promised action really happened.",
-    href:"/method"
-  },
-  {
-    stage:"I", title:"Interpret", question:"What does it mean in context?",
-    body:"Turn verified information into usable understanding without automating human judgement.",
-    href:"/method"
-  },
-  {
-    stage:"A", title:"Act", question:"What do we do next?",
-    body:"Turn understanding into owned action, implementation, commercial delivery and re-checks.",
-    href:"/method"
-  }
+  ["O","Observe","What is actually happening?","Capture the signal properly: calls, concerns, evidence, activity and context."],
+  ["R","Review","What does the record show?","Bring chronology, evidence, competing accounts and missing information together."],
+  ["V","Verify","What can we prove?","Separate evidence from assumption and check whether promised action really happened."],
+  ["I","Interpret","What does it mean in context?","Turn verified information into usable understanding without automating human judgement."],
+  ["A","Act","What do we do next?","Turn understanding into owned action, implementation, delivery and re-checks."]
 ] as const;
 
-const commercial = [
-  {
-    name:"ORVIA Voice",
-    stage:"O — OBSERVE",
-    summary:"Stop important calls, enquiries and out-of-hours issues disappearing into voicemail or memory.",
-    image:"/products/voice.svg",
-    href:"https://orviavoice.co.uk",
-    action:"Explore Voice"
-  },
-  {
-    name:"ORVIA Web",
-    stage:"A — ACT",
-    summary:"A finished commercial website route for small organisations that need something professional, connected and ready to sell.",
-    image:"/products/web.svg",
-    href:"https://web.orvia.org.uk",
-    action:"Explore Web"
-  },
+const specialist = [
   {
     name:"Witness Room",
     stage:"R — REVIEW",
@@ -66,10 +29,26 @@ const commercial = [
   {
     name:"ORVIA Threshold",
     stage:"R — REVIEW",
-    summary:"Review a concern before commitment, escalation or a high-consequence decision.",
+    summary:"Review a concern before commitment, escalation or another high-consequence decision.",
     image:"/products/threshold.svg",
     href:"https://threshold.orvia.org.uk",
     action:"Explore Threshold"
+  },
+  {
+    name:"MIA",
+    stage:"O — OBSERVE",
+    summary:"Preserve stories, voice, photographs, timelines and messages while the opportunity still exists.",
+    image:"/products/mia.svg",
+    href:"https://mia.orvia.org.uk",
+    action:"Explore MIA"
+  },
+  {
+    name:"ORVIA Insight",
+    stage:"I — INTERPRET",
+    summary:"Structured human reasoning, perspective and organisational insight without reducing people to a score.",
+    image:"/products/perspective-room.svg",
+    href:"https://insight.orvia.org.uk",
+    action:"Explore Insight"
   }
 ] as const;
 
@@ -85,25 +64,25 @@ export default function Home(){
       <div className="master-hero-bg" aria-hidden="true"/>
       <div className="shell master-hero-grid">
         <div className="master-hero-copy">
-          <div className="lean-kicker">ORVIA OVERSIGHT · THE FIXERS</div>
+          <div className="lean-kicker">ORVIA OVERSIGHT · INDEPENDENT · HUMAN-CENTRED</div>
           <h1>Find what is going wrong.<br/><span>Fix it before it becomes the thing that breaks the service.</span></h1>
-          <p className="master-hero-lead">ORVIA is brought in when something does not add up, keeps recurring, is consuming management time or risks becoming much bigger. We find the pressure point, test the evidence, fix the system and verify whether the improvement worked.</p>
+          <p className="master-hero-lead">ORVIA helps when something does not add up, keeps recurring, is consuming management time or risks becoming much bigger. We find the pressure point, test the evidence, help fix the system and verify whether the improvement worked.</p>
           <div className="lean-actions master-hero-actions">
             <Link href="/work-with-orvia" className="button">Tell us what needs fixing</Link>
-            <a href="#commercial" className="button secondary">See what you can buy now</a>
+            <a href="#start" className="button secondary">See what you can start now</a>
           </div>
           <div className="master-proof">
             <span>Evidence before assumption</span>
             <span>Human first. Human last.</span>
-            <span>No spin. No fake certainty.</span>
+            <span>Calm challenge. Accountable action.</span>
           </div>
         </div>
         <div className="master-hero-panel">
           <div className="master-hero-panel-inner">
             <span className="master-hero-panel-kicker">THE ORVIA METHOD</span>
             <strong>OBSERVE → REVIEW → VERIFY → INTERPRET → ACT</strong>
-            <p>One method. Specialist tools for the identifiable problems that sit underneath it.</p>
-            <div className="master-stage-row">
+            <p>One method. Specialist tools for identifiable problems. Human judgement remains accountable throughout.</p>
+            <div className="master-stage-row" aria-label="ORVIA method stages">
               {["O","R","V","I","A"].map(stage=><span key={stage} className={`stage-${stage.toLowerCase()}`}>{stage}</span>)}
             </div>
           </div>
@@ -118,9 +97,9 @@ export default function Home(){
           <h2>We are not here to make broken systems look better. We are here to help make them better.</h2>
         </div>
         <div>
-          <p>ORVIA grew from years of seeing the same gap: what a system records is not always what people experience. A form can be complete, a policy can exist and a meeting can be minuted — while the actual problem continues underneath.</p>
-          <p>That is why ORVIA starts with reality, not reassurance. We look for what is strong, what does not fit, what is missing and what needs attention before it becomes a larger failure.</p>
-          <Link href="/founder" className="lean-inline-cta">Read the founder story →</Link>
+          <p>ORVIA grew from years of seeing the same gap: what a system records is not always what people experience. A form can be complete, a policy can exist and a meeting can be minuted — while the real problem continues underneath.</p>
+          <p>We start with reality rather than reassurance: what is strong, what does not fit, what is missing, what needs action and how we will know whether the fix actually worked.</p>
+          <Link href="/founder" className="lean-inline-cta">Read the ORVIA story →</Link>
         </div>
       </div>
     </section>
@@ -132,10 +111,68 @@ export default function Home(){
             <div className="lean-kicker">WHEN TO CALL ORVIA</div>
             <h2>Bring us the difficult, stuck or recurring problem.</h2>
           </div>
-          <p>The public version of “fixer” is simple: independent problem solving without cover-up, theatre or blame hunting.</p>
+          <p>Independent problem-solving without cover-up, blame theatre or pretending that software replaces accountable people.</p>
         </div>
         <div className="compact-card-grid four">
-          {problems.map(([title,body])=><article className="compact-card" key={title}><h3>{title}</h3><p>{body}</p></article>)}
+          {problems.map(([title,body],index)=><article className="compact-card problem-card" key={title}>
+            <span className="card-index">{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{body}</p>
+          </article>)}
+        </div>
+      </div>
+    </section>
+
+    <section id="start" className="lean-section priority-commerce-section">
+      <div className="shell">
+        <div className="lean-section-heading compact-heading">
+          <div>
+            <div className="lean-kicker">START NOW</div>
+            <h2>Two practical ways to put ORVIA to work today.</h2>
+          </div>
+          <p>Research first if you want to. When you are ready, the commercial route should be equally clear.</p>
+        </div>
+
+        <div className="priority-commerce-grid">
+          <article className="priority-commerce-card voice">
+            <div className="priority-media"><Image src="/products/voice.svg" alt="" width={900} height={520}/><span>O — OBSERVE</span></div>
+            <div className="priority-copy">
+              <div className="lean-kicker">ORVIA VOICE</div>
+              <h3>Important calls should become owned work, not forgotten voicemail.</h3>
+              <p>Capture why somebody called, route it properly, create a visible next action and make follow-up accountable.</p>
+              <div className="priority-actions"><a className="button" href="https://voice.orvia.org.uk">Understand Voice</a><a className="button secondary" href="https://voice.orvia.org.uk/#pricing">Price / start →</a></div>
+            </div>
+          </article>
+
+          <article className="priority-commerce-card web">
+            <div className="priority-media"><Image src="/products/web.svg" alt="" width={900} height={520}/><span>A — ACT</span></div>
+            <div className="priority-copy">
+              <div className="lean-kicker">ORVIA WEB</div>
+              <h3>Your website should tell the story, earn trust and lead somewhere useful.</h3>
+              <p>We internalise the business, define the story and boundaries, then build the commercial journey around a controlled reusable system.</p>
+              <div className="priority-actions"><a className="button" href="https://web.orvia.org.uk">Understand Web</a><a className="button secondary" href="https://web.orvia.org.uk/#start">Start a website →</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section className="lean-section section-soft compact-section">
+      <div className="shell">
+        <div className="lean-section-heading compact-heading">
+          <div>
+            <div className="lean-kicker">SPECIALIST ROUTES</div>
+            <h2>Different problems. The same evidence-led discipline.</h2>
+          </div>
+          <p>Specialist experiences stay distinct above the surface while sharing ORVIA's trust, method and human-control principles underneath.</p>
+        </div>
+        <div className="commercial-compact-grid">
+          {specialist.map(product=><article key={product.name} className="commercial-compact-card">
+            <div className="commercial-compact-image"><Image src={product.image} alt="" width={800} height={420}/><span>{product.stage}</span></div>
+            <div className="commercial-compact-body"><h3>{product.name}</h3><p>{product.summary}</p><a href={product.href}>{product.action} →</a></div>
+          </article>)}
+        </div>
+        <div className="commercial-master-actions">
+          <Link href="/services" className="button">Browse all ORVIA routes</Link>
+          <Link href="/work-with-orvia" className="button secondary">Not sure? Bring us the problem</Link>
         </div>
       </div>
     </section>
@@ -144,38 +181,17 @@ export default function Home(){
       <div className="shell">
         <div className="lean-section-heading inverse compact-heading">
           <div>
-            <div className="lean-kicker">THE FIX</div>
-            <h2>We built a method — then built tools around each identifiable problem.</h2>
+            <div className="lean-kicker">HOW ORVIA WORKS</div>
+            <h2>One method — without making the buyer learn the whole operating architecture.</h2>
           </div>
-          <p>Not another pile of disconnected products. Each capability has a clear place in the O-R-V-I-A method and a human-owned outcome.</p>
+          <p>The deeper workflow, evidence and verification layers remain underneath the customer experience until they are useful to understand.</p>
         </div>
         <div className="method-compact-grid">
-          {fixes.map(item=><article key={item.stage} className={`method-compact stage-border-${item.stage.toLowerCase()}`}>
-            <span>{item.stage}</span><div><h3>{item.title}</h3><strong>{item.question}</strong><p>{item.body}</p></div>
+          {fixes.map(([stage,title,question,body])=><article key={stage} className={`method-compact stage-border-${stage.toLowerCase()}`}>
+            <span>{stage}</span><div><h3>{title}</h3><strong>{question}</strong><p>{body}</p></div>
           </article>)}
         </div>
-      </div>
-    </section>
-
-    <section id="commercial" className="lean-section compact-section">
-      <div className="shell">
-        <div className="lean-section-heading compact-heading">
-          <div>
-            <div className="lean-kicker">START SOMETHING USEFUL</div>
-            <h2>Research it first — or go straight to the commercial route.</h2>
-          </div>
-          <p>Every commercial ORVIA route is being rebuilt to connect trust, price or proposal, onboarding, IRIS-owned delivery and follow-up.</p>
-        </div>
-        <div className="commercial-compact-grid">
-          {commercial.map(product=><article key={product.name} className="commercial-compact-card">
-            <div className="commercial-compact-image"><Image src={product.image} alt="" width={800} height={420}/><span>{product.stage}</span></div>
-            <div className="commercial-compact-body"><h3>{product.name}</h3><p>{product.summary}</p><a href={product.href}>{product.action} →</a></div>
-          </article>)}
-        </div>
-        <div className="commercial-master-actions">
-          <Link href="/services" className="button">Browse all services</Link>
-          <Link href="/work-with-orvia" className="button secondary">Bring us a problem</Link>
-        </div>
+        <div className="method-deeper-link"><Link href="/method" className="button light-button">Explore the Method & Trust layers</Link></div>
       </div>
     </section>
 
@@ -185,17 +201,30 @@ export default function Home(){
           <div className="lean-kicker">THE STORY BEHIND THE SYSTEM</div>
           <h2>ORVIA did not begin with software.</h2>
           <p>It began with frontline responsibility, operational pressure and a repeated question: why do systems become so good at recording activity while still missing the person, the context or the warning sign underneath it?</p>
-          <p>Six months of rebuilding turned separate ideas into one method: capture reality, review the record, verify what can be proved, interpret in context and act responsibly.</p>
+          <p>Six months of building, challenging and rebuilding turned separate ideas into one method and one connected estate.</p>
           <blockquote>“Paperwork is rarely the whole story.”</blockquote>
           <Link href="/founder" className="button light-button">Read why ORVIA was built</Link>
         </div>
         <div className="story-band-media" aria-label="Founder film placeholder">
-          <div className="story-film-placeholder"><span>FOUNDER FILM</span><strong>Why ORVIA exists</strong><small>60-second founder film / approved still</small></div>
+          <div className="story-film-placeholder"><span>FOUNDER FILM</span><strong>Why ORVIA exists</strong><small>Final founder film / approved still will occupy this slot.</small></div>
         </div>
       </div>
     </section>
 
-    <MethodMarker stage="O" productName="ORVIA Oversight" explanation="Oversight begins by seeing the real position clearly, then uses the full O-R-V-I-A method to move from signal to accountable action."/>
+    <section className="lean-section compact-section human-influence-section">
+      <div className="shell human-influence-grid">
+        <div>
+          <div className="lean-kicker">HUMAN FIRST</div>
+          <h2>People should not disappear behind the process.</h2>
+          <p>Founder development includes Oliver McGowan training. Its emphasis on better understanding of autistic people and people with a learning disability reinforces ORVIA's own focus on communication, lived experience and reasonable adjustment.</p>
+          <p className="boundary-note">Reference to the training describes founder learning and influence only. It does not imply endorsement of ORVIA by the training programme, NHS England or government.</p>
+        </div>
+        <div className="human-influence-actions">
+          <a className="button secondary" href="https://www.gov.uk/government/collections/mandatory-training-on-learning-disability-and-autism" target="_blank" rel="noreferrer">About the Oliver McGowan training</a>
+          <Link className="button" href="/founder">Founder experience & boundaries</Link>
+        </div>
+      </div>
+    </section>
 
     <section className="lean-section compact-section">
       <div className="shell">
@@ -204,12 +233,12 @@ export default function Home(){
             <div className="lean-kicker">FREE TOOLS</div>
             <h2>Useful before you buy anything.</h2>
           </div>
-          <p>Practical checklists and briefing tools should help somebody understand the problem even when ORVIA is not the right commercial answer.</p>
+          <p>Practical tools should help somebody understand the problem even when ORVIA is not the right commercial answer.</p>
         </div>
         <div className="compact-card-grid three">
           <article className="compact-card resource"><span>FREE</span><h3>Concern clarity checklist</h3><p>Separate what happened, what is known, what is assumed and what is still missing.</p><Link href="/toolkits">Open toolkit →</Link></article>
           <article className="compact-card resource"><span>FREE</span><h3>Evidence readiness checklist</h3><p>Check whether chronology, originals, decisions, owners and gaps are visible before review.</p><Link href="/toolkits">Open toolkit →</Link></article>
-          <article className="compact-card resource"><span>FREE</span><h3>Commercial journey check</h3><p>Test whether your website actually moves a visitor from understanding to a real next action.</p><Link href="/toolkits">Open toolkit →</Link></article>
+          <article className="compact-card resource"><span>FREE</span><h3>Commercial journey check</h3><p>Test whether your website genuinely moves somebody from understanding to a real next action.</p><Link href="/toolkits">Open toolkit →</Link></article>
         </div>
       </div>
     </section>
@@ -231,11 +260,11 @@ export default function Home(){
         <div>
           <div className="lean-kicker">INSIGHTS & UPDATES</div>
           <h2>What ORVIA is learning, building and challenging.</h2>
-          <p>Use the Insights area for explainers, founder notes, evidence practice, product updates and social-ready material without turning the homepage into a feed.</p>
+          <p>Insights hold explainers, founder notes, evidence practice and product updates without turning the homepage into a feed.</p>
           <Link href="/insights" className="button">Read insights</Link>
         </div>
         <div className="master-updates-card">
-          <strong>Social publishing rule</strong>
+          <strong>Verified social only</strong>
           <p>Only verified ORVIA social accounts are surfaced. No invented follower numbers, engagement metrics or unsupported testimonials.</p>
           <Link href="/contact">Follow / contact ORVIA →</Link>
         </div>
@@ -247,7 +276,7 @@ export default function Home(){
         <div>
           <div className="lean-kicker">VERIFIED TRUST</div>
           <h2>Proof should be easy to inspect.</h2>
-          <p>Company credentials stay separate from founder credentials. Important claims are checked before they are published.</p>
+          <p>Company credentials stay separate from founder credentials. Important claims are checked before publication.</p>
           <Link href="/trust" className="lean-inline-cta">Open Trust Centre →</Link>
         </div>
         <div className="lean-trust-list">
@@ -255,7 +284,7 @@ export default function Home(){
           <span><b>ICO</b>ZC152311</span>
           <span><b>Armed Forces Covenant</b>Signatory</span>
           <span><b>ERS</b>Bronze Award holder</span>
-          <a href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer"><b>Trust A Veteran</b>Current public profile →</a>
+          <a href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer"><b>Trust A Veteran</b>Public profile →</a>
         </div>
       </div>
     </section>
@@ -264,7 +293,7 @@ export default function Home(){
 
     <section className="lean-final">
       <div className="shell">
-        <div><span>ORVIA — THE FIXERS</span><h2>Tell us where the pressure is. We will help you see what needs fixing.</h2></div>
+        <div><span>ORVIA OVERSIGHT</span><h2>Tell us where the pressure is. We will help you see what needs fixing.</h2></div>
         <Link href="/work-with-orvia" className="button light-button">Bring us the problem</Link>
       </div>
     </section>

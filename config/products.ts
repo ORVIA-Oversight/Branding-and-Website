@@ -24,7 +24,7 @@ export const products = {
     shortName: "Voice",
     mark: "O",
     accent: "#0B2D5C",
-    url: "https://voice.orvia.org.uk",
+    url: "https://orviavoice.co.uk",
     descriptor: "Communications, capture and routing",
     visualCue: "Signal / conversation / connection"
   },
@@ -60,7 +60,7 @@ export const products = {
     shortName: "Perspective Room",
     mark: "I",
     accent: "#6A2E7C",
-    url: "https://perspective.orvia.org.uk",
+    url: "/perspective-room",
     descriptor: "Human reasoning, safeguarding judgement and evidence-led recruitment",
     visualCue: "Perspective / layered evidence / human review"
   },
@@ -120,7 +120,7 @@ export const productIdentityRule = {
 
 export const productConfig = {
   id: "oversight" as ProductId,
-  name: "ORVIA Universal Reference",
+  name: "ORVIA Brand & Web System",
   legalEntity: "ORVIA Oversight Ltd",
   family: "oversight",
   accent: products.oversight.accent,

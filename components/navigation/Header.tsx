@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { navigationGroups, customerAccessNav } from "@/config/navigation";
-import { productConfig } from "@/config/products";
 import { EstateBar } from "@/components/navigation/EstateBar";
 import { activeSystem, masterIdentity, systemIdentities, type OrviaSystemId } from "@/config/systemIdentity";
+import { contactAndSales } from "@/config/contactAndSales";
 
 type ProductHeaderProps = {
   systemId?: OrviaSystemId;
@@ -59,8 +59,8 @@ export function ProductHeader({
       <div className="shell utility-inner">
         <span>{masterIdentity.legalName}</span>
         <div className="utility-actions">
-          <a href="tel:+443300433703">{productConfig.phone}</a>
-          <a href={`mailto:${productConfig.email}`}>{productConfig.email}</a>
+          <a href={`tel:${contactAndSales.phoneE164}`}>{contactAndSales.phoneDisplay}</a>
+          <a href={`mailto:${contactAndSales.generalEmail}`}>{contactAndSales.generalEmail}</a>
         </div>
       </div>
     </div>

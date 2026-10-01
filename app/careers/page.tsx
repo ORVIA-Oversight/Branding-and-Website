@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { CareerInterestForm } from "@/components/forms/CareerInterestForm";
 
 const values=[
   ["Meaningful work","Use your skills to make a practical difference in people’s lives and in the organisations that serve them."],
   ["Innovative platforms","Work with IRIS, HIVE, VITA, VERA, Command and AI to support evidence-led improvement."],
-  ["Human first","Technology expands the questions. Evidence disciplines the answer. A human remains accountable."],
+  ["Human first. Human last.","Technology expands what we can see. A named, accountable person remains responsible for judgement."],
   ["Outside the box","Test hypotheses, consider alternatives and challenge the easy explanation when the evidence points elsewhere."],
   ["Growth & development","Build capability through learning, supervision, feedback and evidence of competence."],
   ["Supportive community","Work with people who value integrity, fairness, curiosity and respect."]
@@ -99,12 +100,14 @@ export default function CareersPage(){
           <p>We recruit for capability, not CV polish. Where a role requires qualification, statutory competence, licence, clearance or regulated status, those requirements remain mandatory.</p>
         </div>
         <div className="career-pathway">
-          <span>DISCOVER</span><i>→</i><span>TEST</span><i>→</i><span>BUILD</span><i>→</i><span>PRACTISE</span><i>→</i><span>EVIDENCE</span><i>→</i><span>AUTHORISE</span><i>→</i><span>DEVELOP</span>
+          <span>EXPRESS INTEREST</span><i>→</i><span>HUMAN CONVERSATION</span><i>→</i><span>REASONING TEST</span><i>→</i><span>CHALLENGE & ADAPT</span><i>→</i><span>TOOL AWARENESS</span><i>→</i><span>HUMAN DECISION</span><i>→</i><span>VETTING</span><i>→</i><span>LEARN & PRACTISE</span><i>→</i><span>EARN AUTHORITY</span><i>→</i><span>GROW</span>
         </div>
         <div className="career-principle-box">
           <strong>No AI system independently hires or rejects a practitioner.</strong>
           <span>Human reasoning is assessed before AI use. Human suitability review remains a human responsibility.</span>
         </div>
+        <p style={{marginTop:"18px"}}><strong>Destination: ORVIA Practitioner Network.</strong> People who complete the required route can progress into trained, supervised and eventually authorised practitioner work within a defined scope.</p>
+        <Link className="text-link" href="/practitioner-network">See the Practitioner Network →</Link>
       </div>
     </section>
 
@@ -121,14 +124,7 @@ export default function CareersPage(){
             <span>What would you like to develop into?</span>
           </div>
         </div>
-        <form className="contact-form">
-          <label>Name<input name="name" required /></label>
-          <label>Email<input name="email" type="email" required /></label>
-          <label>Background / community<select name="background" defaultValue=""><option value="" disabled>Select if relevant</option><option>Veteran / Service leaver</option><option>Reservist</option><option>Military spouse / partner</option><option>Police / Fire / NHS / other service</option><option>Career changer</option><option>Experienced professional</option><option>Other</option></select></label>
-          <label>What can you do that your CV may not show?<textarea name="capability" rows={7} required /></label>
-          <label>What would you like to develop into?<textarea name="direction" rows={4} /></label>
-          <button className="button" type="submit">Send expression of interest</button>
-        </form>
+        <CareerInterestForm/>
       </div>
     </section>
   </>;

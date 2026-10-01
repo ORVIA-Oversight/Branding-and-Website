@@ -1,3 +1,4 @@
+import Link from "next/link";
 const cases=[
   {
     title:"ORVIA Brand System",
@@ -61,6 +62,13 @@ export default function CaseStudies(){
           <span><strong>ORVIA BUILD CASE STUDY</strong> — ORVIA-owned build or operating architecture.</span>
           <span><strong>DEMO / CONCEPT</strong> — clearly labelled and never presented as completed client work.</span>
         </div>
+      </div>
+    </section>
+
+    <section className="final-cta">
+      <div className="shell">
+        <div><div className="eyebrow light">APPLY THE METHOD TO YOUR PROBLEM</div><h2>Use the examples to understand the approach. Then bring us the real operating issue.</h2></div>
+        <Link className="button light-button" href="/work-with-orvia">Work with ORVIA</Link>
       </div>
     </section>
   </>;

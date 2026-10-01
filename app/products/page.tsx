@@ -1,9 +1,14 @@
 import Link from "next/link";
 import { siteRegistry } from "@/config/siteRegistry";
 
-const visibleProducts=siteRegistry.filter(site =>
-  !["brand","command","iris","academy","foundation"].includes(site.id)
-);
+const publicProductIds=["oversight","voice","threshold","mia","witness","perspective","web","business","security"] as const;
+const visibleProducts=siteRegistry.filter(site => publicProductIds.includes(site.id as typeof publicProductIds[number]));
+
+function publicHref(id:string,domain:string){
+  if(id==="voice") return "https://orviavoice.co.uk";
+  if(id==="perspective") return "/perspective-room";
+  return "https://"+domain;
+}
 
 export default function ProductsPage(){
   return <>
@@ -29,8 +34,10 @@ export default function ProductsPage(){
             <span>{site.commercial.commercialMode.replace("_"," ")}</span>
           </div>
           <div className="product-directory-actions">
-            <a className="button button-small" href={`https://${site.domain}`} target="_blank" rel="noreferrer">Visit site</a>
-            <Link className="text-link" href="/commercial">Commercial route →</Link>
+            {publicHref(site.id,site.domain).startsWith("/")
+              ? <Link className="button button-small" href={publicHref(site.id,site.domain)}>Open information</Link>
+              : <a className="button button-small" href={publicHref(site.id,site.domain)} target="_blank" rel="noreferrer">Visit site</a>}
+            <Link className="text-link" href="/contact">Talk to ORVIA →</Link>
           </div>
         </article>)}
       </div>

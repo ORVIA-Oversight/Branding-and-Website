@@ -82,8 +82,8 @@ export const siteRegistry: SiteRegistryEntry[] = [
   },
   {
     id:"voice", name:"ORVIA Voice", domain:"voice.orvia.org.uk", repo:"ORVIA-Oversight/orvia-voice",
-    family:"communications", productMark:"R", status:"live", layout:"canonical-commercial",
-    commercial:{commercialMode:"fixed_price",commercialRegistryId:"voice",allowDirectPurchase:false,requiresDiscovery:false,releaseState:"blocked",releaseNote:"Direct checkout remains blocked until live telephony, payment and onboarding are verified end to end."},
+    family:"communications", productMark:"R", status:"build", layout:"canonical-commercial",
+    commercial:{commercialMode:"fixed_price",commercialRegistryId:"voice",allowDirectPurchase:false,requiresDiscovery:false,releaseState:"blocked",releaseNote:"Canonical voice.orvia.org.uk DNS is not yet live. Use orviavoice.co.uk as the public route until DNS, telephony, payment and onboarding are verified end to end."},
     theme:{primary:ORVIA_COLOURS.teal,secondary:ORVIA_COLOURS.navy,accent:ORVIA_COLOURS.gold,soft:"#EFF8F8",ink:ORVIA_COLOURS.ink,use:"Conversation, signal, responsiveness and service capture"},
     requiredSections:commercialSections
   },

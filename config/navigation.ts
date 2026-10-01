@@ -33,7 +33,7 @@ export const navigationGroups: readonly NavGroup[] = [
   {
     label: "Products",
     items: [
-      { label: "ORVIA Voice", href: "https://voice.orvia.org.uk", description: "24/7 call capture and accountable follow-up.", external:true },
+      { label: "ORVIA Voice", href: "https://orviavoice.co.uk", description: "24/7 call capture and accountable follow-up.", external:true },
       { label: "Witness Room", href: "https://witness.orvia.org.uk", description: "Structured evidence preparation and challenge.", external:true },
       { label: "Perspective Room", href: "/perspective-room", description: "Human reasoning, judgement and evidence-led assessment." },
       { label: "ORVIA Web", href: "https://web.orvia.org.uk", description: "Lean commercial websites and managed web delivery.", external:true },
@@ -63,7 +63,7 @@ export const customerAccessNav = [
   },
   {
     label:"Voice Portal",
-    href:"https://voice.orvia.org.uk",
+    href:"https://orviavoice.co.uk",
     description:"ORVIA Voice service, onboarding and customer access.",
     status:"live"
   },
@@ -87,7 +87,7 @@ export const footerNavigation = {
   methodProducts: [
     { label:"ORVIA Method", href:"/method" },
     { label:"Service Information", href:"/services" },
-    { label:"ORVIA Voice", href:"https://voice.orvia.org.uk", external:true },
+    { label:"ORVIA Voice", href:"https://orviavoice.co.uk", external:true },
     { label:"Witness Room", href:"https://witness.orvia.org.uk", external:true },
     { label:"MIA", href:"https://mia.orvia.org.uk", external:true },
     { label:"Threshold", href:"https://threshold.orvia.org.uk", external:true }

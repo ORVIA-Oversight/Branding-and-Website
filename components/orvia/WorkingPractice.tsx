@@ -1,4 +1,5 @@
 import { workingPractice } from "@/config/workingPractice";
+import { SiteIcon } from "@/components/visual/SiteIcon";
 
 export function WorkingPractice(){
   return <section className="section working-practice">
@@ -8,9 +9,14 @@ export function WorkingPractice(){
         <p>{workingPractice.intro}</p>
       </div>
 
-      <div className="working-practice-lenses">
+      <div className="working-practice-media-row">
+        <div className="section-visual-placeholder"><span>IMAGE PLACEHOLDER</span><strong>Observe the real environment</strong><small>People, context and evidence in the same frame.</small></div>
+        <div className="section-visual-placeholder dark"><span>DIAGRAM PLACEHOLDER</span><strong>Problem → evidence → action</strong><small>Simple visual explainer, not another text block.</small></div>
+      </div>
+      <div className="working-practice-lenses visual-icon-grid">
         {workingPractice.lenses.map(([title,copy],index)=><article key={title}>
-          <span>{String(index+1).padStart(2,"0")}</span>
+          <div className="visual-card-icon"><SiteIcon kind={(["observe","review","verify","interpret","act","evidence"] as const)[index % 6]}/></div>
+          <span className="visual-icon-badge">{String(index+1).padStart(2,"0")}</span>
           <h3>{title}</h3>
           <p>{copy}</p>
         </article>)}

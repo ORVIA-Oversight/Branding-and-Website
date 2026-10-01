@@ -22,8 +22,8 @@ export const products = {
   voice: {
     name: "ORVIA Voice",
     shortName: "Voice",
-    mark: "R",
-    accent: "#2B929D",
+    mark: "O",
+    accent: "#0B2D5C",
     url: "https://voice.orvia.org.uk",
     descriptor: "Communications, capture and routing",
     visualCue: "Signal / conversation / connection"
@@ -31,8 +31,8 @@ export const products = {
   threshold: {
     name: "ORVIA Threshold",
     shortName: "Threshold",
-    mark: "V",
-    accent: "#EAAA00",
+    mark: "R",
+    accent: "#2F7F86",
     url: "https://threshold.orvia.org.uk",
     descriptor: "Structured concern and decision support",
     visualCue: "Threshold / doorway / decision point"
@@ -40,8 +40,8 @@ export const products = {
   mia: {
     name: "MIA",
     shortName: "MIA",
-    mark: "I",
-    accent: "#82418F",
+    mark: "O",
+    accent: "#0B2D5C",
     url: "https://mia.orvia.org.uk",
     descriptor: "Memory, story and human legacy",
     visualCue: "Human connection / memory / continuity"
@@ -49,8 +49,8 @@ export const products = {
   witness: {
     name: "ORVIA Witness Room",
     shortName: "Witness Room",
-    mark: "W",
-    accent: "#516274",
+    mark: "R",
+    accent: "#2F7F86",
     url: "https://witness.orvia.org.uk",
     descriptor: "Structured preparation and perspective testing",
     visualCue: "Room / perspectives / ripple"
@@ -58,8 +58,8 @@ export const products = {
   perspective: {
     name: "ORVIA Perspective Room",
     shortName: "Perspective Room",
-    mark: "P",
-    accent: "#2B929D",
+    mark: "I",
+    accent: "#6A2E7C",
     url: "https://perspective.orvia.org.uk",
     descriptor: "Human reasoning, safeguarding judgement and evidence-led recruitment",
     visualCue: "Perspective / layered evidence / human review"
@@ -67,8 +67,8 @@ export const products = {
   foundation: {
     name: "ORVIA Foundation",
     shortName: "Foundation",
-    mark: "F",
-    accent: "#A3684C",
+    mark: "A",
+    accent: "#E34B23",
     url: "https://foundation.orvia.org.uk",
     descriptor: "Access, inclusion and public-interest work",
     visualCue: "Belonging / people / community"
@@ -77,7 +77,7 @@ export const products = {
     name: "ORVIA Academy",
     shortName: "Academy",
     mark: "A",
-    accent: "#5D6B82",
+    accent: "#E34B23",
     url: "https://academy.orvia.org.uk",
     descriptor: "Learning and professional development",
     visualCue: "Learning / progression / reflection"
@@ -86,7 +86,7 @@ export const products = {
     name: "ORVIA Web",
     shortName: "Web",
     mark: "A",
-    accent: "#E74612",
+    accent: "#E34B23",
     url: "https://web.orvia.org.uk",
     descriptor: "Governed websites and digital delivery",
     visualCue: "Build / publish / connect"

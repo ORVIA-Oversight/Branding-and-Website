@@ -66,6 +66,11 @@ export default function WorkWithJohnPage(){
           </div>
         </div>
         <aside className="work-john-authority-panel">
+          <div className="work-john-hero-media-placeholder">
+            <span>IMAGE / VIDEO PLACEHOLDER</span>
+            <strong>John McGill — founder introduction</strong>
+            <small>Approved portrait, working image or short founder film.</small>
+          </div>
           <div className="founder-signature-mark">John McGill</div>
           <div className="work-john-authority-rule"/>
           <strong>{founderStory.founder}</strong>
@@ -87,8 +92,20 @@ export default function WorkWithJohnPage(){
           <div><div className="eyebrow">WHY ENGAGE JOHN PERSONALLY</div><h2>A particular set of eyes built across very different operating environments.</h2></div>
           <p>Founder-led work is priced above the practitioner rate because the value is the combination: operator, business builder, safeguarding and governance leader, systems thinker and experienced decision-maker under pressure.</p>
         </div>
-        <div className="work-john-value-grid">
-          {practitionerDeliveryModel.founder.value.map((item,index)=><article key={item}><span>{String(index+1).padStart(2,"0")}</span><p>{item}</p></article>)}
+        <div className="work-john-founder-media-row">
+          <figure className="work-john-visual-placeholder image">
+            <span>IMAGE PLACEHOLDER</span>
+            <strong>John working with a team / reviewing evidence</strong>
+            <small>Documentary-style working image, not staged corporate photography.</small>
+          </figure>
+          <figure className="work-john-visual-placeholder video">
+            <span>VIDEO PLACEHOLDER</span>
+            <strong>Why bring me in?</strong>
+            <small>30–60 second founder film explaining the value of direct involvement.</small>
+          </figure>
+        </div>
+        <div className="work-john-value-grid visual-icon-grid">
+          {practitionerDeliveryModel.founder.value.map((item,index)=><article key={item}><span className="visual-icon-badge">{String(index+1).padStart(2,"0")}</span><p>{item}</p></article>)}
         </div>
         <div className="work-john-founder-statement">
           <div>
@@ -114,9 +131,9 @@ export default function WorkWithJohnPage(){
           <div><div className="eyebrow">WHEN TO BRING ME IN</div><h2>When you need more than reassurance.</h2></div>
           <p>These are the situations where independent challenge can be more valuable than another internal meeting or another report telling you what you already know.</p>
         </div>
-        <div className="work-john-trigger-grid">
+        <div className="work-john-trigger-grid visual-icon-grid">
           {triggers.map(([title,copy],index)=><article key={title}>
-            <span>{String(index+1).padStart(2,"0")}</span>
+            <span className="visual-icon-badge">{String(index+1).padStart(2,"0")}</span>
             <h3>{title}</h3>
             <p>{copy}</p>
             <a href="mailto:hello@orvia.org.uk?subject=Work%20with%20John%20-%20situation%20to%20review">Discuss this situation →</a>
@@ -148,9 +165,17 @@ export default function WorkWithJohnPage(){
           <div><div className="eyebrow">CREDENTIALS & OPERATING EXPERIENCE</div><h2>Experience you can verify. Judgement you can test.</h2></div>
           <p>{founderCredentials.intro}</p>
         </div>
-        <div className="work-john-credential-grid">
-          {founderCredentials.assurance.map(item=><article key={item.label}>
-            <span>{item.label}</span>
+        <div className="work-john-credential-media">
+          <div className="work-john-visual-placeholder image">
+            <span>IMAGE PLACEHOLDER</span>
+            <strong>Founder credentials / operational background</strong>
+            <small>Approved documentary image or controlled credential montage.</small>
+          </div>
+        </div>
+        <div className="work-john-credential-grid visual-icon-grid">
+          {founderCredentials.assurance.map((item,index)=><article key={item.label}>
+            <span className="visual-icon-badge">{String(index+1).padStart(2,"0")}</span>
+            <small className="credential-label">{item.label}</small>
             <h3>{item.value}</h3>
             <p>{item.note}</p>
           </article>)}
@@ -194,9 +219,9 @@ export default function WorkWithJohnPage(){
           <div><div className="eyebrow">WHAT I CAN BE BROUGHT IN TO DO</div><h2>Focused, accountable work with a defined outcome.</h2></div>
           <p>The engagement starts with the result you need, the responsibility involved and what must exist when the work ends.</p>
         </div>
-        <div className="work-john-service-grid">
+        <div className="work-john-service-grid visual-icon-grid">
           {services.map(([title,copy],index)=><article key={title}>
-            <span>{String(index+1).padStart(2,"0")}</span>
+            <span className="visual-icon-badge">{String(index+1).padStart(2,"0")}</span>
             <h3>{title}</h3>
             <p>{copy}</p>
           </article>)}
@@ -212,6 +237,18 @@ export default function WorkWithJohnPage(){
       <div className="shell work-john-two-col">
         <div>
           <div className="eyebrow">EXPERIENCE APPLIED</div>
+          <div className="work-john-experience-media">
+            <figure className="work-john-visual-placeholder image compact">
+              <span>IMAGE PLACEHOLDER</span>
+              <strong>Operational leadership in practice</strong>
+              <small>Use an approved working/leadership image.</small>
+            </figure>
+            <figure className="work-john-visual-placeholder video compact">
+              <span>VIDEO PLACEHOLDER</span>
+              <strong>How I approach a difficult assignment</strong>
+              <small>Short founder explainer film.</small>
+            </figure>
+          </div>
           <h2>Operational leadership, not consultancy theatre.</h2>
           <p className="lead">John has held senior operational responsibility across independent ambulance services, regulated care, local government and overseas security. His professional development includes advanced safeguarding, health and social care leadership and strategic management.</p>
           <p className="lead">He works from the evidence available, states where information is incomplete and keeps consequential judgement with an accountable person. Technology may support the work; it does not replace professional responsibility.</p>
@@ -255,6 +292,11 @@ export default function WorkWithJohnPage(){
         <div>
           <div className="eyebrow">THREE WAYS TO START</div>
           <h2>Make it easy to bring me into the right problem.</h2>
+          <div className="work-john-visual-placeholder image compact engage">
+            <span>IMAGE PLACEHOLDER</span>
+            <strong>Conversation / briefing image</strong>
+            <small>Human first-contact visual.</small>
+          </div>
         </div>
         <div className="work-john-engage-actions">
           <a href="mailto:hello@orvia.org.uk?subject=Bring%20John%20in%20-%20urgent%20operational%20issue"><strong>Bring John in</strong><span>I already know I need direct consultancy.</span></a>

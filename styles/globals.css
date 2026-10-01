@@ -1725,3 +1725,93 @@ body{font-family:var(--font-geist),Arial,sans-serif;background:#FAF7F2;color:#0B
 @media(max-width:700px){
   .method-flow-rail{grid-template-columns:1fr}
 }
+
+
+/* Hero video-ready placeholder */
+.master-hero-panel{display:flex;justify-content:flex-end;align-items:stretch}
+.master-hero-video-placeholder{
+  position:relative;
+  width:min(100%,620px);
+  min-height:430px;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.16);
+  background:
+    linear-gradient(180deg,rgba(4,18,34,.05),rgba(4,18,34,.45)),
+    radial-gradient(circle at 70% 30%,rgba(43,146,157,.45),transparent 30%),
+    linear-gradient(135deg,#173f66,#0B2450 58%,#081b33);
+  box-shadow:0 24px 70px rgba(0,0,0,.22);
+}
+.master-hero-video-placeholder:before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),
+    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:44px 44px;
+  opacity:.28;
+}
+.master-hero-video-overlay{
+  position:relative;z-index:2;
+  min-height:430px;
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.master-hero-video-label{
+  font-size:.68rem;
+  letter-spacing:.16em;
+  font-weight:900;
+  color:#c7d9e5;
+  margin-bottom:12px;
+}
+.master-hero-video-overlay strong{
+  font-size:clamp(1.8rem,3vw,2.8rem);
+  line-height:1.05;
+}
+.master-hero-video-overlay p{
+  max-width:360px;
+  color:#cbd8e1;
+  line-height:1.55;
+}
+.master-hero-video-play{
+  width:74px;height:74px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  margin-top:18px;
+  background:#fff;
+  color:#0B2450;
+  font-size:1.45rem;
+  padding-left:4px;
+  box-shadow:0 12px 30px rgba(0,0,0,.2);
+}
+.master-hero-method-overlay{
+  position:absolute;
+  left:20px;right:20px;bottom:18px;
+  z-index:3;
+  padding:14px 16px;
+  border-radius:14px;
+  background:rgba(5,18,34,.72);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.12);
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.master-hero-method-overlay span{
+  font-size:.6rem;
+  letter-spacing:.14em;
+  font-weight:900;
+  color:#b9ccd9;
+}
+.master-hero-method-overlay strong{
+  font-size:.88rem;
+  line-height:1.35;
+}
+@media(max-width:1100px){
+  .master-hero-video-placeholder{width:100%;min-height:360px}
+  .master-hero-video-overlay{min-height:360px}
+}

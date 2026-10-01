@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navigationGroups, customerAccessNav } from "@/config/navigation";
 import { productConfig } from "@/config/products";
+import { EstateBar } from "@/components/navigation/EstateBar";
 
 type ProductHeaderProps = {
   productName?: string;
@@ -44,6 +45,7 @@ export function ProductHeader({
   ctaHref="/contact"
 }:ProductHeaderProps) {
   return <>
+    <EstateBar/>
     <div className="utility-bar">
       <div className="shell utility-inner">
         <span>ORVIA Oversight Ltd</span>

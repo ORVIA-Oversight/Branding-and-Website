@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { navigationGroups, customerAccessNav } from "@/config/navigation";
-import { productConfig } from "@/config/products";
 import { EstateBar } from "@/components/navigation/EstateBar";
 import { activeSystem, masterIdentity, systemIdentities, type OrviaSystemId } from "@/config/systemIdentity";
 import { contactAndSales } from "@/config/contactAndSales";

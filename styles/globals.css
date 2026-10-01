@@ -1999,3 +1999,14 @@ body{font-family:var(--font-geist),Arial,sans-serif;background:#FAF7F2;color:#0B
 .founder-care-story{background:#fff}
 @media(max-width:1000px){.founder-journey-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.founder-journey-grid{grid-template-columns:1fr}.founder-photo-placeholder{min-height:280px}}
+
+
+/* Founder health & social care credibility */
+.founder-care-credentials{background:#FAF7F2;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.founder-care-credential-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px}
+.founder-care-credential-grid article{padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(11,36,80,.04)}
+.founder-care-credential-grid strong{display:block;color:#0B2450;font-size:1.08rem}
+.founder-care-credential-grid span{display:block;margin-top:6px;color:#2B929D;font-weight:800;font-size:.82rem}
+.founder-care-credential-grid p{margin:10px 0 0;color:var(--muted);line-height:1.55;font-size:.9rem}
+@media(max-width:1000px){.founder-care-credential-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.founder-care-credential-grid{grid-template-columns:1fr}}

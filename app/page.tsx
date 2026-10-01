@@ -61,9 +61,17 @@ const caseStudies = [
 
 export default function Home(){
   return <>
-    <section className="master-hero">
-      <div className="master-hero-bg" aria-hidden="true"/>
-      <div className="shell master-hero-grid">
+    <section className="master-hero master-hero-flagship">
+      <div className="master-hero-video-stage" aria-label="Future ORVIA flagship hero film">
+        <div className="master-hero-video-fallback" aria-hidden="true"/>
+        <div className="master-hero-video-watermark" aria-hidden="true">
+          <span>FLAGSHIP HERO FILM</span>
+          <strong>Full-screen ORVIA explainer video placeholder</strong>
+        </div>
+        <div className="master-hero-scrim" aria-hidden="true"/>
+      </div>
+
+      <div className="shell master-hero-flagship-content">
         <div className="master-hero-copy">
           <div className="lean-kicker">ORVIA OVERSIGHT · INDEPENDENT · HUMAN-CENTRED</div>
           <h1>Find what is going wrong.<br/><span>Fix it before it becomes the thing that breaks the service.</span></h1>
@@ -78,19 +86,13 @@ export default function Home(){
             <span>Calm challenge. Accountable action.</span>
           </div>
         </div>
-        <div className="master-hero-panel">
-          <div className="master-hero-video-placeholder" aria-label="Future ORVIA hero explainer video">
-            <div className="master-hero-video-overlay">
-              <span className="master-hero-video-label">HERO VIDEO PLACEHOLDER</span>
-              <strong>60-second ORVIA explainer</strong>
-              <p>Full-size hero film will sit here once the visual design is signed off.</p>
-              <div className="master-hero-video-play" aria-hidden="true">▶</div>
-            </div>
-            <div className="master-hero-method-overlay">
-              <span>THE ORVIA METHOD</span>
-              <strong>OBSERVE → REVIEW → VERIFY → INTERPRET → ACT</strong>
-            </div>
-          </div>
+      </div>
+
+      <div className="master-hero-method-bar">
+        <div className="shell">
+          <span>THE ORVIA METHOD</span>
+          <strong>OBSERVE → REVIEW → VERIFY → INTERPRET → ACT</strong>
+          <small>Human judgement remains accountable throughout.</small>
         </div>
       </div>
     </section>

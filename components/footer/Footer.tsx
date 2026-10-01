@@ -33,7 +33,7 @@ export function Footer() {
         <div className="footer-col">
           <h3>COMPANY</h3>
           {footerNavigation.company.map(item=><FooterLink key={item.href+item.label} item={item}/>)}
-          <a className="footer-tav-link" href={armedForcesAssets.trustAVeteran.profile} target="_blank" rel="noreferrer"><img src={armedForcesAssets.trustAVeteran.src} alt={armedForcesAssets.trustAVeteran.alt}/><span>Trust A Veteran</span></a>
+          <a href={armedForcesAssets.trustAVeteran.profile} target="_blank" rel="noreferrer">Trust A Veteran</a>
           <a href="tel:+443300433703">0330 043 3703</a>
           <a href="mailto:hello@orvia.org.uk">hello@orvia.org.uk</a>
         </div>
@@ -54,7 +54,7 @@ export function Footer() {
         <a href="https://www.defencediscountservice.co.uk/en" target="_blank" rel="noreferrer">Defence Discount Service</a>
         <Link href="/armed-forces">ERS Bronze</Link>
         <Link href="/founder">Veteran-founded</Link>
-        <a className="footer-trust-badge" href={armedForcesAssets.trustAVeteran.profile} target="_blank" rel="noreferrer"><img src={armedForcesAssets.trustAVeteran.src} alt={armedForcesAssets.trustAVeteran.alt}/><span>Trust A Veteran</span></a>
+        <a href={armedForcesAssets.trustAVeteran.profile} target="_blank" rel="noreferrer">Trust A Veteran</a>
       </div>
 
       <div className="footer-bottom-approved">

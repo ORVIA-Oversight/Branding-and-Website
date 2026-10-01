@@ -47,7 +47,7 @@ const specialist = [
     stage:"I — INTERPRET",
     summary:"Structured human reasoning, perspective and organisational insight without reducing people to a score.",
     image:"/products/perspective-room.svg",
-    href:"https://insight.orvia.org.uk",
+    href:"https://orviainsight.co.uk",
     action:"Explore Insight"
   }
 ] as const;
@@ -138,7 +138,7 @@ export default function Home(){
               <div className="lean-kicker">ORVIA VOICE</div>
               <h3>Important calls should become owned work, not forgotten voicemail.</h3>
               <p>Capture why somebody called, route it properly, create a visible next action and make follow-up accountable.</p>
-              <div className="priority-actions"><a className="button" href="https://voice.orvia.org.uk">Understand Voice</a><a className="button secondary" href="https://voice.orvia.org.uk/#pricing">Price / start →</a></div>
+              <div className="priority-actions"><a className="button" href="https://orviavoice.co.uk">Understand Voice</a><a className="button secondary" href="https://orviavoice.co.uk/#pricing">Price / start →</a></div>
             </div>
           </article>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
+import { contactAndSales } from "@/config/contactAndSales";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -30,10 +31,10 @@ export function ContactForm(){
       product_interest:String(form.get("product_interest")||"general"),
       message:String(form.get("message")||""),
       consent_or_lawful_basis:String(form.get("consent")||""),
-      source:"website",
-      owner:"sales-unassigned",
-      next_action:"human-review",
-      status:"lead",
+      source:contactAndSales.leadDefaults.source,
+      owner:contactAndSales.leadDefaults.owner,
+      next_action:contactAndSales.leadDefaults.nextAction,
+      status:contactAndSales.leadDefaults.status,
       ...attribution
     };
     const response=await fetch("/api/contact",{
@@ -72,6 +73,6 @@ export function ContactForm(){
     <label className="pr-consent"><input type="checkbox" name="consent" value="contact-request" required/> <span>I am asking ORVIA to contact me about this enquiry.</span></label>
     <button className="button" type="submit" disabled={status==="sending"}>{status==="sending"?"Sending…":"Send enquiry"}</button>
     {status==="sent"&&<p className="pr-form-status" role="status">Thank you. Your enquiry has been received and routed for human review.</p>}
-    {status==="error"&&<p className="pr-form-status pr-form-error" role="alert">The web enquiry route is not available right now. Please call 0330 043 3703, WhatsApp us, or email hello@orvia.org.uk.</p>}
+    {status==="error"&&<p className="pr-form-status pr-form-error" role="alert">The web enquiry route is not available right now. Please call {contactAndSales.phoneDisplay}, WhatsApp us, or email {contactAndSales.generalEmail}.</p>}
   </form>;
 }

@@ -79,12 +79,16 @@ export default function Home(){
           </div>
         </div>
         <div className="master-hero-panel">
-          <div className="master-hero-panel-inner">
-            <span className="master-hero-panel-kicker">THE ORVIA METHOD</span>
-            <strong>OBSERVE → REVIEW → VERIFY → INTERPRET → ACT</strong>
-            <p>One method. Specialist tools for identifiable problems. Human judgement remains accountable throughout.</p>
-            <div className="master-stage-row" aria-label="ORVIA method stages">
-              {["O","R","V","I","A"].map(stage=><span key={stage} className={`stage-${stage.toLowerCase()}`}>{stage}</span>)}
+          <div className="master-hero-video-placeholder" aria-label="Future ORVIA hero explainer video">
+            <div className="master-hero-video-overlay">
+              <span className="master-hero-video-label">HERO VIDEO PLACEHOLDER</span>
+              <strong>60-second ORVIA explainer</strong>
+              <p>Full-size hero film will sit here once the visual design is signed off.</p>
+              <div className="master-hero-video-play" aria-hidden="true">▶</div>
+            </div>
+            <div className="master-hero-method-overlay">
+              <span>THE ORVIA METHOD</span>
+              <strong>OBSERVE → REVIEW → VERIFY → INTERPRET → ACT</strong>
             </div>
           </div>
         </div>

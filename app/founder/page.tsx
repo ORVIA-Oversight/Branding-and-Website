@@ -121,6 +121,40 @@ export default function FounderPage(){
       </div>
     </section>
 
+    <section className="section founder-care-credentials">
+      <div className="shell">
+        <div className="section-head">
+          <div>
+            <div className="eyebrow">HEALTH & SOCIAL CARE CREDIBILITY</div>
+            <h2>Current sector credentials support the experience.</h2>
+          </div>
+          <p>These are individual founder credentials and checks. They are not ORVIA company accreditations or endorsements.</p>
+        </div>
+        <div className="founder-care-credential-grid">
+          <article>
+            <strong>Skills for Care</strong>
+            <span>Registered Manager member</span>
+            <p>Part of John's continuing connection to adult social care leadership and registered-manager development.</p>
+          </article>
+          <article>
+            <strong>Enhanced DBS</strong>
+            <span>DBS Update Service subscriber</span>
+            <p>Current subscription status is maintained for portability and due-diligence checks; sensitive certificate details remain private.</p>
+          </article>
+          <article>
+            <strong>Registered-manager breadth</strong>
+            <span>Multiple regulated service settings</span>
+            <p>Experience across ambulance/healthcare, domiciliary care, learning disability & autism, and secure dementia services.</p>
+          </article>
+          <article>
+            <strong>Professional development</strong>
+            <span>Health, safeguarding, leadership & communication</span>
+            <p>Includes Level 5 Health & Social Care, advanced safeguarding study, strategic-management development, Makaton and Oliver McGowan training.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section className="section founder-story-experience">
       <div className="shell founder-story-two-col">
         <div>

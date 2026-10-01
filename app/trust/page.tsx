@@ -1,5 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { trust } from "@/config/trust";
+import { founderCredentials } from "@/config/founderCredentials";
+
+export const metadata:Metadata={title:"Trust Centre | ORVIA Oversight",description:"Company identity, privacy, security, external trust signals and clearly separated founder professional credentials.",alternates:{canonical:"/trust"}};
 
 export default function TrustPage(){
   return <>
@@ -66,6 +70,18 @@ export default function TrustPage(){
             <p>ORVIA has a current public Trust A Veteran profile. Trust A Veteran has authorised ORVIA to promote its membership while the subscription remains current, using the supplied artwork unchanged.</p>
             <a className="text-link" href="https://www.trustaveteran.com/team/orvia" target="_blank" rel="noreferrer">View ORVIA profile →</a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section className="section">
+      <div className="shell">
+        <div className="section-head">
+          <div><div className="eyebrow">FOUNDER PROFESSIONAL TRUST</div><h2>Individual credentials are kept separate from company accreditation.</h2></div>
+          <p>These points describe John McGill personally. They do not imply that Skills for Care, DBS, training providers or membership bodies endorse ORVIA Oversight Ltd.</p>
+        </div>
+        <div className="card-grid">
+          {founderCredentials.assurance.map(item=><article className="feature-card" key={item.label}><h3>{item.label}</h3><p><strong>{item.value}</strong></p><p>{item.note}</p></article>)}
         </div>
       </div>
     </section>

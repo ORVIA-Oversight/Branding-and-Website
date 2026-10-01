@@ -7,10 +7,13 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 export function ContactForm(){
   const [status,setStatus]=useState<Status>("idle");
+  const [interest,setInterest]=useState("general");
   const [attribution,setAttribution]=useState({landing_page:"/contact",utm_source:"",utm_medium:"",utm_campaign:""});
 
   useEffect(()=>{
     const url=new URL(window.location.href);
+    const requestedInterest=url.searchParams.get("interest");
+    if(requestedInterest) setInterest(requestedInterest);
     setAttribution({
       landing_page:url.pathname,
       utm_source:url.searchParams.get("utm_source")||"",
@@ -54,7 +57,7 @@ export function ContactForm(){
     <label>Organisation<input name="organisation" autoComplete="organization"/></label>
     <label>Telephone <span className="form-optional">optional</span><input name="phone" type="tel" autoComplete="tel"/></label>
     <label>What is this about?
-      <select name="product_interest" defaultValue="general">
+      <select name="product_interest" value={interest} onChange={event=>setInterest(event.target.value)}>
         <option value="general">General ORVIA enquiry</option>
         <option value="consultancy">Consultancy / operational support</option>
         <option value="founder">Work directly with John</option>

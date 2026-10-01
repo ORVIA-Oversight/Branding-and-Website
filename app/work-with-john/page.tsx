@@ -55,7 +55,7 @@ export default function WorkWithJohnPage(){
             <span>Clearly, respectfully and with the evidence behind the challenge.</span>
           </div>
           <div className="actions work-john-primary-actions">
-            <a className="button" href="mailto:hello@orvia.org.uk?subject=Bring%20John%20in%20-%20consultancy%20enquiry">Bring John in</a>
+            <Link className="button" href="/contact?interest=founder">Bring John in</Link>
             <Link className="button secondary" href="/contact">Talk through the situation</Link>
           </div>
           <div className="work-john-proof-row">
@@ -136,7 +136,7 @@ export default function WorkWithJohnPage(){
             <span className="visual-icon-badge">{String(index+1).padStart(2,"0")}</span>
             <h3>{title}</h3>
             <p>{copy}</p>
-            <a href="mailto:hello@orvia.org.uk?subject=Work%20with%20John%20-%20situation%20to%20review">Discuss this situation →</a>
+            <Link href="/contact?interest=founder">Discuss this situation →</Link>
           </article>)}
         </div>
       </div>
@@ -264,7 +264,7 @@ export default function WorkWithJohnPage(){
             <li>Agreed actions, owners or written outputs where included</li>
             <li>An honest answer when another professional is required</li>
           </ul>
-          <a className="button" href="mailto:hello@orvia.org.uk?subject=John%20McGill%20consultancy%20availability">Ask John about an assignment</a>
+          <Link className="button" href="/contact?interest=founder">Ask John about an assignment</Link>
         </article>
       </div>
     </section>
@@ -280,7 +280,7 @@ export default function WorkWithJohnPage(){
             <h3>{name}</h3>
             <strong>{price}</strong>
             <p>{note}</p>
-            <a href="mailto:hello@orvia.org.uk?subject=John%20McGill%20consultancy%20rate%20enquiry">Check availability →</a>
+            <Link href="/contact?interest=founder">Check availability →</Link>
           </article>)}
         </div>
         <p className="work-john-small">Travel, accommodation and other approved expenses are agreed separately. Interim assignments remain subject to availability, applicable regulatory requirements and the correct employment-status determination.</p>
@@ -337,7 +337,7 @@ export default function WorkWithJohnPage(){
         <h2>If something is not right, say what is happening.</h2>
         <p className="lead">If ORVIA is not the right fit, you will be told plainly. If it is, you will receive a written scope and price before committing to the work.</p>
         <div className="actions">
-          <a className="button" href="mailto:hello@orvia.org.uk?subject=Bring%20John%20in%20-%20consultancy%20enquiry">Bring John in</a>
+          <Link className="button" href="/contact?interest=founder">Bring John in</Link>
           <Link className="button secondary" href="/contact">Talk it through first</Link>
         </div>
       </div>

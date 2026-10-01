@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArmedForcesCommitment } from "@/components/trust/ArmedForcesCommitment";
+import { SiteIcon } from "@/components/visual/SiteIcon";
 
 const problems = [
   ["Pressure is building","Something keeps recurring, escalating or consuming management time."],
@@ -97,6 +98,11 @@ export default function Home(){
           <h2>We are not here to make broken systems look better. We are here to help make them better.</h2>
         </div>
         <div>
+          <div className="home-story-media-placeholder">
+            <span>IMAGE PLACEHOLDER</span>
+            <strong>ORVIA in the real world</strong>
+            <small>Use approved documentary-style imagery showing people, evidence, leadership and practical problem-solving.</small>
+          </div>
           <p>ORVIA grew from years of seeing the same gap: what a system records is not always what people experience. A form can be complete, a policy can exist and a meeting can be minuted — while the real problem continues underneath.</p>
           <p>We start with reality rather than reassurance: what is strong, what does not fit, what is missing, what needs action and how we will know whether the fix actually worked.</p>
           <Link href="/founder" className="lean-inline-cta">Read the ORVIA story →</Link>
@@ -114,7 +120,8 @@ export default function Home(){
           <p>Independent problem-solving without cover-up, blame theatre or pretending that software replaces accountable people.</p>
         </div>
         <div className="compact-card-grid four">
-          {problems.map(([title,body],index)=><article className="compact-card problem-card" key={title}>
+          {problems.map(([title,body],index)=><article className="compact-card problem-card visual-card" key={title}>
+            <div className="visual-card-icon"><SiteIcon kind={(["pressure","record","owner","alert"] as const)[index]}/></div>
             <span className="card-index">{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{body}</p>
           </article>)}
         </div>
@@ -186,9 +193,13 @@ export default function Home(){
           </div>
           <p>The deeper workflow, evidence and verification layers remain underneath the customer experience until they are useful to understand.</p>
         </div>
-        <div className="method-compact-grid">
-          {fixes.map(([stage,title,question,body])=><article key={stage} className={`method-compact stage-border-${stage.toLowerCase()}`}>
-            <span>{stage}</span><div><h3>{title}</h3><strong>{question}</strong><p>{body}</p></div>
+        <div className="method-flow-rail" aria-label="ORVIA method flow">
+          {fixes.map(([stage,title,question,body],index)=><article key={stage} className={`method-flow-step stage-border-${stage.toLowerCase()}`}>
+            <div className="method-flow-icon"><SiteIcon kind={(["observe","review","verify","interpret","act"] as const)[index]}/></div>
+            <span>{stage}</span>
+            <h3>{title}</h3>
+            <strong>{question}</strong>
+            <p>{body}</p>
           </article>)}
         </div>
         <div className="method-deeper-link"><Link href="/method" className="button light-button">Explore the Method & Trust layers</Link></div>
@@ -236,9 +247,9 @@ export default function Home(){
           <p>Practical tools should help somebody understand the problem even when ORVIA is not the right commercial answer.</p>
         </div>
         <div className="compact-card-grid three">
-          <article className="compact-card resource"><span>FREE</span><h3>Concern clarity checklist</h3><p>Separate what happened, what is known, what is assumed and what is still missing.</p><Link href="/toolkits">Open toolkit →</Link></article>
-          <article className="compact-card resource"><span>FREE</span><h3>Evidence readiness checklist</h3><p>Check whether chronology, originals, decisions, owners and gaps are visible before review.</p><Link href="/toolkits">Open toolkit →</Link></article>
-          <article className="compact-card resource"><span>FREE</span><h3>Commercial journey check</h3><p>Test whether your website genuinely moves somebody from understanding to a real next action.</p><Link href="/toolkits">Open toolkit →</Link></article>
+          <article className="compact-card resource visual-card"><div className="visual-card-icon"><SiteIcon kind="checklist"/></div><span>FREE</span><h3>Concern clarity checklist</h3><p>Separate what happened, what is known, what is assumed and what is still missing.</p><Link href="/toolkits">Open toolkit →</Link></article>
+          <article className="compact-card resource visual-card"><div className="visual-card-icon"><SiteIcon kind="evidence"/></div><span>FREE</span><h3>Evidence readiness checklist</h3><p>Check whether chronology, originals, decisions, owners and gaps are visible before review.</p><Link href="/toolkits">Open toolkit →</Link></article>
+          <article className="compact-card resource visual-card"><div className="visual-card-icon"><SiteIcon kind="journey"/></div><span>FREE</span><h3>Commercial journey check</h3><p>Test whether your website genuinely moves somebody from understanding to a real next action.</p><Link href="/toolkits">Open toolkit →</Link></article>
         </div>
       </div>
     </section>
@@ -250,7 +261,13 @@ export default function Home(){
           <p>Until client evidence is approved for publication, ORVIA uses clearly labelled demonstration cases to show how the operating model works.</p>
         </div>
         <div className="compact-card-grid three">
-          {caseStudies.map(([title,body])=><article className="compact-card" key={title}><span className="demo-label">DEMONSTRATION</span><h3>{title}</h3><p>{body}</p><Link href="/case-studies">View case study →</Link></article>)}
+          {caseStudies.map(([title,body],index)=><article className="compact-card case-visual-card" key={title}>
+            <div className="case-media-placeholder">
+              <SiteIcon kind={(["voice","case","web"] as const)[index]}/>
+              <span>CASE VISUAL</span>
+            </div>
+            <span className="demo-label">DEMONSTRATION</span><h3>{title}</h3><p>{body}</p><Link href="/case-studies">View case study →</Link>
+          </article>)}
         </div>
       </div>
     </section>
@@ -264,8 +281,11 @@ export default function Home(){
           <Link href="/insights" className="button">Read insights</Link>
         </div>
         <div className="master-updates-card">
-          <strong>Verified social only</strong>
-          <p>Only verified ORVIA social accounts are surfaced. No invented follower numbers, engagement metrics or unsupported testimonials.</p>
+          <strong>Social & publishing hub</strong>
+          <p>Verified ORVIA social channels will be linked here as they are confirmed, alongside founder notes, product releases and explainers.</p>
+          <div className="social-link-placeholders">
+            <span>LINKEDIN</span><span>FACEBOOK</span><span>INSTAGRAM</span><span>VIDEO</span>
+          </div>
           <Link href="/contact">Follow / contact ORVIA →</Link>
         </div>
       </div>

@@ -12,10 +12,10 @@ export const founderCredentials = {
   experience:[
     "UK Armed Forces experience — learning discipline, responsibility, teamwork and how frontline detail connects to the wider operational picture",
     "Operational work in austere and high-risk international environments, where situational awareness, judgement and composure mattered",
-    "Around 11 years across ambulance and healthcare operations, including ownership and operation of an independent ambulance service",
+    "Around 11 years across ambulance and healthcare operations, including ownership and operation of an independent ambulance service with CQC registered-manager responsibility",
     "Ambulance operations spanning mental-health work, patient transport, frontline activity, urgent care and specialist support",
     "Multi-site operational leadership across public, private and regulated environments",
-    "Registered-manager experience in learning-disability and autism services, including around 16 months working closely with the people supported and the teams around them",
+    "Registered-manager experience across four distinct service environments: independent ambulance/healthcare, domiciliary care, residential learning-disability & autism, and secure dementia services",
     "Local-government operational leadership, safeguarding, governance, service improvement and evidence-led assurance"
   ],
   practitionerPromise:"ORVIA practitioners are selected and developed around evidence discipline, professional boundaries, safeguarding awareness, structured challenge, practical implementation and verification that the fix actually worked."

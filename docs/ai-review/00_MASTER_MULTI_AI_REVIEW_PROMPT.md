@@ -133,6 +133,38 @@ Identify:
 - whether the current content sells calmly rather than pressuring;
 - whether each CTA leads to a real next step.
 
+## Preservation list — optimise presentation, do not casually rewrite/remove
+
+These items are semantically preserved unless the reviewer identifies a factual, legal or safety defect:
+- ORVIA = OBSERVE → REVIEW → VERIFY → INTERPRET → ACT;
+- ORVIA Oversight as the parent identity;
+- evidence before assumption;
+- human first, human last;
+- authorised humans retain consequential judgement;
+- fixed separation between product proposition and deeper ORVIA operating architecture;
+- verified company trust markers and legal identity;
+- IRIS/HIVE/VITA/VERA roles as underlying architecture, even if they are moved deeper in the customer journey;
+- current 1 October architecture and product/surface register, subject only to an evidenced merge/retire challenge.
+
+Reviewers may improve hierarchy, wording, spacing and location of these elements. They must not remove or materially redefine them merely to make the site feel different.
+
+## Output discipline
+
+Do not return a long conceptual essay.
+
+Maximum:
+- 14 required sections;
+- 3–6 recommendations per section unless a critical issue requires more;
+- prioritise P0/P1/P2 issues;
+- avoid minor CSS nitpicks unless they materially affect usability, accessibility or consistency.
+
+For every recommendation use:
+
+**[Section / Component] → [Current State] → [Recommended Change] → [Evidence / Rationale] → [Priority: P0/P1/P2]**
+
+Where implementation is obvious, add:
+**[Acceptance Test]**
+
 ## Output required from every reviewing AI
 
 Return:

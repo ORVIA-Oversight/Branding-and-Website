@@ -59,6 +59,7 @@ export default function FounderPage(){
         </div>
         <div className="founder-story-copy">
           <p>The military created the baseline: discipline, teamwork, responsibility and situational awareness. Austere environments added judgement under pressure. Ambulance operations added the reality of delivering services where people, time, risk, regulation and operational consequence meet.</p>
+          <p>Health and social care then added another dimension. John has worked through the layers of service delivery from frontline and operational responsibility, through registered-manager leadership, multi-site oversight and regional management, to now leading ORVIA as Managing Director. That progression matters because it means he understands both what a service feels like at ground level and what it takes to lead, govern and improve one strategically.</p>
           <p>Owning and operating an independent ambulance service meant learning the whole landscape — frontline delivery, mental-health work, patient transport, urgent activity, workforce, governance, customers, contracts, compliance and the strategic decisions needed to keep the operation working.</p>
           <p>Later registered-manager roles widened that perspective further across domiciliary care, residential learning-disability and autism services, and secure dementia care. The point is not that John knows everything about every sector; it is that he has repeatedly had to understand very different regulated environments quickly, see how they function and work out what good operational control looks like in context.</p>
         </div>
@@ -104,6 +105,7 @@ export default function FounderPage(){
         </div>
         <div>
           <p className="lead">Observe the reality. Review the context. Verify what can actually be supported. Interpret it proportionately. Act — then check whether the action worked.</p>
+          <p>ORVIA is the culmination of that journey: from frontline work to strategic leadership, and now to building an organisation designed to help employers and businesses improve without losing sight of the human being at the beginning and the end of every system.</p>
           <p>That is the backbone of what John delivers. Not a theory built outside operations, but a method shaped by working across multiple environments where people, evidence, responsibility and consequence all had to meet.</p>
         </div>
       </div>
@@ -173,7 +175,7 @@ export default function FounderPage(){
       <div className="shell founder-story-two-col">
         <div>
           <div className="eyebrow light">WHAT ORVIA HAS TO ACHIEVE</div>
-          <h2>Commercially useful. Operationally credible. Human enough to matter.</h2>
+          <h2>Commercially useful. Operationally credible. Human at the beginning and the end.</h2>
         </div>
         <div>
           <p className="lead">ORVIA has to solve identifiable problems, create measurable value and be commercially strong enough to survive. But it also has to preserve the principles learned across the environments that built it.</p>

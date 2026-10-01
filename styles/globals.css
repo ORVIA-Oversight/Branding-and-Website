@@ -1568,3 +1568,90 @@ body{font-family:var(--font-geist),Arial,sans-serif;background:#FAF7F2;color:#0B
 .orvia-mini-placeholder small{margin-top:4px;color:var(--muted);line-height:1.35}
 @media(max-width:950px){.orvia-ideas-grid{grid-template-columns:1fr}.orvia-ideas-media-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.orvia-ideas-inline-media{grid-template-columns:1fr}.orvia-ideas-card{padding:20px}}
+
+
+/* Work With John — visual review pass */
+.work-john-hero-media-placeholder{
+  min-height:170px;
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:20px;
+  background:linear-gradient(145deg,#eef3f5,#fff);
+  border:1px dashed #9cadbb;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.work-john-hero-media-placeholder span,
+.work-john-visual-placeholder span{
+  font-size:.64rem;
+  letter-spacing:.13em;
+  font-weight:900;
+  color:#0B2450;
+}
+.work-john-hero-media-placeholder strong,
+.work-john-visual-placeholder strong{
+  margin-top:6px;
+  font-size:1.08rem;
+}
+.work-john-hero-media-placeholder small,
+.work-john-visual-placeholder small{
+  margin-top:5px;
+  color:#66727e;
+  line-height:1.4;
+}
+.work-john-founder-media-row,
+.work-john-experience-media{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin:26px 0 22px;
+}
+.work-john-visual-placeholder{
+  min-height:220px;
+  margin:0;
+  padding:22px;
+  border-radius:18px;
+  border:1px dashed #9cadbb;
+  background:linear-gradient(135deg,#f1f5f6,#fff);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.work-john-visual-placeholder.video{
+  background:linear-gradient(135deg,#0B2450,#173f66);
+  color:#fff;
+  border-color:rgba(255,255,255,.24);
+}
+.work-john-visual-placeholder.video span,
+.work-john-visual-placeholder.video small{color:#d8e3ea}
+.work-john-visual-placeholder.compact{min-height:150px}
+.work-john-visual-placeholder.engage{margin-top:22px}
+.visual-icon-grid article{position:relative}
+.visual-icon-badge{
+  width:40px!important;
+  height:40px!important;
+  border-radius:12px!important;
+  display:grid!important;
+  place-items:center!important;
+  background:#0B2450!important;
+  color:#fff!important;
+  font-size:.7rem!important;
+  font-weight:900!important;
+  letter-spacing:.08em!important;
+  margin-bottom:12px!important;
+}
+.credential-label{
+  display:block;
+  color:#5f6975;
+  font-size:.68rem;
+  letter-spacing:.11em;
+  font-weight:850;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+.work-john-credential-media{margin-bottom:18px}
+@media(max-width:900px){
+  .work-john-founder-media-row,
+  .work-john-experience-media{grid-template-columns:1fr}
+}

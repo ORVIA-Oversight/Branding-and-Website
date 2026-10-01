@@ -20,6 +20,7 @@ const journey=[
   ["UK Armed Forces","A baseline in discipline, teamwork, responsibility and understanding how individual actions connect to a wider mission."],
   ["Austere environments","Operational work in high-risk settings developed situational awareness, composure and the habit of reading what is happening around the plan."],
   ["Ambulance operations","Around 11 years across ambulance and healthcare operations, including building and operating an independent ambulance service across mental health, patient transport, urgent and frontline work."],
+  ["Registered-manager breadth","Registered-manager responsibility across independent ambulance/healthcare, domiciliary care, residential learning-disability & autism, and secure dementia services added a wide view of how regulated services actually operate."],
   ["Multi-site leadership","Experience across local government, private organisations and regulated services added governance, systems, workforce and strategic perspective."],
   ["Learning disability & autism","Around 16 months in learning-disability and autism services changed the human dimension of the work. John found his feet there, valued the experience deeply and cared about the people behind the service."],
   ["ORVIA","Those different landscapes culminated in one operating approach: observe reality, review context, verify evidence, interpret proportionately and act with accountable human judgement."]
@@ -59,6 +60,7 @@ export default function FounderPage(){
         <div className="founder-story-copy">
           <p>The military created the baseline: discipline, teamwork, responsibility and situational awareness. Austere environments added judgement under pressure. Ambulance operations added the reality of delivering services where people, time, risk, regulation and operational consequence meet.</p>
           <p>Owning and operating an independent ambulance service meant learning the whole landscape — frontline delivery, mental-health work, patient transport, urgent activity, workforce, governance, customers, contracts, compliance and the strategic decisions needed to keep the operation working.</p>
+          <p>Later registered-manager roles widened that perspective further across domiciliary care, residential learning-disability and autism services, and secure dementia care. The point is not that John knows everything about every sector; it is that he has repeatedly had to understand very different regulated environments quickly, see how they function and work out what good operational control looks like in context.</p>
         </div>
       </div>
     </section>
@@ -83,11 +85,12 @@ export default function FounderPage(){
       <div className="shell founder-story-two-col">
         <div>
           <div className="eyebrow">THE HUMAN LAYER</div>
-          <h2>Learning-disability and autism services changed the perspective.</h2>
+          <h2>Learning-disability and autism services added a different kind of operational understanding.</h2>
           <p className="lead">After years in operational environments built around pressure, response and delivery, around 16 months working in learning-disability and autism services brought a different kind of learning.</p>
         </div>
         <div className="founder-story-copy">
           <p>John found his feet there. He loved the experience and, more importantly, valued the people — the individuals being supported, their families and the staff around them. It reinforced that a service cannot be understood only through compliance, incidents, rotas or records.</p>
+          <p>That experience sat alongside earlier ambulance work involving mental-health provision and later registered-manager responsibility in domiciliary and dementia services. Together, those environments created breadth rather than a claim of universal expertise.</p>
           <p>That human experience sits underneath ORVIA now: systems matter because people live inside their consequences. Evidence matters because assumptions can distort a person's story. Human judgement matters because no dashboard should become the final authority over somebody's life.</p>
         </div>
       </div>

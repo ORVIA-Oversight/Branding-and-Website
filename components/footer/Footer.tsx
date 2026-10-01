@@ -51,7 +51,8 @@ export function Footer() {
       <div className="footer-trust-approved">
         <strong>Verified trust:</strong>
         <a href="https://www.armedforcescovenant.gov.uk/" target="_blank" rel="noreferrer">Armed Forces Covenant</a>
-        <a href="https://www.defencediscountservice.co.uk/en" target="_blank" rel="noreferrer">Defence Discount Service</a>
+        <Link href="/trust">Companies House 16123685</Link>
+        <Link href="/trust">ICO ZC152311</Link>
         <Link href="/armed-forces">ERS Bronze</Link>
         <Link href="/founder">Veteran-founded</Link>
         <a href={armedForcesAssets.trustAVeteran.profile} target="_blank" rel="noreferrer">Trust A Veteran</a>

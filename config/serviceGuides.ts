@@ -26,7 +26,7 @@ export const serviceGuides: Record<ServiceGuideId, ServiceGuide> = {
     name:"ORVIA Voice",
     strapline:"Never lose the enquiry just because you could not answer the phone.",
     accent:"#2B929D",
-    serviceUrl:"https://voice.orvia.org.uk",
+    serviceUrl:"https://orviavoice.co.uk",
     summary:"ORVIA Voice provides structured call capture, routing and follow-up for organisations that cannot always answer live. It is designed to turn a missed call into an owned action rather than another voicemail that disappears.",
     audiences:["Trades and field teams","Small and growing businesses","Care and service organisations","Teams with out-of-hours or overflow calls","Organisations needing a consistent first response"],
     helps:["Capture the caller and the reason for contact","Record the information the service needs at first contact","Route or escalate according to agreed service rules","Create a clear follow-up responsibility","Support consistent customer handling when the team is busy or unavailable"],

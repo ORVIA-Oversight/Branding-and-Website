@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Source_Serif_4 } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { Header } from "@/components/navigation/Header";
 import { Footer } from "@/components/footer/Footer";
 
-const sourceSerif = Source_Serif_4({ subsets:["latin"], variable:"--font-source-serif" });
+const geist = Geist({ subsets:["latin"], variable:"--font-geist" });
+const mono = Geist_Mono({ subsets:["latin"], variable:"--font-mono" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://brand.orvia.org.uk"),
@@ -19,5 +20,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({children}:{children:React.ReactNode}){
-  return <html lang="en-GB"><body className={sourceSerif.variable}><Header/><main>{children}</main><Footer/></body></html>;
+  return <html lang="en-GB"><body className={`${geist.variable} ${mono.variable}`}><Header/><main>{children}</main><Footer/></body></html>;
 }

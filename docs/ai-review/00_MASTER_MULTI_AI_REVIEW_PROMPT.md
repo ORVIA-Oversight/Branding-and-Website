@@ -2,9 +2,17 @@
 **Date:** 1 October 2026
 **Target:** ORVIA master website system and all future ORVIA product sites
 **Primary live reference:** https://www.orvia.org.uk/
+**Fixed review snapshot:** docs/ai-review/snapshots/2026-10-01-orvia-org-uk.html
+**Canonical product/surface register:** docs/ai-review/00A_CANONICAL_PRODUCT_SURFACE_REGISTER.md
 **Build branch:** reset/2026-10-01-master-template-v2
 
-## Non-negotiable architecture
+Do not review an unspecified master branch. Use the named reset branch for the review.
+
+## Review scope
+
+Run the first wave with the Master, Commercial and Red Team prompts across 2–3 models. Bring Creative and Story into a second pass after structural issues are resolved.
+
+## Architecture
 
 ORVIA means:
 
@@ -14,7 +22,7 @@ ORVIA means:
 **I — INTERPRET**
 **A — ACT**
 
-Every ORVIA public website must feel like one organisation: **ORVIA Oversight** as the fixed parent identity, then the active system icon/name beside it.
+The current intended architecture is that every ORVIA public website should feel like one organisation: **ORVIA Oversight** as the fixed parent identity, then the active system icon/name beside it.
 
 The homepage of each ORVIA business/product must sell that product clearly, but the deeper ORVIA fundamentals stay behind the experience:
 
@@ -31,6 +39,8 @@ The homepage of each ORVIA business/product must sell that product clearly, but 
 - shared founder story and brand boundaries where relevant.
 
 Do **not** turn every homepage into an explanation of the internal architecture.
+
+Reviewers may challenge the number of sites, domain model and one-homepage-per-product assumption where maintainability, cost or customer clarity would improve. Preserve the underlying capability and explain the commercial/migration consequence of any proposed merge or retirement.
 
 ## Commercial philosophy
 
@@ -101,7 +111,9 @@ Prioritise:
 
 ## Review the live site
 
-Review https://www.orvia.org.uk/ in full.
+Review the fixed snapshot first: `docs/ai-review/snapshots/2026-10-01-orvia-org-uk.html`.
+
+Use https://www.orvia.org.uk/ only as a secondary freshness check. If it differs from the snapshot, report the drift.
 
 Treat it as useful evidence of what already works, not as untouchable truth.
 

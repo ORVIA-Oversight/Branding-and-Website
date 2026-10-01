@@ -18,33 +18,33 @@ export const siteIdentityRegistry: SiteIdentity[] = [
     publicName:"ORVIA Oversight",
     browserTitle:"ORVIA Oversight | Independent Evidence & Operational Assurance",
     domain:"orvia.org.uk",
-    githubTarget:"ORVIA-Oversight/orvia-oversight-public",
-    vercelTarget:"orvia-oversight-public",
+    githubTarget:"ORVIA-Oversight/orvia-oversight",
+    vercelTarget:"orvia-oversight",
     status:"public",
     faviconRule:"Use the approved ORVIA master orbit mark only. Never use a letter O as a substitute.",
-    faviconSource:"Approved ORVIA master mark from controlled Brand Media library"
+    faviconSource:"ORVIA-Unified-Circular-Brand-Pack.zip — Oversight circular favicon/app-icon set, plus approved ORVIA master mark"
   },
   {
     id:"web",
     publicName:"ORVIA Web",
     browserTitle:"ORVIA Web | Websites Built to Work",
     domain:"web.orvia.org.uk",
-    githubTarget:"ORVIA-Oversight/orvia-web-public",
-    vercelTarget:"orvia-web-public",
+    githubTarget:"ORVIA-Oversight/orvia-web",
+    vercelTarget:"orvia-web",
     status:"public",
     faviconRule:"Use the approved ORVIA Web product icon. Do not reuse the parent ORVIA orbit if a controlled Web icon exists.",
-    faviconSource:"Current approved ORVIA Web product mark to be verified against controlled Brand Media assets before migration"
+    faviconSource:"ORVIA-Unified-Circular-Brand-Pack.zip — Web circular favicon/app-icon set (controlled SharePoint backup)"
   },
   {
     id:"voice",
     publicName:"ORVIA Voice",
     browserTitle:"ORVIA Voice | Calls Into Accountable Action",
     domain:"voice.orvia.org.uk",
-    githubTarget:"ORVIA-Oversight/orvia-voice-public",
-    vercelTarget:"orvia-voice-public",
+    githubTarget:"ORVIA-Oversight/orvia-voice",
+    vercelTarget:"orvia-voice",
     status:"build",
     faviconRule:"Use the approved ORVIA Voice product icon. Do not invent a microphone, waveform or letter mark.",
-    faviconSource:"Current approved ORVIA Voice product mark to be verified against controlled Brand Media assets before migration"
+    faviconSource:"ORVIA-Unified-Circular-Brand-Pack.zip — Voice circular favicon/app-icon set (controlled SharePoint backup)"
   },
   {
     id:"threshold",
@@ -77,7 +77,7 @@ export const siteIdentityRegistry: SiteIdentity[] = [
     vercelTarget:"orvia-mia-public",
     status:"public",
     faviconRule:"Use the current approved MIA product icon/logo reduced specifically for browser/app-icon use. Do not substitute an ORVIA letter mark.",
-    faviconSource:"Current MIA approved mark in ORVIA controlled media / current MIA repository, to be verified before migration"
+    faviconSource:"ORVIA-Unified-Circular-Brand-Pack.zip — MIA circular favicon/app-icon set (controlled SharePoint backup)"
   },
   {
     id:"insight",
@@ -170,8 +170,8 @@ export const siteIdentityRegistry: SiteIdentity[] = [
 ];
 
 export const siteIdentityRules = {
-  repository:"Every fresh public repository uses the pattern ORVIA-Oversight/orvia-<product>-public.",
-  vercel:"Every fresh public Vercel project uses the matching orvia-<product>-public name.",
+  repository:"Fresh canonical repositories use ORVIA-Oversight/orvia-<product> where that name is available. Existing canonical names must be archived/renamed before reuse; do not create parallel lookalike repositories.",
+  vercel:"Canonical Vercel projects use the existing estate convention orvia-<product> (for example orvia-oversight, orvia-web, orvia-voice).",
   domain:"Public products use the canonical <product>.orvia.org.uk domain wherever available.",
   title:"Browser titles start with the product name and then a plain-English purpose.",
   favicon:"Every site must ship favicon.ico plus PNG/app-icon variants derived from its approved controlled product icon. No AI-generated logo or favicon is permitted.",

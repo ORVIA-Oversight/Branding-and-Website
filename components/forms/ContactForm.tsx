@@ -59,7 +59,10 @@ export function ContactForm(){
         <option value="founder">Work directly with John</option>
         <option value="voice">ORVIA Voice</option>
         <option value="witness-room">Witness Room</option>
+        <option value="threshold">ORVIA Threshold</option>
         <option value="perspective-room">Perspective Room</option>
+        <option value="insight">ORVIA Insight</option>
+        <option value="business">ORVIA Business</option>
         <option value="web">ORVIA Web</option>
         <option value="mia">MIA</option>
         <option value="careers">Careers / practitioner interest</option>

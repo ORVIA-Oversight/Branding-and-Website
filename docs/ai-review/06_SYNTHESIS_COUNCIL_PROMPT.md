@@ -11,6 +11,14 @@ You will receive outputs from:
 
 Do not average them blindly.
 
+Actively discount:
+- praise without evidence;
+- recommendations that merely mirror the founder/user's stated preference;
+- consensus created by several models repeating the same unsupported assumption;
+- aesthetic novelty that conflicts with the priority hierarchy.
+
+Weight arguments by evidence, internal consistency, user impact, legal/trust implications and acceptance-test quality — not by model count or politeness.
+
 Do not silently settle material disagreements. If reviewers disagree on product architecture, legal/trust position, pricing route, user safety, accessibility or a launch decision, return a **FOUNDER DECISION REQUIRED** item containing:
 - decision to make;
 - Option A;
@@ -70,3 +78,20 @@ Require:
 13. version tag only after the checklist passes.
 
 Recommend a release-candidate tag such as `orvia-master-template-v2.0.0-rc1`, followed by a final version tag only after acceptance.
+
+
+## Synthesis output format
+
+Keep the final brief implementation-oriented.
+
+For each accepted change use:
+**[Component] → [Decision] → [Why] → [Implementation] → [Acceptance Test] → [Priority]**
+
+Separate:
+- ACCEPTED CHANGES
+- REJECTED SUGGESTIONS
+- FOUNDER DECISION REQUIRED
+- LAUNCH BLOCKERS
+- POST-LAUNCH / DEFERRED
+
+Do not include motivational commentary or generic praise.

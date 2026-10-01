@@ -17,7 +17,7 @@ export function Footer() {
           <Link href="https://orvia.org.uk" aria-label="ORVIA Oversight">
             <img src="/brand/ORVIA-Oversight-master.png" alt="ORVIA Oversight"/>
           </Link>
-          <p><strong>See. Understand. Protect.</strong><br/>Independent oversight, evidence and practical improvement with people kept at the centre.</p>
+          <p><strong>Evidence before assumption.</strong><br/>Human first. Human last. Independent oversight, practical improvement and accountable action.</p>
         </div>
 
         <div className="footer-col">
@@ -39,7 +39,7 @@ export function Footer() {
         </div>
 
         <div className="footer-signature-approved">
-          <strong>People first.<br/>A safer tomorrow.</strong>
+          <strong>Human first.<br/>Human last.</strong>
           <span className="footer-signature-line"/>
           <div className="footer-socials" aria-label="Social and contact links">
             <a href="mailto:hello@orvia.org.uk" aria-label="Email">@</a>

@@ -99,6 +99,63 @@ export default function WorkWithOrviaPage(){
   </section>
 
 
+
+  <section className="section orvia-ideas-section">
+    <div className="shell orvia-ideas-grid">
+      <div className="orvia-ideas-copy">
+        <div className="eyebrow">BRING US AN IDEA</div>
+        <h2>Have a good idea and nowhere obvious to take it?</h2>
+        <p className="lead">Bring it to ORVIA. We can help turn an early thought into a properly tested concept: understand the problem, challenge the assumptions, shape the offer, test whether it is commercially viable and work out what it would take to launch.</p>
+        <p>We do not promise every idea becomes a product. We scrutinise it first. If the evidence supports it, we can help develop the concept, build the commercial story, create the digital route and take it to market.</p>
+
+        <div className="orvia-ideas-media-grid" aria-label="Future ORVIA creator media">
+          <figure className="orvia-media-placeholder image">
+            <div className="orvia-media-placeholder-inner">
+              <span>IMAGE PLACEHOLDER</span>
+              <strong>Idea workshop / creator concept image</strong>
+              <small>Replace with approved ORVIA documentary-style photography.</small>
+            </div>
+          </figure>
+          <figure className="orvia-media-placeholder video">
+            <div className="orvia-media-placeholder-inner">
+              <span>VIDEO PLACEHOLDER</span>
+              <strong>How ORVIA turns an idea into a concept</strong>
+              <small>30–60 second explainer film or founder-led walkthrough.</small>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      <article className="orvia-ideas-card">
+        <div className="eyebrow">IDEA → CONCEPT → MARKET</div>
+        <h3>Build it together when the idea stands up.</h3>
+        <ol>
+          <li><strong>Bring the idea.</strong><span>Tell us what you think should exist and why.</span></li>
+          <li><strong>Let us challenge it.</strong><span>We test the need, audience, alternatives, risks, evidence and commercial logic.</span></li>
+          <li><strong>Turn it into a concept.</strong><span>Proposition, story, user journey, commercial model, prototype and launch route.</span></li>
+          <li><strong>Take it to market.</strong><span>Where the model is viable, ORVIA can support build, launch and marketing under an agreed fee and/or commission structure.</span></li>
+        </ol>
+
+        <div className="orvia-ideas-inline-media">
+          <div className="orvia-mini-placeholder">
+            <span>CONCEPT VISUAL</span>
+            <small>Future storyboard / prototype image</small>
+          </div>
+          <div className="orvia-mini-placeholder">
+            <span>LAUNCH FILM</span>
+            <small>Future product / founder video</small>
+          </div>
+        </div>
+
+        <p className="boundary-note">Any commercial partnership is agreed in writing before work starts, including ownership, costs, commission, responsibilities, exit terms and how revenue is shared.</p>
+        <div className="actions">
+          <Link className="button" href="/contact">Bring ORVIA your idea</Link>
+          <a className="button secondary" href="https://airsoft-found.vercel.app/creator/" target="_blank" rel="noreferrer">See a live creator example →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section className="section section-soft">
     <div className="shell work-john-two-col">
       <div>

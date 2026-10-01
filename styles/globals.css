@@ -1655,3 +1655,73 @@ body{font-family:var(--font-geist),Arial,sans-serif;background:#FAF7F2;color:#0B
   .work-john-founder-media-row,
   .work-john-experience-media{grid-template-columns:1fr}
 }
+
+
+/* Visual review implementation — homepage + Work With ORVIA */
+.visual-card{position:relative}
+.visual-card-icon{
+  width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
+  background:#eef3f4;color:#0B2450;margin-bottom:10px
+}
+.home-story-media-placeholder,
+.section-visual-placeholder,
+.work-orvia-image-placeholder{
+  min-height:190px;border:1px dashed #9aabb8;border-radius:18px;
+  padding:22px;background:linear-gradient(135deg,#eef3f4,#fff);
+  display:flex;flex-direction:column;justify-content:flex-end;margin-bottom:18px
+}
+.home-story-media-placeholder span,
+.section-visual-placeholder span,
+.work-orvia-image-placeholder span,
+.case-media-placeholder span,
+.package-visual-placeholder span{
+  font-size:.62rem;letter-spacing:.13em;font-weight:900;color:#0B2450
+}
+.home-story-media-placeholder strong,
+.section-visual-placeholder strong,
+.work-orvia-image-placeholder strong{font-size:1.15rem;margin-top:5px}
+.home-story-media-placeholder small,
+.section-visual-placeholder small,
+.work-orvia-image-placeholder small{margin-top:5px;color:#66727f;line-height:1.4}
+.method-flow-rail{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:10px;position:relative
+}
+.method-flow-step{
+  padding:18px;border:1px solid rgba(255,255,255,.14);border-top:4px solid transparent;
+  border-radius:16px;background:rgba(255,255,255,.035);position:relative
+}
+.method-flow-step:not(:last-child):after{
+  content:"→";position:absolute;right:-10px;top:42%;z-index:2;color:#d2dde5;font-weight:900
+}
+.method-flow-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.09);margin-bottom:10px}
+.method-flow-step>span{font-size:1.6rem;font-weight:900}
+.method-flow-step h3{margin:5px 0 4px}.method-flow-step strong{font-size:.8rem;color:#dce6ed}.method-flow-step p{font-size:.82rem;line-height:1.5;color:#aebfcb}
+.case-visual-card{overflow:hidden}
+.case-media-placeholder{
+  height:110px;margin:-20px -22px 16px;padding:18px;background:linear-gradient(135deg,#e9f0f2,#f8fafb);
+  display:flex;align-items:flex-end;justify-content:space-between;color:#0B2450
+}
+.social-link-placeholders{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}
+.social-link-placeholders span{padding:7px 9px;border:1px solid var(--line);border-radius:999px;font-size:.62rem;font-weight:850;letter-spacing:.08em;background:#fff}
+.work-orvia-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.work-orvia-hero-visual img{display:block;width:min(360px,80%);height:auto;margin:0 0 18px}
+.work-orvia-image-placeholder{min-height:280px;margin:0}
+.section-visual-strip{margin:22px 0}
+.working-practice-media-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+.section-visual-placeholder{margin:0;min-height:180px}
+.section-visual-placeholder.dark{background:linear-gradient(135deg,#0B2450,#173f66);color:#fff;border-color:rgba(255,255,255,.2)}
+.section-visual-placeholder.dark span,.section-visual-placeholder.dark small{color:#d6e1e8}
+.visual-package-grid article{position:relative;overflow:hidden}
+.package-visual-placeholder{
+  display:flex;align-items:center;justify-content:space-between;background:#eef3f4;
+  margin:-1px -1px 16px;padding:14px 16px;border-bottom:1px solid var(--line)
+}
+.package-visual-placeholder strong{font-size:1.7rem;color:#0B2450}
+@media(max-width:1000px){
+  .work-orvia-hero-grid,.working-practice-media-row{grid-template-columns:1fr}
+  .method-flow-rail{grid-template-columns:1fr 1fr}
+  .method-flow-step:after{display:none}
+}
+@media(max-width:700px){
+  .method-flow-rail{grid-template-columns:1fr}
+}

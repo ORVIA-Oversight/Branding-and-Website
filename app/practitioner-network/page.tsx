@@ -69,22 +69,6 @@ export default function PractitionerNetworkPage(){
     </section>
 
 
-    <section className="section oath-section">
-      <div className="shell oath-grid">
-        <div>
-          <div className="eyebrow">THE ORVIA OATH</div>
-          <h2>Before the role comes the promise.</h2>
-          <p className="lead">Every ORVIA practitioner signs up to a human-first oath: see the person before the paperwork, look beyond the surface, challenge what does not fit and use judgement in the service of protection — never ego, theatre or institutional convenience.</p>
-          <p>The Oath is retained on the practitioner record because it is intended to shape behaviour, not decorate a certificate. The standard is simple: protect humans, make people visible, tell the truth with dignity and leave the system safer than you found it.</p>
-        </div>
-        <div className="oath-card">
-          <span>THE PROMISE</span>
-          <strong>See the human. Read the room. Go to the source. Truth before comfort.</strong>
-          <p>One life made safer. One person properly heard. One risk noticed before it becomes harm. That is the point.</p>
-        </div>
-      </div>
-    </section>
-
     <section className="section section-soft">
       <div className="shell">
         <div className="section-head">
@@ -198,33 +182,6 @@ export default function PractitionerNetworkPage(){
           <span>You care whether the fix works after you leave.</span>
           <span>You are comfortable saying “I do not know yet.”</span>
         </div>
-      </div>
-    </section>
-
-
-    <section className="section section-soft">
-      <div className="shell service-modes-grid">
-        <div>
-          <div className="eyebrow">TWO WAYS WE CAN WORK</div>
-          <h2>Open assurance by default. Restricted covert work only by exception.</h2>
-          <p className="lead">Most ORVIA work is overt: people know why we are there, what we are reviewing and how the evidence will be handled. That is the normal model.</p>
-        </div>
-        <div className="service-mode-cards">
-          <article>
-            <span>01</span>
-            <h3>Overt observational assurance</h3>
-            <p>On-site observation, evidence review, interviews, environmental checks, process testing and operational challenge carried out transparently with the organisation.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Restricted covert / discreet assurance</h3>
-            <p>Considered only for a genuine human-protection purpose where there is a specific concern, less intrusive routes are inadequate and the proposed work can be justified as lawful, necessary and proportionate.</p>
-          </article>
-        </div>
-      </div>
-      <div className="shell covert-boundary">
-        <strong>Important boundary</strong>
-        <p>Covert work is not a general investigation product, a staff-monitoring shortcut or a way to bypass privacy rights. Any such engagement requires senior approval, legal and data-protection review, a defined purpose and timeframe, strict access controls and an appropriate DPIA before work begins. In regulated care settings, CQC privacy, dignity, consent and surveillance guidance must also be addressed.</p>
       </div>
     </section>
 

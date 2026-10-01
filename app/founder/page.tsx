@@ -1,28 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { founderStory } from "@/config/founder";
 import { founderCredentials } from "@/config/founderCredentials";
 
 export const metadata:Metadata={
   title:"Founder Story | Why ORVIA Exists",
-  description:"The story behind ORVIA Oversight: why John McGill built an evidence-led, human-centred operating model for connected review, accountability and better professional action.",
+  description:"Why John McGill built ORVIA: from frontline responsibility and fragmented systems to an evidence-led, human-centred method for finding and fixing problems.",
   alternates:{canonical:"/founder"}
 };
 
-const practice=[
-  ["One evidence picture","Bring records, chronology, accounts, decisions and actions into one controlled view rather than leaving the truth scattered across separate systems."],
-  ["Shared context","Connected parties should work from the same underlying information while permissions, attribution and professional boundaries remain clear."],
-  ["Difference is preserved","A shared record does not mean forced agreement. Competing accounts, missing evidence and dissent remain visible."],
-  ["Human decisions stay human","Technology can organise, compare and surface patterns. It does not make safeguarding, clinical, regulatory or culpability decisions."],
-  ["Action has an owner","Every material issue should lead to a proportionate next step, a responsible person and a point at which the outcome is checked."]
-] as const;
-
-const aims=[
-  ["See more clearly","Replace fragmented reporting with a view of what the record actually contains."],
-  ["Understand before acting","Separate fact, account, interpretation, uncertainty and missing evidence."],
-  ["Reduce repeated work","Stop different people rebuilding the same chronology from different inboxes, spreadsheets and case systems."],
-  ["Make challenge safer","Give people a structured way to raise contradictions and alternative explanations without turning challenge into conflict."],
-  ["Verify improvement","Do not stop at an action plan. Check whether the change was implemented, effective and sustained."]
+const lessons=[
+  ["Systems record activity","A complete form is not the same thing as seeing the person, the context or the warning sign underneath it."],
+  ["Evidence before assumption","Instinct may start the question. Evidence has to test it."],
+  ["Challenge the comfortable answer","Ask what does not fit, what is missing, what else could this mean and what would make us wrong."],
+  ["Human first. Human last.","Technology can organise, compare and challenge. Consequential judgement remains with accountable people."],
+  ["Verify the fix","An action plan is not proof. Check whether change was implemented, effective and sustained."]
 ] as const;
 
 export default function FounderPage(){
@@ -31,21 +22,18 @@ export default function FounderPage(){
       <div className="shell founder-story-hero-grid">
         <div>
           <div className="eyebrow">THE FOUNDER STORY</div>
-          <h1>ORVIA began with a simple question: what if everyone could see the same evidence before the important decision was made?</h1>
-          <p className="lead">John McGill built ORVIA after years of working in environments where the real picture was often split between people, paperwork, systems and professional boundaries. The aim is not to create another layer of reporting. It is to connect the evidence, preserve context and help the right human make a better-informed decision.</p>
+          <h1>ORVIA was not built to make broken systems look better. It was built to help fix them.</h1>
+          <p className="lead">John McGill spent much of his working life around responsibility, risk, people and consequence — in the military, security, ambulance operations, management and health and social care. Across different environments, the same pattern kept appearing: systems could record activity without always seeing the person or the real problem underneath it.</p>
           <div className="actions">
             <Link className="button" href="/work-with-john">Work with John</Link>
             <Link className="button secondary" href="/method">See the ORVIA method</Link>
           </div>
-          <div className="founder-story-proof">
-            <span>Independent</span><span>Evidence-led</span><span>Human-centred</span><span>Accountable</span>
-          </div>
         </div>
         <aside className="founder-story-quote">
           <div className="founder-signature-mark">John McGill</div>
-          <strong>{founderStory.role}</strong>
-          <blockquote>“The problem is rarely that nobody has information. The problem is that the information sits in different places, different hands and different versions of the story.”</blockquote>
-          <p>ORVIA exists to bring those pieces into a controlled evidence picture without pretending uncertainty has disappeared.</p>
+          <strong>Founder, ORVIA Oversight Ltd</strong>
+          <blockquote>“Paperwork is rarely the whole story.”</blockquote>
+          <p>ORVIA exists to help people see what is really happening, challenge what does not fit and turn understanding into an owned fix.</p>
         </aside>
       </div>
     </section>
@@ -53,68 +41,68 @@ export default function FounderPage(){
     <section className="section founder-story-origin">
       <div className="shell founder-story-two-col">
         <div>
-          <div className="eyebrow">WHY ORVIA EXISTS</div>
-          <h2>Instinct starts the question. Evidence tests it.</h2>
-          <p className="lead">{founderStory.medium}</p>
+          <div className="eyebrow">THE BEGINNING</div>
+          <h2>It did not begin with software.</h2>
+          <p className="lead">It began with accumulated experience and one repeated lesson: the gap between what a system says happened and what people actually experienced can become enormous.</p>
         </div>
         <div className="founder-story-copy">
-          {founderStory.full.slice(0,4).map((paragraph,index)=><p key={index}>{paragraph}</p>)}
+          <p>A form can be completed. A box can be ticked. A policy can exist. A report can be written. And the human being at the centre can still feel completely unseen.</p>
+          <p>That became one of the foundations of ORVIA: evidence before assumption, context alongside attribution, and a human being still visible at the beginning and the end.</p>
+          <p>Six intense months of rebuilding then turned a collection of ideas into one method: <strong>OBSERVE → REVIEW → VERIFY → INTERPRET → ACT.</strong></p>
         </div>
       </div>
     </section>
 
     <section className="section section-soft">
-      <div className="shell founder-story-visual-grid">
-        <div>
-          <div className="eyebrow">THE PROBLEM ORVIA IS TRYING TO FIX</div>
-          <h2>Disconnected systems create disconnected understanding.</h2>
-          <p className="lead">A family may hold one part of the story. A provider may hold another. A commissioner, school, clinician, manager or regulator may each have records of their own. Add emails, calls, dashboards, incident systems, HR platforms and spreadsheets, and the same event can quickly exist in several different versions.</p>
-          <p>ORVIA's practice is designed to organise the available evidence into a controlled chronology, show where accounts align or differ, preserve the source behind each assertion and make it easier for authorised people to understand the same underlying picture.</p>
+      <div className="shell">
+        <div className="section-head">
+          <div><div className="eyebrow">FROM EXPERIENCE TO ARCHITECTURE</div><h2>Questions became principles. Principles became processes. Processes became tools.</h2></div>
+          <p>The public founder story is not an autobiography. The important part is what ORVIA learned and built from experience.</p>
         </div>
-        <figure className="founder-story-explainer">
-          <img src="/founder/shared-evidence.svg" alt="Diagram showing multiple evidence sources flowing into one controlled evidence record shared with connected parties" />
-        </figure>
+        <div className="founder-aim-grid">
+          {lessons.map(([title,copy],index)=><article key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p></article>)}
+        </div>
       </div>
     </section>
 
     <section className="section section-ink">
-      <div className="shell">
-        <div className="section-head">
-          <div><div className="eyebrow light">THE WORKING PRACTICE</div><h2>Shared information does not mean shared conclusions.</h2></div>
-          <p>ORVIA is designed so connected people can work from the same evidence picture while preserving permissions, attribution, professional roles, uncertainty and disagreement.</p>
+      <div className="shell founder-story-two-col">
+        <div>
+          <div className="eyebrow light">THE FIXER IDEA</div>
+          <h2>Bring ORVIA the problem before it becomes the crisis.</h2>
         </div>
-        <div className="founder-practice-grid">
-          {practice.map(([title,copy],index)=><article key={title}>
-            <span>{String(index+1).padStart(2,"0")}</span>
-            <h3>{title}</h3>
-            <p>{copy}</p>
-          </article>)}
+        <div>
+          <p className="lead">Think crisis-fixer discipline without the spin: find the pressure point, get beyond the presentation layer, establish what the evidence supports and fix the system.</p>
+          <p>ORVIA is not there to hide a problem, manufacture a defence or protect an organisation from the truth. It is there to help the organisation face the truth early enough to do something useful with it.</p>
         </div>
       </div>
     </section>
 
     <section className="section">
-      <div className="shell founder-story-visual-grid founder-story-visual-grid-reverse">
-        <figure className="founder-story-explainer">
-          <img src="/founder/human-first.svg" alt="Human-first ORVIA diagram showing evidence, review, challenge and action around an accountable person" />
-        </figure>
+      <div className="shell founder-story-two-col">
         <div>
-          <div className="eyebrow">HUMAN FIRST. HUMAN LAST.</div>
-          <h2>Better systems should create better human judgement, not replace it.</h2>
-          <p className="lead">ORVIA uses technology to reduce repetition, preserve evidence, test completeness and widen the field of view. But the consequential decision remains with the person who is authorised, competent and accountable to make it.</p>
-          <p>This is one of the founder principles that does not move: AI may support the work; it does not inherit safeguarding, clinical, legal, regulatory or culpability authority.</p>
+          <div className="eyebrow">THE HUMAN THREAD</div>
+          <h2>ORVIA learned that preserving context matters because people can disappear inside systems.</h2>
+          <p className="lead">Some of the strongest principles came from personal experience of separation, loss and the fear that an important human story could one day be reduced to somebody else's record.</p>
+        </div>
+        <div className="founder-story-copy">
+          <p>That experience contributed to MIA, ORVIA's memory and legacy work: preserve voice, photographs, stories and messages so the parts of a life that matter are not lost when circumstances change.</p>
+          <p>The public story deliberately protects private family circumstances. The principle is what belongs here: <strong>see people properly, preserve what matters and do not let a system erase human context.</strong></p>
+          <Link className="text-link" href="https://mia.orvia.org.uk">Explore MIA →</Link>
         </div>
       </div>
     </section>
 
     <section className="section section-soft">
-      <div className="shell">
-        <div className="section-head">
-          <div><div className="eyebrow">WHAT WE ARE TRYING TO ACHIEVE</div><h2>Less fragmentation. More clarity. Better follow-through.</h2></div>
-          <p>The measure is not whether ORVIA produces more paperwork. The measure is whether people can understand the position, act proportionately and later show what happened and why.</p>
+      <div className="shell founder-story-two-col">
+        <div>
+          <div className="eyebrow">HUMAN FIRST. HUMAN LAST.</div>
+          <h2>AI can help us see. It should not decide who somebody is.</h2>
+          <p className="lead">ORVIA uses technology to organise records, compare information, surface gaps, preserve provenance and challenge assumptions.</p>
         </div>
-        <div className="founder-aim-grid">
-          {aims.map(([title,copy],index)=><article key={title}><span>{String(index+1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p></article>)}
+        <div className="founder-story-copy">
+          <p>But safeguarding, clinical, culpability and other high-consequence judgements remain with accountable people. A machine should not become the final authority over another human being.</p>
+          <p>That boundary is not a disclaimer added at the end. It is part of the architecture.</p>
         </div>
       </div>
     </section>
@@ -136,14 +124,15 @@ export default function FounderPage(){
     <section className="section section-ink founder-story-close">
       <div className="shell founder-story-two-col">
         <div>
-          <div className="eyebrow light">THE POINT OF ORVIA</div>
-          <h2>See what is there. Show what is missing. Keep people connected to the same picture.</h2>
+          <div className="eyebrow light">WHAT ORVIA HAS TO ACHIEVE</div>
+          <h2>Build something commercially strong enough to survive its founder without losing the reason it exists.</h2>
         </div>
         <div>
-          <p className="lead">The ambition is straightforward even when the work is complex: evidence before assumption, context alongside attribution, challenge without theatre, action with ownership, and a human being still visible at the centre of the system.</p>
+          <p className="lead">ORVIA has to create recurring revenue, useful intellectual property, strong customer relationships and products that solve identifiable problems. But commercial success cannot become an excuse for abandoning the principles that made the company worth building.</p>
+          <p>The test is whether ORVIA can help an organisation become clearer, more accountable and more human — and prove the improvement rather than merely claim it.</p>
           <div className="actions">
-            <Link className="button" href="/contact">Start a conversation</Link>
-            <Link className="button secondary" href="/work-with-john">Work with John</Link>
+            <Link className="button" href="/contact">Bring us a problem</Link>
+            <Link className="button secondary" href="/">Back to ORVIA</Link>
           </div>
         </div>
       </div>

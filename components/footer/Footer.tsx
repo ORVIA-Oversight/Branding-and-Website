@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { footerNavigation } from "@/config/navigation";
 import { armedForcesAssets } from "@/config/armedForces";
+import { contactAndSales } from "@/config/contactAndSales";
 
 function FooterLink({item}:{item:{label:string;href:string;external?:boolean}}){
   if(item.external || item.href.startsWith("http")){
@@ -34,16 +35,16 @@ export function Footer() {
           <h3>COMPANY</h3>
           {footerNavigation.company.map(item=><FooterLink key={item.href+item.label} item={item}/>)}
           <a href={armedForcesAssets.trustAVeteran.profile} target="_blank" rel="noreferrer">Trust A Veteran</a>
-          <a href="tel:+443300433703">0330 043 3703</a>
-          <a href="mailto:hello@orvia.org.uk">hello@orvia.org.uk</a>
+          <a href={`tel:${contactAndSales.phoneE164}`}>{contactAndSales.phoneDisplay}</a>
+          <a href={`mailto:${contactAndSales.generalEmail}`}>{contactAndSales.generalEmail}</a>
         </div>
 
         <div className="footer-signature-approved">
           <strong>Human first.<br/>Human last.</strong>
           <span className="footer-signature-line"/>
           <div className="footer-socials" aria-label="Social and contact links">
-            <a href="mailto:hello@orvia.org.uk" aria-label="Email">@</a>
-            <a href="tel:+443300433703" aria-label="Telephone">☎</a>
+            <a href={`mailto:${contactAndSales.generalEmail}`} aria-label="Email">@</a>
+            <a href={`tel:${contactAndSales.phoneE164}`} aria-label="Telephone">☎</a>
           </div>
         </div>
       </div>
